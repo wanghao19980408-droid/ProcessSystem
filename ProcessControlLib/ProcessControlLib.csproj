@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{68509A0D-A05F-4047-A23C-87EDE5DA7F39}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProcessControlLib</RootNamespace>
+    <AssemblyName>ProcessControlLib</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SunnyUI">
+      <HintPath>..\ProcessSystem\bin\Debug\SunnyUI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AirBull.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AirBull.Designer.cs">
+      <DependentUpon>AirBull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Engine.Designer.cs">
+      <DependentUpon>Engine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FiringIIHighAISensor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FiringIIHighAISensor.Designer.cs">
+      <DependentUpon>FiringIIHighAISensor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FiringIHighAISensor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FiringIHighAISensor.Designer.cs">
+      <DependentUpon>FiringIHighAISensor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FuelSensor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FuelSensor.Designer.cs">
+      <DependentUpon>FuelSensor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GaseSourceSensor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GaseSourceSensor.Designer.cs">
+      <DependentUpon>GaseSourceSensor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GaseSupplySolenoid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GaseSupplySolenoid.Designer.cs">
+      <DependentUpon>GaseSupplySolenoid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GaseSupplySensor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GaseSupplySensor.Designer.cs">
+      <DependentUpon>GaseSupplySensor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FiringIISensor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FiringIISensor.Designer.cs">
+      <DependentUpon>FiringIISensor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FiringISensor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FiringISensor.Designer.cs">
+      <DependentUpon>FiringISensor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GaseSupplyElectricSwitchCombo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GaseSupplyElectricSwitchCombo.Designer.cs">
+      <DependentUpon>GaseSupplyElectricSwitchCombo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GaseSupplyElectricSwitchIcon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GaseSupplyElectricSwitchIcon.Designer.cs">
+      <DependentUpon>GaseSupplyElectricSwitchIcon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GaseSupplyAdjustValve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GaseSupplyAdjustValve.Designer.cs">
+      <DependentUpon>GaseSupplyAdjustValve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GaseSourceElectricSwitchCombo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GaseSourceElectricSwitchCombo.Designer.cs">
+      <DependentUpon>GaseSourceElectricSwitchCombo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GaseSourceElectricSwitchIcon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GaseSourceElectricSwitchIcon.Designer.cs">
+      <DependentUpon>GaseSourceElectricSwitchIcon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GaseSourceAdjustValve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GaseSourceAdjustValve.Designer.cs">
+      <DependentUpon>GaseSourceAdjustValve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FiringIIAdjustValve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FiringIIAdjustValve.Designer.cs">
+      <DependentUpon>FiringIIAdjustValve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FiringIAdjustValve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FiringIAdjustValve.Designer.cs">
+      <DependentUpon>FiringIAdjustValve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FiringIISwitchCombo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FiringIISwitchCombo.Designer.cs">
+      <DependentUpon>FiringIISwitchCombo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FiringIISwitchIcon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FiringIISwitchIcon.Designer.cs">
+      <DependentUpon>FiringIISwitchIcon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FuelAdjustValve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FuelAdjustValve.Designer.cs">
+      <DependentUpon>FuelAdjustValve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FiringISwitchCombo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FiringISwitchCombo.Designer.cs">
+      <DependentUpon>FiringISwitchCombo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FiringISwitchIcon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FiringISwitchIcon.Designer.cs">
+      <DependentUpon>FiringISwitchIcon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FuelSwitchIcon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FuelSwitchIcon.Designer.cs">
+      <DependentUpon>FuelSwitchIcon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandValve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HandValve.Designer.cs">
+      <DependentUpon>HandValve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Heater.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Heater.Designer.cs">
+      <DependentUpon>Heater.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PreReduce.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PreReduce.Designer.cs">
+      <DependentUpon>PreReduce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Pump.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pump.Designer.cs">
+      <DependentUpon>Pump.cs</DependentUpon>
+    </Compile>
+    <Compile Include="radiotube.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="radiotube.Designer.cs">
+      <DependentUpon>radiotube.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rocket.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Rocket.Designer.cs">
+      <DependentUpon>Rocket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sensor.Designer.cs">
+      <DependentUpon>Sensor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FuelSwitchCombo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FuelSwitchCombo.Designer.cs">
+      <DependentUpon>FuelSwitchCombo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tank.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tank.Designer.cs">
+      <DependentUpon>Tank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegulatingValve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RegulatingValve.Designer.cs">
+      <DependentUpon>RegulatingValve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SolenoidValve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SolenoidValve.Designer.cs">
+      <DependentUpon>SolenoidValve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Stop.Designer.cs">
+      <DependentUpon>Stop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SwitchValve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SwitchValve.Designer.cs">
+      <DependentUpon>SwitchValve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCComboBoxcs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCComboBoxcs.Designer.cs">
+      <DependentUpon>UCComboBoxcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FlowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FlowControl.designer.cs">
+      <DependentUpon>FlowControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vaporizer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vaporizer.Designer.cs">
+      <DependentUpon>Vaporizer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Motor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Motor.designer.cs">
+      <DependentUpon>Motor.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AirBull.resx">
+      <DependentUpon>AirBull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Engine.resx">
+      <DependentUpon>Engine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FiringIIHighAISensor.resx">
+      <DependentUpon>FiringIIHighAISensor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FiringIHighAISensor.resx">
+      <DependentUpon>FiringIHighAISensor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuelSensor.resx">
+      <DependentUpon>FuelSensor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GaseSourceSensor.resx">
+      <DependentUpon>GaseSourceSensor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GaseSupplySolenoid.resx">
+      <DependentUpon>GaseSupplySolenoid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GaseSupplySensor.resx">
+      <DependentUpon>GaseSupplySensor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FiringIISensor.resx">
+      <DependentUpon>FiringIISensor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FiringISensor.resx">
+      <DependentUpon>FiringISensor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GaseSupplyElectricSwitchCombo.resx">
+      <DependentUpon>GaseSupplyElectricSwitchCombo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GaseSupplyElectricSwitchIcon.resx">
+      <DependentUpon>GaseSupplyElectricSwitchIcon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GaseSupplyAdjustValve.resx">
+      <DependentUpon>GaseSupplyAdjustValve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GaseSourceElectricSwitchCombo.resx">
+      <DependentUpon>GaseSourceElectricSwitchCombo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GaseSourceElectricSwitchIcon.resx">
+      <DependentUpon>GaseSourceElectricSwitchIcon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GaseSourceAdjustValve.resx">
+      <DependentUpon>GaseSourceAdjustValve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FiringIIAdjustValve.resx">
+      <DependentUpon>FiringIIAdjustValve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FiringIAdjustValve.resx">
+      <DependentUpon>FiringIAdjustValve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FiringIISwitchCombo.resx">
+      <DependentUpon>FiringIISwitchCombo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FiringIISwitchIcon.resx">
+      <DependentUpon>FiringIISwitchIcon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuelAdjustValve.resx">
+      <DependentUpon>FuelAdjustValve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FiringISwitchCombo.resx">
+      <DependentUpon>FiringISwitchCombo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FiringISwitchIcon.resx">
+      <DependentUpon>FiringISwitchIcon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuelSwitchIcon.resx">
+      <DependentUpon>FuelSwitchIcon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandValve.resx">
+      <DependentUpon>HandValve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Heater.resx">
+      <DependentUpon>Heater.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PreReduce.resx">
+      <DependentUpon>PreReduce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pump.resx">
+      <DependentUpon>Pump.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="radiotube.resx">
+      <DependentUpon>radiotube.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rocket.resx">
+      <DependentUpon>Rocket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensor.resx">
+      <DependentUpon>Sensor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuelSwitchCombo.resx">
+      <DependentUpon>FuelSwitchCombo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tank.resx">
+      <DependentUpon>Tank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegulatingValve.resx">
+      <DependentUpon>RegulatingValve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SolenoidValve.resx">
+      <DependentUpon>SolenoidValve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stop.resx">
+      <DependentUpon>Stop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SwitchValve.resx">
+      <DependentUpon>SwitchValve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCComboBoxcs.resx">
+      <DependentUpon>UCComboBoxcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlowControl.resx">
+      <DependentUpon>FlowControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vaporizer.resx">
+      <DependentUpon>Vaporizer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Motor.resx">
+      <DependentUpon>Motor.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProcessSystemLib\ProcessSystemLib.csproj">
+      <Project>{32c0d203-9411-4b0c-91cd-3fc1e78d7407}</Project>
+      <Name>ProcessSystemLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

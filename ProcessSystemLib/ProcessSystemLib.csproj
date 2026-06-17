@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{32C0D203-9411-4B0C-91CD-3FC1E78D7407}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProcessSystemLib</RootNamespace>
+    <AssemblyName>ProcessSystemLib</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DataConvertLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DataConvertLib.dll</HintPath>
+    </Reference>
+    <Reference Include="MiniExcel, Version=1.28.5.0, Culture=neutral, PublicKeyToken=e7310002a53eac39, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MiniExcel.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SqlSugar, Version=5.1.4.168, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\SqlSugar.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UdpEx, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\UdpEx.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlarmLib.cs" />
+    <Compile Include="Communication\TCPManager.cs" />
+    <Compile Include="Communication\UDPManager.cs" />
+    <Compile Include="DualValveInterlock.cs" />
+    <Compile Include="Helper\CRC_Check.cs" />
+    <Compile Include="Helper\IniConfigHelper.cs" />
+    <Compile Include="Helper\ReadExcel.cs" />
+    <Compile Include="Helper\SimpleHybirdLock.cs" />
+    <Compile Include="Helper\SqlSugarHelper.cs" />
+    <Compile Include="Interface\ISensorBase.cs" />
+    <Compile Include="Model\AdjustInfo.cs" />
+    <Compile Include="Model\AlarmState.cs" />
+    <Compile Include="Model\ElectricSwitch.cs" />
+    <Compile Include="Model\Enum.cs" />
+    <Compile Include="Interface\IAdjustValve.cs" />
+    <Compile Include="Interface\IAirControlValveBase .cs" />
+    <Compile Include="Interface\IAirControlValveIcon.cs" />
+    <Compile Include="Interface\IElectricControlValveBase.cs" />
+    <Compile Include="Interface\IElectricControlValveIcon.cs" />
+    <Compile Include="Model\FiringIModel.cs" />
+    <Compile Include="Model\PressureStageModel.cs" />
+    <Compile Include="Model\ProcessDataModel.cs" />
+    <Compile Include="Model\GasSupplyStationModel.cs" />
+    <Compile Include="Model\HistoryData.cs" />
+    <Compile Include="Model\LockModel.cs" />
+    <Compile Include="Model\LogReport.cs" />
+    <Compile Include="Model\PID.cs" />
+    <Compile Include="Model\SensorConfig.cs" />
+    <Compile Include="Model\SequenceSettingsModel.cs" />
+    <Compile Include="Model\SwitchDQCloseAndOpen.cs" />
+    <Compile Include="Model\SwitchTwoDQValve.cs" />
+    <Compile Include="Model\TimingPressureParam.cs" />
+    <Compile Include="Model\UserTable.cs" />
+    <Compile Include="Model\UDPValues.cs" />
+    <Compile Include="SensorLib.cs" />
+    <Compile Include="SqlServer\HistoryDataService.cs" />
+    <Compile Include="SqlServer\LockDataService.cs" />
+    <Compile Include="SqlServer\PidDataService.cs" />
+    <Compile Include="SqlServer\PressureStageService.cs" />
+    <Compile Include="SqlServer\SqlSugarService.cs" />
+    <Compile Include="SqlServer\SysAdminService.cs" />
+    <Compile Include="SqlServer\TitleDataService.cs" />
+    <Compile Include="ValveLib.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
