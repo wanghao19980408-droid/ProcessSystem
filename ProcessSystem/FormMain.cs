@@ -1078,6 +1078,8 @@ namespace ProcessSystem
                         tcp = FiringIITCPManager;
                         device = Firing2Device;
                         break;
+                    default:
+                        break;
                 }
                 LockNew pIDSetting;
                 pIDSetting = new LockNew(tcp, index, mIndex, name, device);
@@ -2165,6 +2167,16 @@ namespace ProcessSystem
                     if (SolenoidList != null)
                     {
                         var solenoid = GetControls<T3>(index, solenoidName);
+
+                        if (item["DIOpenAndClose"] != null)
+                        {
+                            solenoid.DiOpenAndClose = ToUInt16(item, "DIOpenAndClose");
+                        }
+                        else
+                        {
+                            solenoid.DiOpenAndClose = UInt16.MaxValue;
+
+                        }
                         solenoid.DqOpenAndClose = ToUInt16(item, "DQOpenAndClose");
                         solenoid.ValveName = valveName;
                         SolenoidList.Add(solenoid);

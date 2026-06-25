@@ -65,6 +65,9 @@ namespace ProcessSystem
             var result = await Task.Run(() => pidDataService.QueryPIDInfo(TitleName));
             if (!result.IsSuccess)
             {
+                pidMode.ValveName = TitleName;
+                pidMode.SensorSetting = -1;
+                pidDataService.InsertPIDInfo(TitleName, pidMode);
                 if (new FrmMsgNoAck("PID参数获取失败，请检查数据库连接！", "查询提醒")
                     .ShowDialog() == DialogResult.OK)
                 {
@@ -213,11 +216,11 @@ namespace ProcessSystem
                     pidParamSeq: seq,
                     pidParamValue: uiValue).IsSuccess)
             {
-                AddLog(1, $"{TitleName}{logName}设定失败");
+                AddLog(1, $"{TitleName} {logName}设定失败");
                 return false;
             }
 
-            AddLog(0, $"{TitleName}{logName}设定成功");
+            AddLog(0, $"{TitleName} {logName}设定成功");
             onSuccess(pidParseResult.Content);
             return true;
         }

@@ -28,7 +28,7 @@ namespace ProcessSystem
         string[] Kerosene = { "PT401", "PT401a", "PT401b" };
         string[] Methane = { "PT306", "PT307", "PT308" };
         string[] Station1 = { "PT214", "PT215", "PT216" };
-        string[] Station2 = { "PT218", "PT219", "PT220" };
+        string[] Station2 = { "PT218", "PT219", "PT220", "PT222", "PT223", };
         string[] Station = { "工位1", "工位2" };
         FormMain Control = null;
 

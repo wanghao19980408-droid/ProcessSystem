@@ -1,4 +1,5 @@
 ﻿using DataConvertLib;
+using SqlSugar;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -261,8 +262,16 @@ namespace ProcessSystemLib
 
             for (int i = 0; i < solenoid.Count; i++)
             {
-                int index = solenoid[i].DqOpenAndClose - 1;
-                result.Add((i, e.DQ_value[index] ? ValveState.open : ValveState.close));
+                if (solenoid[i].DiOpenAndClose != UInt16.MaxValue)
+                {
+                    int index = solenoid[i].DiOpenAndClose - 1;
+                    result.Add((i, e.DI_value[index] ? ValveState.open : ValveState.close));
+                }
+                else
+                {
+                    int index = solenoid[i].DqOpenAndClose - 1;
+                    result.Add((i, e.DQ_value[index] ? ValveState.open : ValveState.close));
+                }
             }
             return result;
         }

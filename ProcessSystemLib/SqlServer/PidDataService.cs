@@ -55,5 +55,36 @@ namespace ProcessSystemLib.SqlServer
                 return OperateResult.CreateFailResult(ex.Message);
             }
         }
+        public OperateResult InsertPIDInfo(string valveName, PID pidInfo)
+        {
+            try
+            {
+                var insertObj = new PID()
+                {
+                    ValveName = valveName,
+                    SetPoint = pidInfo.SetPoint,
+                    SensorSetting = pidInfo.SensorSetting,
+                    Kp = pidInfo.Kp,
+                    Ki = pidInfo.Ki,
+                    Kd = pidInfo.Kd,
+                    IsAuto = pidInfo.IsAuto
+                };
+
+                int result = SqlSugarHelper.SqlSugarClient.Insertable<PID>(insertObj).ExecuteCommand();
+
+                if (result > 0)
+                {
+                    return OperateResult.CreateSuccessResult();
+                }
+                else
+                {
+                    return OperateResult.CreateFailResult("Insert failed");
+                }
+            }
+            catch (Exception ex)
+            {
+                return OperateResult.CreateFailResult(ex.Message);
+            }
+        }
     }
 }
