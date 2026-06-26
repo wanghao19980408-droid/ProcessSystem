@@ -1,19 +1,10 @@
-﻿using DataConvertLib;
-using Newtonsoft.Json.Linq;
+﻿
 using NodeSettings;
 using ProcessSystemLib;
-using ProcessSystemLib.Model;
-using Sunny.UI;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+
 using System.Drawing;
-using System.Linq;
-using System.Net.NetworkInformation;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
 
 namespace ProcessSystem
@@ -25,7 +16,7 @@ namespace ProcessSystem
         SiemensDevice OneDevice = null;
         SiemensDevice Tw0Device = null;
 
-        string[] Kerosene = { "PT401", "PT401a", "PT401b" };
+        string[] Kerosene = { "PT401", "PT401a", "PT401b", "PT403" };
         string[] Methane = { "PT306", "PT307", "PT308" };
         string[] Station1 = { "PT214", "PT215", "PT216" };
         string[] Station2 = { "PT218", "PT219", "PT220", "PT222", "PT223", };

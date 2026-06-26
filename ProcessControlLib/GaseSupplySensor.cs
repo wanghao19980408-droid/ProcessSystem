@@ -194,7 +194,7 @@ namespace ProcessControlLib
                 case 808:
                     return (407.48 * levelValue / 0.98 - 563.8) / 1000;
                 case 1140:
-                    return 0.5477 * levelValue - 1.2492;
+                    return 0.6321 * levelValue - 1.7676;
                 case 810:
                     return 0.7564 * levelValue + 3.74;
                 default:
