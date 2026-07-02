@@ -154,8 +154,14 @@ namespace ProcessSystem
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
+
             var stagesToPLC = StageList.ToList();
-  
+            if (stagesToPLC.Count == 0)
+            {
+                FrmMsgNoAck frmMsg = new FrmMsgNoAck("请至少设置一个阶段！", "提示");
+                frmMsg.ShowDialog();
+                return;
+            }
             var result = TCPManager.Send_PLC_Command(
                 cmd: (byte)CMD.pressurization_command,
                 lockIndex: (byte)CurrentSettingType,
@@ -173,7 +179,6 @@ namespace ProcessSystem
 
                     FrmMsgNoAck frmMsgSuccess = new FrmMsgNoAck($"{msgType}时序设置已成功保存！", "保存成功");
                     frmMsgSuccess.ShowDialog();
-                    this.Close();
                 }
                 else
                 {

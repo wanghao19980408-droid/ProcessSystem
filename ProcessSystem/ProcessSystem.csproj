@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Darth Vader.ico</ApplicationIcon>
+    <ApplicationIcon>像素-宝箱.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DataConvertLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -357,6 +357,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Darth Vader.ico" />
+    <Content Include="像素-宝箱.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
