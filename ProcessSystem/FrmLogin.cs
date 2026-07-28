@@ -25,23 +25,42 @@ namespace ProcessSystem
         UserTableService adminService = new UserTableService();
         public UserTable SysAdmin;
 
-        private void FrmLogin_Load(object sender, EventArgs e)
+        public async void FrmLogin_Load(object sender, EventArgs e)
         {
-            var res =  adminService.GetAllAdmin();
-            if (res.IsSuccess && res.Content.Count > 0)
-            {
-                foreach (var item in res.Content)
-                {
-                    this.cb_UserName.Items.Add(item.LoginName);
-                }
-                this.cb_UserName.SelectedIndex = 0;
-            }
-            else
-            {
-                new FrmMsgNoAck("没有可用的登录用户,请联系管理员.", "登陆提示").ShowDialog();
-            }
+            this.cb_UserName.Items.Add("正在连接数据库...");
+            this.cb_UserName.SelectedIndex = 0;
+            this.Enabled = false;
 
-            try { this.AcceptButton = this.btn_Login; } catch { }
+            try
+            {
+                var res = await Task.Run(() => adminService.GetAllAdmin());
+
+                this.cb_UserName.Items.Clear();
+                if (res.IsSuccess && res.Content != null && res.Content.Count > 0)
+                {
+                    foreach (var item in res.Content)
+                    {
+                        this.cb_UserName.Items.Add(item.LoginName);
+                    }
+                    this.cb_UserName.SelectedIndex = 0;
+                }
+            }
+            catch (SqlSugar.SqlSugarException ex)
+            {
+                this.cb_UserName.Items.Clear();
+                new FrmMsgNoAck($"数据库连接失败，请检查网络或服务器状态。\n{ex.Message}", "连接异常").ShowDialog();
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                this.cb_UserName.Items.Clear();
+                new FrmMsgNoAck($"发生未知错误：\n{ex.Message}", "错误").ShowDialog();
+                this.Close();
+            }
+            finally
+            {
+                this.Enabled = true;
+            }
         }
 
         private void btn_Close_Click(object sender, EventArgs e)
@@ -65,7 +84,7 @@ namespace ProcessSystem
         }
         #endregion
 
-        private void btn_Login_Click(object sender, EventArgs e)
+        private async void btn_Login_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(tb_pwd.Text) && !string.IsNullOrEmpty(cb_UserName.Text))
             {
@@ -75,7 +94,14 @@ namespace ProcessSystem
                     LoginPwd = tb_pwd.Text.Trim(),
                 };
 
-                var res = adminService.LoginIn(SysAdmin);
+                btn_Login.Enabled = false;
+                btn_Login.Text = "登录中...";
+
+                var res = await Task.Run(() => adminService.LoginIn(SysAdmin));
+
+                btn_Login.Enabled = true;
+                btn_Login.Text = "登录";
+
                 if (res.IsSuccess && res.Content != null)
                 {
                     this.DialogResult = DialogResult.OK;
@@ -83,17 +109,16 @@ namespace ProcessSystem
                 }
                 else
                 {
-                    new FrmMsgNoAck("登陆失败: 密码错误！", "登录提示").ShowDialog();
-
+                    new FrmMsgNoAck("登陆失败: 密码错误或网络异常！", "登录提示").ShowDialog();
                 }
             }
             else
             {
-                new FrmMsgNoAck("密码不得为空！", "登录提示").ShowDialog();
+                new FrmMsgNoAck("账号或密码不得为空！", "登录提示").ShowDialog();
             }
         }
 
-	private void FrmLogin_KeyDown(object sender, KeyEventArgs e)
+        private void FrmLogin_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
