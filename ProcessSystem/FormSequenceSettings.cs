@@ -2,6 +2,7 @@
 using ProcessSystemLib;
 using ProcessSystemLib.Model;
 using ProcessSystemLib.SqlServer;
+using SqlSugar;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -61,7 +62,19 @@ namespace ProcessSystem
             }
 
             LoadDataFromDatabase();
-
+            bool isSequenceActive = Convert.ToBoolean(Device["Sequence"]);
+            if (isSequenceActive)
+            {
+                this.btnSetting.Text = "停用自动时序";
+                this.btnSetting.FillColor = Color.Red;
+                this.btnSetting.Symbol = 61534;
+            }
+            else
+            {
+                this.btnSetting.Text = "启用自动时序";
+                this.btnSetting.FillColor = Color.SeaGreen;
+                this.btnSetting.Symbol = 61515;
+            }
             InitGrid();
         }
         private void LoadDataFromDatabase()
@@ -176,18 +189,21 @@ namespace ProcessSystem
                     string msgType = CurrentSettingType == PressureSettingType.OneOxygen ? "工位1氧箱" :
                                      (CurrentSettingType == PressureSettingType.TwoOxygen ? "工位2氧箱" :
                                      (CurrentSettingType == PressureSettingType.Methane ? "甲烷" : "煤油"));
-
+                    FormMain.AddLog(0, $"{msgType}时序设置已成功保存！");
                     FrmMsgNoAck frmMsgSuccess = new FrmMsgNoAck($"{msgType}时序设置已成功保存！", "保存成功");
                     frmMsgSuccess.ShowDialog();
+
                 }
                 else
                 {
+                    FormMain.AddLog(2, $"下发成功，但数据库保存失败：{saveResult.Message}");
                     FrmMsgNoAck frmMsgFail = new FrmMsgNoAck($"下发成功，但数据库保存失败：{saveResult.Message}", "数据库错误");
                     frmMsgFail.ShowDialog();
                 }
             }
             else
             {
+                FormMain.AddLog(2, $"下发失败：{result.Message}");
                 FrmMsgNoAck frmMsgFail = new FrmMsgNoAck($"下发失败：{result.Message}", "通信错误");
                 frmMsgFail.ShowDialog();
             }
@@ -218,20 +234,26 @@ namespace ProcessSystem
             var stagesToPLC = StageList.ToList();
             if (stagesToPLC.Count == 0)
             {
+                FormMain.AddLog(2, "请至少设置一个阶段！");
                 FrmMsgNoAck frmMsg = new FrmMsgNoAck("请至少设置一个阶段！", "提示");
                 frmMsg.ShowDialog();
                 return;
             }
-            if (btnSetting.Text == "投入")
+
+            if (btnSetting.Text == "启用自动时序")
             {
                 var res = Device.Write("Sequence", "1");
                 if (res.IsSuccess)
                 {
-                    btnSetting.Text = "投出";
+                    btnSetting.Text = "停用自动时序";
+                    btnSetting.FillColor = Color.Red;
+                    this.btnSetting.Symbol = 61534;
+                    FormMain.AddLog(0, "时序已成功启用！");
                 }
                 else
                 {
-                    FrmMsgNoAck frmMsgFail = new FrmMsgNoAck($"投入失败：{res.Message}", "通信错误");
+                    FormMain.AddLog(2, $"时序启用失败：{res.Message}");
+                    FrmMsgNoAck frmMsgFail = new FrmMsgNoAck($"启用失败：{res.Message}", "通信错误");
                     frmMsgFail.ShowDialog();
                 }
             }
@@ -240,12 +262,15 @@ namespace ProcessSystem
                 var res = Device.Write("Sequence", "0");
                 if (res.IsSuccess)
                 {
-                    btnSetting.Text = "投入";
+                    btnSetting.Text = "启用自动时序";
+                    btnSetting.FillColor = Color.SeaGreen;
+                    this.btnSetting.Symbol = 61515;
+                    FormMain.AddLog(0, "时序已成功停用！");
                 }
                 else
                 {
-
-                    FrmMsgNoAck frmMsgFail = new FrmMsgNoAck($"投出失败：{res.Message}", "通信错误");
+                    FormMain.AddLog(2, $"时序停用失败：{res.Message}");
+                    FrmMsgNoAck frmMsgFail = new FrmMsgNoAck($"停用失败：{res.Message}", "通信错误");
                     frmMsgFail.ShowDialog();
                 }
             }

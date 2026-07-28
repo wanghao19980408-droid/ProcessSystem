@@ -471,7 +471,7 @@ namespace ProcessSystem
                 }
             }
         }
-        private void InvokeIfRequired(Action action)
+        public void InvokeIfRequired(Action action)
         {
             if (IsDisposed || !IsHandleCreated) return;
 
@@ -521,7 +521,7 @@ namespace ProcessSystem
                 System.Reflection.BindingFlags.Instance |
                 System.Reflection.BindingFlags.IgnoreCase).GetValue(this);
         }
-        private void AddLog(int index, string log)
+        public void AddLog(int index, string log)
         {
             if (lv_Log.InvokeRequired)
             {
@@ -538,11 +538,11 @@ namespace ProcessSystem
                 LogType = index == 0 ? "成功日志" : "失败日志"
             });
             var user = UserInfo?.LoginName ?? "未登录";
-            item.SubItems.Add(log + $" ————  操作者：{user}");
+            item.SubItems.Add(log + $"—— 操作者：{user}");
             lv_Log.Items.Add(item);
             lv_Log.EnsureVisible(lv_Log.Items.Count - 1);
         }
-        private void AddWarLog(int index, string log)
+        public void AddWarLog(int index, string log)
         {
             if (lv_WaLog.InvokeRequired)
             {

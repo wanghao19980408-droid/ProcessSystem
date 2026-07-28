@@ -26,7 +26,7 @@ namespace ProcessSystem
             try
             {
                 SqlSugarService.SetConnectionString("Data Source=192.168.25.155;Initial Catalog=FcsDB;User ID=sa;Password=123;");
-                SqlSugarService.SetConnectionString("Data Source=DESKTOP-6MPOC9C;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=True;Application Name=\"SQL Server Management Studio\";");
+                //SqlSugarService.SetConnectionString("Data Source=DESKTOP-6MPOC9C;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=True;Application Name=\"SQL Server Management Studio\";");
                 SqlSugarService.CreateTable<SequenceSettingsModel>();
             }
             catch (Exception ex)

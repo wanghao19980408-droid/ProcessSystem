@@ -1616,7 +1616,7 @@ namespace ProcessSystem
             this.pl_Top.ForeColor = System.Drawing.Color.White;
             this.pl_Top.Location = new System.Drawing.Point(0, 0);
             this.pl_Top.Name = "pl_Top";
-            this.pl_Top.Size = new System.Drawing.Size(2564, 45);
+            this.pl_Top.Size = new System.Drawing.Size(1711, 45);
             this.pl_Top.TabIndex = 4;
             this.pl_Top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDown);
             this.pl_Top.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseMove);
@@ -1627,7 +1627,7 @@ namespace ProcessSystem
             this.btn_TimerValve.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_TimerValve.FillColor = System.Drawing.Color.Transparent;
             this.btn_TimerValve.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_TimerValve.Location = new System.Drawing.Point(2105, 0);
+            this.btn_TimerValve.Location = new System.Drawing.Point(1252, 0);
             this.btn_TimerValve.MinimumSize = new System.Drawing.Size(1, 1);
             this.btn_TimerValve.Name = "btn_TimerValve";
             this.btn_TimerValve.RectColor = System.Drawing.Color.Transparent;
@@ -1653,7 +1653,7 @@ namespace ProcessSystem
             this.btn_User.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_User.FillColor = System.Drawing.Color.Transparent;
             this.btn_User.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_User.Location = new System.Drawing.Point(2196, 0);
+            this.btn_User.Location = new System.Drawing.Point(1343, 0);
             this.btn_User.MinimumSize = new System.Drawing.Size(1, 1);
             this.btn_User.Name = "btn_User";
             this.btn_User.RectColor = System.Drawing.Color.Transparent;
@@ -1764,7 +1764,7 @@ namespace ProcessSystem
             this.uiSymbolButton136.Dock = System.Windows.Forms.DockStyle.Right;
             this.uiSymbolButton136.FillColor = System.Drawing.Color.Transparent;
             this.uiSymbolButton136.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiSymbolButton136.Location = new System.Drawing.Point(2287, 0);
+            this.uiSymbolButton136.Location = new System.Drawing.Point(1434, 0);
             this.uiSymbolButton136.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSymbolButton136.Name = "uiSymbolButton136";
             this.uiSymbolButton136.RectColor = System.Drawing.Color.Transparent;
@@ -1791,7 +1791,7 @@ namespace ProcessSystem
             this.btn_ExportLog.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_ExportLog.FillColor = System.Drawing.Color.Transparent;
             this.btn_ExportLog.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_ExportLog.Location = new System.Drawing.Point(2378, 0);
+            this.btn_ExportLog.Location = new System.Drawing.Point(1525, 0);
             this.btn_ExportLog.MinimumSize = new System.Drawing.Size(1, 1);
             this.btn_ExportLog.Name = "btn_ExportLog";
             this.btn_ExportLog.RectColor = System.Drawing.Color.Transparent;
@@ -1821,7 +1821,7 @@ namespace ProcessSystem
             this.btn_CLose.ForeHoverColor = System.Drawing.Color.Red;
             this.btn_CLose.ForePressColor = System.Drawing.Color.Red;
             this.btn_CLose.ForeSelectedColor = System.Drawing.Color.Red;
-            this.btn_CLose.Location = new System.Drawing.Point(2469, 0);
+            this.btn_CLose.Location = new System.Drawing.Point(1616, 0);
             this.btn_CLose.MinimumSize = new System.Drawing.Size(1, 1);
             this.btn_CLose.Name = "btn_CLose";
             this.btn_CLose.RectColor = System.Drawing.Color.Transparent;
@@ -1849,9 +1849,9 @@ namespace ProcessSystem
             this.panel2.Controls.Add(this.panel10);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 1132);
+            this.panel2.Location = new System.Drawing.Point(0, 759);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(2562, 203);
+            this.panel2.Size = new System.Drawing.Size(1709, 203);
             this.panel2.TabIndex = 6;
             // 
             // panel10
@@ -1881,7 +1881,7 @@ namespace ProcessSystem
             this.lv_WaLog.Location = new System.Drawing.Point(0, 30);
             this.lv_WaLog.Name = "lv_WaLog";
             this.lv_WaLog.ShowItemToolTips = true;
-            this.lv_WaLog.Size = new System.Drawing.Size(544, 169);
+            this.lv_WaLog.Size = new System.Drawing.Size(1096, 169);
             this.lv_WaLog.SmallImageList = this.logIco;
             this.lv_WaLog.TabIndex = 3;
             this.lv_WaLog.UseCompatibleStateImageBehavior = false;
@@ -1948,7 +1948,7 @@ namespace ProcessSystem
             this.pl_Main.Location = new System.Drawing.Point(0, 45);
             this.pl_Main.Margin = new System.Windows.Forms.Padding(10);
             this.pl_Main.Name = "pl_Main";
-            this.pl_Main.Size = new System.Drawing.Size(2564, 1376);
+            this.pl_Main.Size = new System.Drawing.Size(1711, 1003);
             this.pl_Main.TabIndex = 5;
             // 
             // tbm_Main
@@ -1967,7 +1967,7 @@ namespace ProcessSystem
             this.tbm_Main.Multiline = true;
             this.tbm_Main.Name = "tbm_Main";
             this.tbm_Main.SelectedIndex = 0;
-            this.tbm_Main.Size = new System.Drawing.Size(2562, 1132);
+            this.tbm_Main.Size = new System.Drawing.Size(1709, 759);
             this.tbm_Main.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tbm_Main.Style = Sunny.UI.UIStyle.Custom;
             this.tbm_Main.TabBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(59)))), ((int)(((byte)(138)))));
@@ -1985,7 +1985,7 @@ namespace ProcessSystem
             this.tabPage1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage1.Location = new System.Drawing.Point(121, 0);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(2441, 1132);
+            this.tabPage1.Size = new System.Drawing.Size(1588, 759);
             this.tabPage1.TabIndex = 6;
             this.tabPage1.Text = "配气系统";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -2002,7 +2002,7 @@ namespace ProcessSystem
             this.uiTabControl7.MainPage = "";
             this.uiTabControl7.Name = "uiTabControl7";
             this.uiTabControl7.SelectedIndex = 0;
-            this.uiTabControl7.Size = new System.Drawing.Size(2441, 1170);
+            this.uiTabControl7.Size = new System.Drawing.Size(1588, 1170);
             this.uiTabControl7.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.uiTabControl7.TabIndex = 2;
             this.uiTabControl7.TipsFont = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -2381,7 +2381,7 @@ namespace ProcessSystem
             this.lb_Pump1.ForeColor = System.Drawing.Color.White;
             this.lb_Pump1.Location = new System.Drawing.Point(0, 40);
             this.lb_Pump1.Name = "lb_Pump1";
-            this.lb_Pump1.Size = new System.Drawing.Size(2441, 1130);
+            this.lb_Pump1.Size = new System.Drawing.Size(1588, 1130);
             this.lb_Pump1.TabIndex = 0;
             this.lb_Pump1.Text = "主界面";
             // 
@@ -11382,7 +11382,7 @@ namespace ProcessSystem
             this.tabPage27.ForeColor = System.Drawing.Color.White;
             this.tabPage27.Location = new System.Drawing.Point(0, 40);
             this.tabPage27.Name = "tabPage27";
-            this.tabPage27.Size = new System.Drawing.Size(3317, 1130);
+            this.tabPage27.Size = new System.Drawing.Size(1588, 1130);
             this.tabPage27.TabIndex = 1;
             this.tabPage27.Text = "Debug";
             // 
@@ -15739,7 +15739,7 @@ namespace ProcessSystem
             this.tabPage2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage2.Location = new System.Drawing.Point(121, 0);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(2441, 1132);
+            this.tabPage2.Size = new System.Drawing.Size(1588, 759);
             this.tabPage2.TabIndex = 0;
             this.tabPage2.Text = "液氧系统";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -15756,7 +15756,7 @@ namespace ProcessSystem
             this.uiTabControl2.MainPage = "";
             this.uiTabControl2.Name = "uiTabControl2";
             this.uiTabControl2.SelectedIndex = 0;
-            this.uiTabControl2.Size = new System.Drawing.Size(2441, 1132);
+            this.uiTabControl2.Size = new System.Drawing.Size(1588, 759);
             this.uiTabControl2.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.uiTabControl2.TabIndex = 0;
             this.uiTabControl2.TipsFont = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -16001,7 +16001,7 @@ namespace ProcessSystem
             this.tabPage10.ForeColor = System.Drawing.Color.Red;
             this.tabPage10.Location = new System.Drawing.Point(0, 40);
             this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Size = new System.Drawing.Size(2441, 1092);
+            this.tabPage10.Size = new System.Drawing.Size(1588, 719);
             this.tabPage10.TabIndex = 0;
             this.tabPage10.Text = "主界面";
             // 
@@ -21827,7 +21827,7 @@ namespace ProcessSystem
             this.tabPage11.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage11.Location = new System.Drawing.Point(0, 40);
             this.tabPage11.Name = "tabPage11";
-            this.tabPage11.Size = new System.Drawing.Size(3317, 1092);
+            this.tabPage11.Size = new System.Drawing.Size(2441, 1092);
             this.tabPage11.TabIndex = 1;
             this.tabPage11.Text = "Debug";
             // 
@@ -24591,7 +24591,7 @@ namespace ProcessSystem
             this.tabPage3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage3.Location = new System.Drawing.Point(121, 0);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(3317, 1132);
+            this.tabPage3.Size = new System.Drawing.Size(1588, 759);
             this.tabPage3.TabIndex = 1;
             this.tabPage3.Text = "甲烷系统";
             // 
@@ -24607,7 +24607,7 @@ namespace ProcessSystem
             this.uiTabControl3.MainPage = "";
             this.uiTabControl3.Name = "uiTabControl3";
             this.uiTabControl3.SelectedIndex = 0;
-            this.uiTabControl3.Size = new System.Drawing.Size(3317, 1132);
+            this.uiTabControl3.Size = new System.Drawing.Size(1588, 759);
             this.uiTabControl3.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.uiTabControl3.TabIndex = 1;
             this.uiTabControl3.TipsFont = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -24813,7 +24813,7 @@ namespace ProcessSystem
             this.tabPage12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage12.Location = new System.Drawing.Point(0, 40);
             this.tabPage12.Name = "tabPage12";
-            this.tabPage12.Size = new System.Drawing.Size(3317, 1092);
+            this.tabPage12.Size = new System.Drawing.Size(1588, 719);
             this.tabPage12.TabIndex = 0;
             this.tabPage12.Text = "主界面";
             // 
@@ -29445,7 +29445,7 @@ namespace ProcessSystem
             this.tabPage13.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage13.Location = new System.Drawing.Point(0, 40);
             this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Size = new System.Drawing.Size(3317, 1078);
+            this.tabPage13.Size = new System.Drawing.Size(2441, 1092);
             this.tabPage13.TabIndex = 1;
             this.tabPage13.Text = "Debug";
             // 
@@ -30617,7 +30617,7 @@ namespace ProcessSystem
             this.tabPage4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage4.Location = new System.Drawing.Point(121, 0);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(2441, 1132);
+            this.tabPage4.Size = new System.Drawing.Size(1588, 759);
             this.tabPage4.TabIndex = 2;
             this.tabPage4.Text = "煤油系统";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -30634,7 +30634,7 @@ namespace ProcessSystem
             this.uiTabControl4.MainPage = "";
             this.uiTabControl4.Name = "uiTabControl4";
             this.uiTabControl4.SelectedIndex = 0;
-            this.uiTabControl4.Size = new System.Drawing.Size(2441, 1132);
+            this.uiTabControl4.Size = new System.Drawing.Size(1588, 759);
             this.uiTabControl4.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.uiTabControl4.TabIndex = 1;
             this.uiTabControl4.TipsFont = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -30744,7 +30744,7 @@ namespace ProcessSystem
             this.tabPage15.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage15.Location = new System.Drawing.Point(0, 40);
             this.tabPage15.Name = "tabPage15";
-            this.tabPage15.Size = new System.Drawing.Size(2441, 1092);
+            this.tabPage15.Size = new System.Drawing.Size(1588, 719);
             this.tabPage15.TabIndex = 0;
             this.tabPage15.Text = "主界面";
             // 
@@ -33696,7 +33696,7 @@ namespace ProcessSystem
             this.tabPage17.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage17.Location = new System.Drawing.Point(0, 40);
             this.tabPage17.Name = "tabPage17";
-            this.tabPage17.Size = new System.Drawing.Size(3317, 1078);
+            this.tabPage17.Size = new System.Drawing.Size(2441, 1092);
             this.tabPage17.TabIndex = 1;
             this.tabPage17.Text = "Debug";
             // 
@@ -35409,9 +35409,9 @@ namespace ProcessSystem
             this.panel1.Controls.Add(this.lbl_SysTime);
             this.panel1.Controls.Add(this.none20);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 1335);
+            this.panel1.Location = new System.Drawing.Point(0, 962);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2562, 39);
+            this.panel1.Size = new System.Drawing.Size(1709, 39);
             this.panel1.TabIndex = 4;
             // 
             // Total1
@@ -35641,7 +35641,7 @@ namespace ProcessSystem
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(59)))), ((int)(((byte)(138)))));
-            this.ClientSize = new System.Drawing.Size(2564, 1421);
+            this.ClientSize = new System.Drawing.Size(1711, 1048);
             this.Controls.Add(this.pl_Main);
             this.Controls.Add(this.pl_Top);
             this.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));

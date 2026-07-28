@@ -121,6 +121,12 @@
     <Compile Include="FrmMsgNoAck.Designer.cs">
       <DependentUpon>FrmMsgNoAck.cs</DependentUpon>
     </Compile>
+    <Compile Include="DualFault.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DualFault.Designer.cs">
+      <DependentUpon>DualFault.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMsgWithAck.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMsgNoAck.resx">
       <DependentUpon>FrmMsgNoAck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DualFault.resx">
+      <DependentUpon>DualFault.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMsgWithAck.resx">
       <DependentUpon>FrmMsgWithAck.cs</DependentUpon>

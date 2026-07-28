@@ -18,7 +18,7 @@ namespace ProcessSystem
     {
         string[] mode1 = { "无设定模式" };
         string[] mode6 = { "PT214", "PT215", "PT216" };
-        string[] mode7 = { "PT218", "PT219", "PT220" };
+        string[] mode7 = { "PT218", "PT219", "PT220", "PT223" };
         string[] mode9 = { "PT401", "PT401a", "PT401b" };
         string[] mode10 = { "PT202", "PT203" };
         string[] mode11 = { "PT306", "PT307", "PT308" };
