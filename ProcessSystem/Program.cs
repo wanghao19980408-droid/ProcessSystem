@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProcessSystemLib;
@@ -27,9 +25,29 @@ namespace ProcessSystem
             {
                 Task.Run(() =>
                 {
-                    SqlSugarService.SetConnectionString("Data Source=192.168.25.155;Initial Catalog=FcsDB;User ID=sa;Password=123;");
-                    //SqlSugarService.SetConnectionString("Data Source=DESKTOP-6MPOC9C;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=True;Application Name=\"SQL Server Management Studio\";");
-                    SqlSugarService.CreateTable<SequenceSettingsModel>();
+                    string rawConnectionString = IniConfigHelper.ReadIniData("SqlKey", "Key", "", Application.StartupPath + "\\Config");
+
+                    if (string.IsNullOrWhiteSpace(rawConnectionString))
+                    {
+                        Console.WriteLine("数据库连接配置为空，请检查 INI 文件。");
+                        return;
+                    }
+
+                    string cleanConnectionString = rawConnectionString
+                        .Trim()                      
+                        .Replace("\r", "")           
+                        .Replace("\n", "")           
+                        .Replace("\\\"", "\"");      
+
+                    try
+                    {
+                        SqlSugarService.SetConnectionString(cleanConnectionString);
+                        SqlSugarService.CreateTable<SequenceSettingsModel>();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"数据库连接或建表失败: {ex.Message}");
+                    }
                 });
             }
             catch (Exception ex)
@@ -39,6 +57,7 @@ namespace ProcessSystem
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormMain(FuelArea, FiringI, FiringII, Gase, GaseSource, IHighAI, IIHighAI));
+
         }
     }
 }

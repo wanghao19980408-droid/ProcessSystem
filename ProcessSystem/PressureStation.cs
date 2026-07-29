@@ -598,6 +598,7 @@ namespace ProcessSystem
                     this.txt_Oxygen_P.Text = this.Tw0Device?["Pressure"]?.ToString() ?? "";
                     this.CB_OxygenSensorMain.SelectedIndex = Convert.ToInt32(this.Tw0Device?["目标传感器主"]) - 1;
                     this.CB_OxygenSensorBackup.SelectedIndex = Convert.ToInt32(this.Tw0Device?["目标传感器备"]) - 1;
+                    this.CB_OxygenSensorBackup.Enabled = true;
                     this.panel2.Enabled = true;
                     if (Convert.ToInt32(Tw0Device?["初始增压目标传感器"]) == 1)
                     {

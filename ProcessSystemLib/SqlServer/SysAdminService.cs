@@ -16,7 +16,6 @@ namespace ProcessSystemLib.SqlServer
                 e.LoginName == ud.LoginName && e.LoginPwd == ud.LoginPwd
             ).First());
         }
-
         public OperateResult<List<UserTable>> GetAllAdmin()
         {
             try
@@ -31,19 +30,43 @@ namespace ProcessSystemLib.SqlServer
         }
                 
 
-        public int AddUserTable(UserTable ud)
+        public OperateResult<int> AddUserTable(UserTable ud)
         {
-            return SqlSugarHelper.SqlSugarClient.Insertable(ud).ExecuteCommand();
+            try
+            {
+                return OperateResult<int>.CreateSuccessResult(SqlSugarHelper.SqlSugarClient.Insertable(ud).ExecuteCommand());
+
+            }
+            catch (Exception ex)
+            {
+                return OperateResult.CreateFailResult<int>(ex.Message);
+            }
         }
 
-        public int DeleteUserTable(int loginId)
+        public OperateResult<int> DeleteUserTable(int loginId)
         {
-            return SqlSugarHelper.SqlSugarClient.Deleteable<UserTable>().Where(e => e.LoginId == loginId).ExecuteCommand();
+            try
+            {
+                return OperateResult<int>.CreateSuccessResult(SqlSugarHelper.SqlSugarClient.Deleteable<UserTable>().Where(e => e.LoginId == loginId).ExecuteCommand());
+
+            }
+            catch (Exception ex)
+            {
+                return OperateResult.CreateFailResult<int>(ex.Message);
+            }
         }
 
-        public int ModifyUserTable(UserTable ud)
+        public OperateResult<int> ModifyUserTable(UserTable ud)
         {
-            return SqlSugarHelper.SqlSugarClient.Updateable(ud).WhereColumns(e => e.LoginId).ExecuteCommand();
+            try
+            {
+                return OperateResult<int>.CreateSuccessResult(SqlSugarHelper.SqlSugarClient.Updateable(ud).WhereColumns(e => e.LoginId).ExecuteCommand());
+
+            }
+            catch (Exception ex)
+            {
+                return OperateResult.CreateFailResult<int>(ex.Message);
+            }
         }
 
         public int GetCountFromLoginId(int loginId)

@@ -109,6 +109,7 @@ namespace ProcessSystem
         public FormMain(int[] fuelArea, int[] firingI, int[] firingII, int[] gase, int[] source, int[] highOne, int[] highTwo)
         {
             InitializeComponent();
+
             this.Size = new Size(3440, 1440);
             this.FuelArea = fuelArea;
             this.FiringI = firingI;
@@ -2259,27 +2260,51 @@ namespace ProcessSystem
         #endregion
 
         public UserTable UserInfo;
+        public bool IsLoginOut = false;
+
         private void btn_User_Click(object sender, EventArgs e)
         {
-            if (this.btn_User.Symbol == 560023)
+            if (this.btn_User.Symbol == 560023) 
             {
-                DialogResult dr = new FrmMsgWithAck("请确认是否登出！", "登出确认").ShowDialog();
-                if (dr == DialogResult.OK)
+                if (UserInfo != null && UserInfo.RoleType == "管理员")
                 {
-                    AddLog(0, $"用户{UserInfo.LoginName}登出成功！");
-                    UserInfo = null;
-                    this.tbm_Main.Selecting -= tbm_Main_Selecting;
-                    this.tbm_Main.SelectedIndex = 0;
-                    this.tbm_Main.Selecting += tbm_Main_Selecting;
-                    this.btn_User.Symbol = 61447;
-                    this.btn_User.Text = null;
+                    this.IsLoginOut = false;
+
+                    new FrmUser(this).ShowDialog(); 
+
+                    if (this.IsLoginOut)
+                    {
+                        this.tbm_Main.Selecting -= tbm_Main_Selecting;
+                        this.tbm_Main.SelectedIndex = 0;
+                        this.tbm_Main.Selecting += tbm_Main_Selecting;
+                        this.btn_User.Symbol = 61447;
+                        this.btn_User.Text = null;
+
+                    }
                 }
-                else
+                else 
                 {
-                    return;
+                    DialogResult dr = new FrmMsgWithAck("请确认是否登出！", "登出确认").ShowDialog();
+                    if (dr == DialogResult.OK)
+                    {
+                        this.IsLoginOut = true;
+                        this.AddLog(0, $"用户{this.UserInfo.LoginName}登出成功！");
+                        this.UserInfo = null;
+                        this.tbm_Main.Selecting -= tbm_Main_Selecting;
+                        this.tbm_Main.SelectedIndex = 0;
+                        this.tbm_Main.Selecting += tbm_Main_Selecting;
+                        this.btn_User.Symbol = 61447;
+                        this.btn_User.Text = null;
+
+                    }
+                    else
+                    {
+                        this.IsLoginOut = false;
+                        return;
+                    }
                 }
             }
-            else
+            else 
             {
                 DialogResult dr = new FrmLogin(this).ShowDialog();
                 if (dr == DialogResult.OK)
@@ -2367,7 +2392,6 @@ namespace ProcessSystem
                     }
                 }
             }
-
             ExtractNames(FuelArea_SwitchValve);
             ExtractNames(FiringI_SwitchValve);
             ExtractNames(FiringII_SwitchValve);

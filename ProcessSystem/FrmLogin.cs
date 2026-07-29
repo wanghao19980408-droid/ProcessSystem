@@ -23,6 +23,7 @@ namespace ProcessSystem
         }
 
         UserTableService adminService = new UserTableService();
+        UserTable userTable = new UserTable();
         public UserTable SysAdmin;
 
         public async void FrmLogin_Load(object sender, EventArgs e)

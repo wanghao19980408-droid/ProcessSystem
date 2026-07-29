@@ -1590,7 +1590,7 @@ namespace ProcessSystem
             // columnHeader2
             // 
             this.columnHeader2.Text = "日志信息";
-            this.columnHeader2.Width = 300;
+            this.columnHeader2.Width = 500;
             // 
             // logIco
             // 
@@ -1616,7 +1616,7 @@ namespace ProcessSystem
             this.pl_Top.ForeColor = System.Drawing.Color.White;
             this.pl_Top.Location = new System.Drawing.Point(0, 0);
             this.pl_Top.Name = "pl_Top";
-            this.pl_Top.Size = new System.Drawing.Size(1711, 45);
+            this.pl_Top.Size = new System.Drawing.Size(3440, 45);
             this.pl_Top.TabIndex = 4;
             this.pl_Top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDown);
             this.pl_Top.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseMove);
@@ -1627,7 +1627,7 @@ namespace ProcessSystem
             this.btn_TimerValve.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_TimerValve.FillColor = System.Drawing.Color.Transparent;
             this.btn_TimerValve.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_TimerValve.Location = new System.Drawing.Point(1252, 0);
+            this.btn_TimerValve.Location = new System.Drawing.Point(2981, 0);
             this.btn_TimerValve.MinimumSize = new System.Drawing.Size(1, 1);
             this.btn_TimerValve.Name = "btn_TimerValve";
             this.btn_TimerValve.RectColor = System.Drawing.Color.Transparent;
@@ -1653,7 +1653,7 @@ namespace ProcessSystem
             this.btn_User.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_User.FillColor = System.Drawing.Color.Transparent;
             this.btn_User.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_User.Location = new System.Drawing.Point(1343, 0);
+            this.btn_User.Location = new System.Drawing.Point(3072, 0);
             this.btn_User.MinimumSize = new System.Drawing.Size(1, 1);
             this.btn_User.Name = "btn_User";
             this.btn_User.RectColor = System.Drawing.Color.Transparent;
@@ -1688,7 +1688,7 @@ namespace ProcessSystem
             this.gaseSupplySensor60.InputType = ProcessSystemLib.InputValueType.PLC_Digital;
             this.gaseSupplySensor60.IsPT100 = false;
             this.gaseSupplySensor60.KValue = 1F;
-            this.gaseSupplySensor60.Location = new System.Drawing.Point(2747, 10);
+            this.gaseSupplySensor60.Location = new System.Drawing.Point(2714, 10);
             this.gaseSupplySensor60.Margin = new System.Windows.Forms.Padding(5);
             this.gaseSupplySensor60.MaxSensorRange = 1F;
             this.gaseSupplySensor60.MinSensorRange = 0F;
@@ -1764,7 +1764,7 @@ namespace ProcessSystem
             this.uiSymbolButton136.Dock = System.Windows.Forms.DockStyle.Right;
             this.uiSymbolButton136.FillColor = System.Drawing.Color.Transparent;
             this.uiSymbolButton136.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiSymbolButton136.Location = new System.Drawing.Point(1434, 0);
+            this.uiSymbolButton136.Location = new System.Drawing.Point(3163, 0);
             this.uiSymbolButton136.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSymbolButton136.Name = "uiSymbolButton136";
             this.uiSymbolButton136.RectColor = System.Drawing.Color.Transparent;
@@ -1791,7 +1791,7 @@ namespace ProcessSystem
             this.btn_ExportLog.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_ExportLog.FillColor = System.Drawing.Color.Transparent;
             this.btn_ExportLog.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_ExportLog.Location = new System.Drawing.Point(1525, 0);
+            this.btn_ExportLog.Location = new System.Drawing.Point(3254, 0);
             this.btn_ExportLog.MinimumSize = new System.Drawing.Size(1, 1);
             this.btn_ExportLog.Name = "btn_ExportLog";
             this.btn_ExportLog.RectColor = System.Drawing.Color.Transparent;
@@ -1821,7 +1821,7 @@ namespace ProcessSystem
             this.btn_CLose.ForeHoverColor = System.Drawing.Color.Red;
             this.btn_CLose.ForePressColor = System.Drawing.Color.Red;
             this.btn_CLose.ForeSelectedColor = System.Drawing.Color.Red;
-            this.btn_CLose.Location = new System.Drawing.Point(1616, 0);
+            this.btn_CLose.Location = new System.Drawing.Point(3345, 0);
             this.btn_CLose.MinimumSize = new System.Drawing.Size(1, 1);
             this.btn_CLose.Name = "btn_CLose";
             this.btn_CLose.RectColor = System.Drawing.Color.Transparent;
@@ -1849,9 +1849,9 @@ namespace ProcessSystem
             this.panel2.Controls.Add(this.panel10);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 759);
+            this.panel2.Location = new System.Drawing.Point(0, 1132);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1709, 203);
+            this.panel2.Size = new System.Drawing.Size(3438, 203);
             this.panel2.TabIndex = 6;
             // 
             // panel10
@@ -1861,9 +1861,9 @@ namespace ProcessSystem
             this.panel10.Controls.Add(this.lv_WaLog);
             this.panel10.Controls.Add(this.uiSymbolLabel2);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel10.Location = new System.Drawing.Point(2014, 0);
+            this.panel10.Location = new System.Drawing.Point(2001, 0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(546, 201);
+            this.panel10.Size = new System.Drawing.Size(1435, 201);
             this.panel10.TabIndex = 9;
             // 
             // lv_WaLog
@@ -1881,7 +1881,7 @@ namespace ProcessSystem
             this.lv_WaLog.Location = new System.Drawing.Point(0, 30);
             this.lv_WaLog.Name = "lv_WaLog";
             this.lv_WaLog.ShowItemToolTips = true;
-            this.lv_WaLog.Size = new System.Drawing.Size(1096, 169);
+            this.lv_WaLog.Size = new System.Drawing.Size(1433, 169);
             this.lv_WaLog.SmallImageList = this.logIco;
             this.lv_WaLog.TabIndex = 3;
             this.lv_WaLog.UseCompatibleStateImageBehavior = false;
@@ -1948,7 +1948,7 @@ namespace ProcessSystem
             this.pl_Main.Location = new System.Drawing.Point(0, 45);
             this.pl_Main.Margin = new System.Windows.Forms.Padding(10);
             this.pl_Main.Name = "pl_Main";
-            this.pl_Main.Size = new System.Drawing.Size(1711, 1003);
+            this.pl_Main.Size = new System.Drawing.Size(3440, 1376);
             this.pl_Main.TabIndex = 5;
             // 
             // tbm_Main
@@ -1967,7 +1967,7 @@ namespace ProcessSystem
             this.tbm_Main.Multiline = true;
             this.tbm_Main.Name = "tbm_Main";
             this.tbm_Main.SelectedIndex = 0;
-            this.tbm_Main.Size = new System.Drawing.Size(1709, 759);
+            this.tbm_Main.Size = new System.Drawing.Size(3438, 1132);
             this.tbm_Main.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tbm_Main.Style = Sunny.UI.UIStyle.Custom;
             this.tbm_Main.TabBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(59)))), ((int)(((byte)(138)))));
@@ -1985,7 +1985,7 @@ namespace ProcessSystem
             this.tabPage1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage1.Location = new System.Drawing.Point(121, 0);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1588, 759);
+            this.tabPage1.Size = new System.Drawing.Size(3317, 1132);
             this.tabPage1.TabIndex = 6;
             this.tabPage1.Text = "配气系统";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -2002,7 +2002,7 @@ namespace ProcessSystem
             this.uiTabControl7.MainPage = "";
             this.uiTabControl7.Name = "uiTabControl7";
             this.uiTabControl7.SelectedIndex = 0;
-            this.uiTabControl7.Size = new System.Drawing.Size(1588, 1170);
+            this.uiTabControl7.Size = new System.Drawing.Size(3317, 1170);
             this.uiTabControl7.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.uiTabControl7.TabIndex = 2;
             this.uiTabControl7.TipsFont = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -2381,7 +2381,7 @@ namespace ProcessSystem
             this.lb_Pump1.ForeColor = System.Drawing.Color.White;
             this.lb_Pump1.Location = new System.Drawing.Point(0, 40);
             this.lb_Pump1.Name = "lb_Pump1";
-            this.lb_Pump1.Size = new System.Drawing.Size(1588, 1130);
+            this.lb_Pump1.Size = new System.Drawing.Size(3317, 1130);
             this.lb_Pump1.TabIndex = 0;
             this.lb_Pump1.Text = "主界面";
             // 
@@ -4757,7 +4757,7 @@ namespace ProcessSystem
             this.label459.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label459.Location = new System.Drawing.Point(2190, 9);
             this.label459.Name = "label459";
-            this.label459.Size = new System.Drawing.Size(182, 31);
+            this.label459.Size = new System.Drawing.Size(122, 22);
             this.label459.TabIndex = 425;
             this.label459.Text = "燃增压供气阀台";
             // 
@@ -4767,7 +4767,7 @@ namespace ProcessSystem
             this.label458.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label458.Location = new System.Drawing.Point(1624, 9);
             this.label458.Name = "label458";
-            this.label458.Size = new System.Drawing.Size(245, 31);
+            this.label458.Size = new System.Drawing.Size(164, 22);
             this.label458.TabIndex = 425;
             this.label458.Text = "工位2氧增压供气阀台";
             // 
@@ -4777,7 +4777,7 @@ namespace ProcessSystem
             this.label405.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label405.Location = new System.Drawing.Point(1055, 9);
             this.label405.Name = "label405";
-            this.label405.Size = new System.Drawing.Size(245, 31);
+            this.label405.Size = new System.Drawing.Size(164, 22);
             this.label405.TabIndex = 425;
             this.label405.Text = "工位1氧增压供气阀台";
             // 
@@ -5891,7 +5891,7 @@ namespace ProcessSystem
             this.label277.ForeColor = System.Drawing.Color.White;
             this.label277.Location = new System.Drawing.Point(14, 94);
             this.label277.Name = "label277";
-            this.label277.Size = new System.Drawing.Size(107, 28);
+            this.label277.Size = new System.Drawing.Size(72, 20);
             this.label277.TabIndex = 239;
             this.label277.Text = "核心温度 :";
             // 
@@ -5913,7 +5913,7 @@ namespace ProcessSystem
             this.label279.ForeColor = System.Drawing.Color.White;
             this.label279.Location = new System.Drawing.Point(14, 63);
             this.label279.Name = "label279";
-            this.label279.Size = new System.Drawing.Size(128, 28);
+            this.label279.Size = new System.Drawing.Size(86, 20);
             this.label279.TabIndex = 240;
             this.label279.Text = "输出百分率 :";
             // 
@@ -5935,7 +5935,7 @@ namespace ProcessSystem
             this.label281.ForeColor = System.Drawing.Color.White;
             this.label281.Location = new System.Drawing.Point(177, 64);
             this.label281.Name = "label281";
-            this.label281.Size = new System.Drawing.Size(31, 28);
+            this.label281.Size = new System.Drawing.Size(21, 20);
             this.label281.TabIndex = 241;
             this.label281.Text = "%";
             // 
@@ -5946,7 +5946,7 @@ namespace ProcessSystem
             this.label287.ForeColor = System.Drawing.Color.White;
             this.label287.Location = new System.Drawing.Point(162, 96);
             this.label287.Name = "label287";
-            this.label287.Size = new System.Drawing.Size(0, 28);
+            this.label287.Size = new System.Drawing.Size(0, 20);
             this.label287.TabIndex = 242;
             // 
             // label288
@@ -5956,7 +5956,7 @@ namespace ProcessSystem
             this.label288.ForeColor = System.Drawing.Color.White;
             this.label288.Location = new System.Drawing.Point(177, 96);
             this.label288.Name = "label288";
-            this.label288.Size = new System.Drawing.Size(33, 28);
+            this.label288.Size = new System.Drawing.Size(23, 20);
             this.label288.TabIndex = 243;
             this.label288.Text = "℃";
             // 
@@ -5967,7 +5967,7 @@ namespace ProcessSystem
             this.label294.ForeColor = System.Drawing.Color.White;
             this.label294.Location = new System.Drawing.Point(177, 31);
             this.label294.Name = "label294";
-            this.label294.Size = new System.Drawing.Size(33, 28);
+            this.label294.Size = new System.Drawing.Size(23, 20);
             this.label294.TabIndex = 244;
             this.label294.Text = "℃";
             // 
@@ -5978,7 +5978,7 @@ namespace ProcessSystem
             this.label295.ForeColor = System.Drawing.Color.White;
             this.label295.Location = new System.Drawing.Point(14, 31);
             this.label295.Name = "label295";
-            this.label295.Size = new System.Drawing.Size(107, 28);
+            this.label295.Size = new System.Drawing.Size(72, 20);
             this.label295.TabIndex = 245;
             this.label295.Text = "出口温度 :";
             // 
@@ -6156,7 +6156,7 @@ namespace ProcessSystem
             this.label665.ForeColor = System.Drawing.Color.White;
             this.label665.Location = new System.Drawing.Point(6, 91);
             this.label665.Name = "label665";
-            this.label665.Size = new System.Drawing.Size(76, 31);
+            this.label665.Size = new System.Drawing.Size(52, 22);
             this.label665.TabIndex = 239;
             this.label665.Text = "气温 :";
             // 
@@ -6179,7 +6179,7 @@ namespace ProcessSystem
             this.label663.ForeColor = System.Drawing.Color.White;
             this.label663.Location = new System.Drawing.Point(6, 60);
             this.label663.Name = "label663";
-            this.label663.Size = new System.Drawing.Size(76, 31);
+            this.label663.Size = new System.Drawing.Size(52, 22);
             this.label663.TabIndex = 240;
             this.label663.Text = "液位 :";
             // 
@@ -6202,7 +6202,7 @@ namespace ProcessSystem
             this.label670.ForeColor = System.Drawing.Color.White;
             this.label670.Location = new System.Drawing.Point(130, 60);
             this.label670.Name = "label670";
-            this.label670.Size = new System.Drawing.Size(62, 31);
+            this.label670.Size = new System.Drawing.Size(42, 22);
             this.label670.TabIndex = 241;
             this.label670.Text = "mm";
             // 
@@ -6212,7 +6212,7 @@ namespace ProcessSystem
             this.label664.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label664.Location = new System.Drawing.Point(128, 94);
             this.label664.Name = "label664";
-            this.label664.Size = new System.Drawing.Size(0, 31);
+            this.label664.Size = new System.Drawing.Size(0, 22);
             this.label664.TabIndex = 242;
             // 
             // label671
@@ -6222,7 +6222,7 @@ namespace ProcessSystem
             this.label671.ForeColor = System.Drawing.Color.White;
             this.label671.Location = new System.Drawing.Point(132, 95);
             this.label671.Name = "label671";
-            this.label671.Size = new System.Drawing.Size(38, 31);
+            this.label671.Size = new System.Drawing.Size(26, 22);
             this.label671.TabIndex = 243;
             this.label671.Text = "℃";
             // 
@@ -6233,7 +6233,7 @@ namespace ProcessSystem
             this.label662.ForeColor = System.Drawing.Color.White;
             this.label662.Location = new System.Drawing.Point(130, 29);
             this.label662.Name = "label662";
-            this.label662.Size = new System.Drawing.Size(38, 31);
+            this.label662.Size = new System.Drawing.Size(26, 22);
             this.label662.TabIndex = 244;
             this.label662.Text = "℃";
             // 
@@ -6244,7 +6244,7 @@ namespace ProcessSystem
             this.label661.ForeColor = System.Drawing.Color.White;
             this.label661.Location = new System.Drawing.Point(6, 29);
             this.label661.Name = "label661";
-            this.label661.Size = new System.Drawing.Size(76, 31);
+            this.label661.Size = new System.Drawing.Size(52, 22);
             this.label661.TabIndex = 245;
             this.label661.Text = "水温 :";
             // 
@@ -6337,7 +6337,7 @@ namespace ProcessSystem
             this.label675.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label675.Location = new System.Drawing.Point(776, 1021);
             this.label675.Name = "label675";
-            this.label675.Size = new System.Drawing.Size(33, 28);
+            this.label675.Size = new System.Drawing.Size(23, 20);
             this.label675.TabIndex = 237;
             this.label675.Text = "℃";
             // 
@@ -6347,7 +6347,7 @@ namespace ProcessSystem
             this.label667.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label667.Location = new System.Drawing.Point(606, 202);
             this.label667.Name = "label667";
-            this.label667.Size = new System.Drawing.Size(33, 28);
+            this.label667.Size = new System.Drawing.Size(23, 20);
             this.label667.TabIndex = 237;
             this.label667.Text = "℃";
             // 
@@ -6357,7 +6357,7 @@ namespace ProcessSystem
             this.label674.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label674.Location = new System.Drawing.Point(906, 1025);
             this.label674.Name = "label674";
-            this.label674.Size = new System.Drawing.Size(38, 28);
+            this.label674.Size = new System.Drawing.Size(27, 20);
             this.label674.TabIndex = 237;
             this.label674.Text = "Hz";
             // 
@@ -6367,7 +6367,7 @@ namespace ProcessSystem
             this.label673.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label673.Location = new System.Drawing.Point(908, 962);
             this.label673.Name = "label673";
-            this.label673.Size = new System.Drawing.Size(58, 28);
+            this.label673.Size = new System.Drawing.Size(40, 20);
             this.label673.TabIndex = 237;
             this.label673.Text = "Mpa";
             // 
@@ -6377,7 +6377,7 @@ namespace ProcessSystem
             this.label669.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label669.Location = new System.Drawing.Point(742, 202);
             this.label669.Name = "label669";
-            this.label669.Size = new System.Drawing.Size(38, 28);
+            this.label669.Size = new System.Drawing.Size(27, 20);
             this.label669.TabIndex = 237;
             this.label669.Text = "Hz";
             // 
@@ -6387,7 +6387,7 @@ namespace ProcessSystem
             this.label672.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label672.Location = new System.Drawing.Point(776, 960);
             this.label672.Name = "label672";
-            this.label672.Size = new System.Drawing.Size(33, 28);
+            this.label672.Size = new System.Drawing.Size(23, 20);
             this.label672.TabIndex = 237;
             this.label672.Text = "℃";
             // 
@@ -6397,7 +6397,7 @@ namespace ProcessSystem
             this.label668.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label668.Location = new System.Drawing.Point(742, 140);
             this.label668.Name = "label668";
-            this.label668.Size = new System.Drawing.Size(58, 28);
+            this.label668.Size = new System.Drawing.Size(40, 20);
             this.label668.TabIndex = 237;
             this.label668.Text = "Mpa";
             // 
@@ -6407,7 +6407,7 @@ namespace ProcessSystem
             this.label666.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label666.Location = new System.Drawing.Point(606, 142);
             this.label666.Name = "label666";
-            this.label666.Size = new System.Drawing.Size(33, 28);
+            this.label666.Size = new System.Drawing.Size(23, 20);
             this.label666.TabIndex = 237;
             this.label666.Text = "℃";
             // 
@@ -6602,7 +6602,7 @@ namespace ProcessSystem
             this.lb_Pump2Info.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lb_Pump2Info.Location = new System.Drawing.Point(586, 1060);
             this.lb_Pump2Info.Name = "lb_Pump2Info";
-            this.lb_Pump2Info.Size = new System.Drawing.Size(143, 28);
+            this.lb_Pump2Info.Size = new System.Drawing.Size(97, 19);
             this.lb_Pump2Info.TabIndex = 271;
             this.lb_Pump2Info.Text = "低温液氮泵2#";
             // 
@@ -6647,7 +6647,7 @@ namespace ProcessSystem
             this.lb_Pump1Info.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lb_Pump1Info.Location = new System.Drawing.Point(587, 249);
             this.lb_Pump1Info.Name = "lb_Pump1Info";
-            this.lb_Pump1Info.Size = new System.Drawing.Size(143, 28);
+            this.lb_Pump1Info.Size = new System.Drawing.Size(97, 19);
             this.lb_Pump1Info.TabIndex = 237;
             this.lb_Pump1Info.Text = "低温液氮泵1#";
             // 
@@ -6657,7 +6657,7 @@ namespace ProcessSystem
             this.label657.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label657.Location = new System.Drawing.Point(830, 988);
             this.label657.Name = "label657";
-            this.label657.Size = new System.Drawing.Size(101, 28);
+            this.label657.Size = new System.Drawing.Size(69, 19);
             this.label657.TabIndex = 237;
             this.label657.Text = "2#泵频率";
             // 
@@ -6667,7 +6667,7 @@ namespace ProcessSystem
             this.label653.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label653.Location = new System.Drawing.Point(660, 169);
             this.label653.Name = "label653";
-            this.label653.Size = new System.Drawing.Size(101, 28);
+            this.label653.Size = new System.Drawing.Size(69, 19);
             this.label653.TabIndex = 237;
             this.label653.Text = "1#泵频率";
             // 
@@ -6677,7 +6677,7 @@ namespace ProcessSystem
             this.label656.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label656.Location = new System.Drawing.Point(830, 920);
             this.label656.Name = "label656";
-            this.label656.Size = new System.Drawing.Size(122, 28);
+            this.label656.Size = new System.Drawing.Size(83, 19);
             this.label656.TabIndex = 237;
             this.label656.Text = "2#出气压力";
             // 
@@ -6687,7 +6687,7 @@ namespace ProcessSystem
             this.label652.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label652.Location = new System.Drawing.Point(660, 101);
             this.label652.Name = "label652";
-            this.label652.Size = new System.Drawing.Size(122, 28);
+            this.label652.Size = new System.Drawing.Size(83, 19);
             this.label652.TabIndex = 237;
             this.label652.Text = "1#出气压力";
             // 
@@ -6774,7 +6774,7 @@ namespace ProcessSystem
             this.label520.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label520.Location = new System.Drawing.Point(701, 988);
             this.label520.Name = "label520";
-            this.label520.Size = new System.Drawing.Size(122, 28);
+            this.label520.Size = new System.Drawing.Size(83, 19);
             this.label520.TabIndex = 237;
             this.label520.Text = "2#出气温度";
             // 
@@ -6795,7 +6795,7 @@ namespace ProcessSystem
             this.label519.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label519.Location = new System.Drawing.Point(701, 920);
             this.label519.Name = "label519";
-            this.label519.Size = new System.Drawing.Size(122, 28);
+            this.label519.Size = new System.Drawing.Size(83, 19);
             this.label519.TabIndex = 237;
             this.label519.Text = "2#回气温度";
             // 
@@ -6805,7 +6805,7 @@ namespace ProcessSystem
             this.label651.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label651.Location = new System.Drawing.Point(531, 169);
             this.label651.Name = "label651";
-            this.label651.Size = new System.Drawing.Size(122, 28);
+            this.label651.Size = new System.Drawing.Size(83, 19);
             this.label651.TabIndex = 237;
             this.label651.Text = "1#出气温度";
             // 
@@ -6815,7 +6815,7 @@ namespace ProcessSystem
             this.label650.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label650.Location = new System.Drawing.Point(531, 101);
             this.label650.Name = "label650";
-            this.label650.Size = new System.Drawing.Size(122, 28);
+            this.label650.Size = new System.Drawing.Size(83, 19);
             this.label650.TabIndex = 237;
             this.label650.Text = "1#回气温度";
             // 
@@ -6825,7 +6825,7 @@ namespace ProcessSystem
             this.label2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.Location = new System.Drawing.Point(2424, 153);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 28);
+            this.label2.Size = new System.Drawing.Size(67, 19);
             this.label2.TabIndex = 237;
             this.label2.Text = "RDK2(a)";
             // 
@@ -6835,7 +6835,7 @@ namespace ProcessSystem
             this.label534.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label534.Location = new System.Drawing.Point(1273, 574);
             this.label534.Name = "label534";
-            this.label534.Size = new System.Drawing.Size(83, 28);
+            this.label534.Size = new System.Drawing.Size(56, 19);
             this.label534.TabIndex = 237;
             this.label534.Text = "Q23(a)";
             // 
@@ -8973,7 +8973,7 @@ namespace ProcessSystem
             this.label501.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label501.Location = new System.Drawing.Point(208, 716);
             this.label501.Name = "label501";
-            this.label501.Size = new System.Drawing.Size(186, 47);
+            this.label501.Size = new System.Drawing.Size(125, 31);
             this.label501.TabIndex = 229;
             this.label501.Text = "液氮储罐2";
             // 
@@ -8985,7 +8985,7 @@ namespace ProcessSystem
             this.label500.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label500.Location = new System.Drawing.Point(217, 192);
             this.label500.Name = "label500";
-            this.label500.Size = new System.Drawing.Size(166, 42);
+            this.label500.Size = new System.Drawing.Size(109, 28);
             this.label500.TabIndex = 229;
             this.label500.Text = "液氮储罐1";
             // 
@@ -11382,7 +11382,7 @@ namespace ProcessSystem
             this.tabPage27.ForeColor = System.Drawing.Color.White;
             this.tabPage27.Location = new System.Drawing.Point(0, 40);
             this.tabPage27.Name = "tabPage27";
-            this.tabPage27.Size = new System.Drawing.Size(1588, 1130);
+            this.tabPage27.Size = new System.Drawing.Size(3317, 1130);
             this.tabPage27.TabIndex = 1;
             this.tabPage27.Text = "Debug";
             // 
@@ -15739,7 +15739,7 @@ namespace ProcessSystem
             this.tabPage2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage2.Location = new System.Drawing.Point(121, 0);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1588, 759);
+            this.tabPage2.Size = new System.Drawing.Size(3317, 1151);
             this.tabPage2.TabIndex = 0;
             this.tabPage2.Text = "液氧系统";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -15756,7 +15756,7 @@ namespace ProcessSystem
             this.uiTabControl2.MainPage = "";
             this.uiTabControl2.Name = "uiTabControl2";
             this.uiTabControl2.SelectedIndex = 0;
-            this.uiTabControl2.Size = new System.Drawing.Size(1588, 759);
+            this.uiTabControl2.Size = new System.Drawing.Size(3317, 1151);
             this.uiTabControl2.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.uiTabControl2.TabIndex = 0;
             this.uiTabControl2.TipsFont = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -16001,7 +16001,7 @@ namespace ProcessSystem
             this.tabPage10.ForeColor = System.Drawing.Color.Red;
             this.tabPage10.Location = new System.Drawing.Point(0, 40);
             this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Size = new System.Drawing.Size(1588, 719);
+            this.tabPage10.Size = new System.Drawing.Size(3317, 1111);
             this.tabPage10.TabIndex = 0;
             this.tabPage10.Text = "主界面";
             // 
@@ -19192,7 +19192,7 @@ namespace ProcessSystem
             this.label805.ForeColor = System.Drawing.Color.GreenYellow;
             this.label805.Location = new System.Drawing.Point(1941, 433);
             this.label805.Name = "label805";
-            this.label805.Size = new System.Drawing.Size(134, 31);
+            this.label805.Size = new System.Drawing.Size(90, 22);
             this.label805.TabIndex = 475;
             this.label805.Text = "热氮加注口";
             // 
@@ -20902,7 +20902,7 @@ namespace ProcessSystem
             this.label394.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label394.Location = new System.Drawing.Point(2150, 126);
             this.label394.Name = "label394";
-            this.label394.Size = new System.Drawing.Size(230, 42);
+            this.label394.Size = new System.Drawing.Size(151, 28);
             this.label394.TabIndex = 16;
             this.label394.Text = "1工位液氧储罐";
             // 
@@ -20914,7 +20914,7 @@ namespace ProcessSystem
             this.label400.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label400.Location = new System.Drawing.Point(1781, 777);
             this.label400.Name = "label400";
-            this.label400.Size = new System.Drawing.Size(146, 42);
+            this.label400.Size = new System.Drawing.Size(96, 28);
             this.label400.TabIndex = 16;
             this.label400.Text = "液氮储罐";
             // 
@@ -20926,7 +20926,7 @@ namespace ProcessSystem
             this.label401.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label401.Location = new System.Drawing.Point(330, 775);
             this.label401.Name = "label401";
-            this.label401.Size = new System.Drawing.Size(178, 42);
+            this.label401.Size = new System.Drawing.Size(117, 28);
             this.label401.TabIndex = 16;
             this.label401.Text = "液氧暂存罐";
             // 
@@ -20938,7 +20938,7 @@ namespace ProcessSystem
             this.label399.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label399.Location = new System.Drawing.Point(463, 152);
             this.label399.Name = "label399";
-            this.label399.Size = new System.Drawing.Size(230, 42);
+            this.label399.Size = new System.Drawing.Size(151, 28);
             this.label399.TabIndex = 16;
             this.label399.Text = "2工位液氧储罐";
             // 
@@ -20950,7 +20950,7 @@ namespace ProcessSystem
             this.label391.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label391.Location = new System.Drawing.Point(1081, 168);
             this.label391.Name = "label391";
-            this.label391.Size = new System.Drawing.Size(178, 42);
+            this.label391.Size = new System.Drawing.Size(117, 28);
             this.label391.TabIndex = 16;
             this.label391.Text = "液氧过冷器";
             // 
@@ -20961,7 +20961,7 @@ namespace ProcessSystem
             this.label729.ForeColor = System.Drawing.Color.GreenYellow;
             this.label729.Location = new System.Drawing.Point(1482, 1004);
             this.label729.Name = "label729";
-            this.label729.Size = new System.Drawing.Size(134, 31);
+            this.label729.Size = new System.Drawing.Size(90, 22);
             this.label729.TabIndex = 16;
             this.label729.Text = "液氧暂存罐";
             // 
@@ -20972,7 +20972,7 @@ namespace ProcessSystem
             this.label814.ForeColor = System.Drawing.Color.GreenYellow;
             this.label814.Location = new System.Drawing.Point(1027, 760);
             this.label814.Name = "label814";
-            this.label814.Size = new System.Drawing.Size(182, 31);
+            this.label814.Size = new System.Drawing.Size(122, 22);
             this.label814.TabIndex = 16;
             this.label814.Text = "过滤器高点排气";
             // 
@@ -20983,7 +20983,7 @@ namespace ProcessSystem
             this.label810.ForeColor = System.Drawing.Color.GreenYellow;
             this.label810.Location = new System.Drawing.Point(3173, 435);
             this.label810.Name = "label810";
-            this.label810.Size = new System.Drawing.Size(182, 31);
+            this.label810.Size = new System.Drawing.Size(122, 22);
             this.label810.TabIndex = 16;
             this.label810.Text = "过滤器高点排气";
             // 
@@ -20994,7 +20994,7 @@ namespace ProcessSystem
             this.label813.ForeColor = System.Drawing.Color.GreenYellow;
             this.label813.Location = new System.Drawing.Point(1536, 273);
             this.label813.Name = "label813";
-            this.label813.Size = new System.Drawing.Size(86, 31);
+            this.label813.Size = new System.Drawing.Size(58, 22);
             this.label813.TabIndex = 16;
             this.label813.Text = "加注口";
             // 
@@ -21005,7 +21005,7 @@ namespace ProcessSystem
             this.label812.ForeColor = System.Drawing.Color.GreenYellow;
             this.label812.Location = new System.Drawing.Point(1538, 348);
             this.label812.Name = "label812";
-            this.label812.Size = new System.Drawing.Size(86, 31);
+            this.label812.Size = new System.Drawing.Size(58, 22);
             this.label812.TabIndex = 16;
             this.label812.Text = "排气口";
             // 
@@ -21016,7 +21016,7 @@ namespace ProcessSystem
             this.label811.ForeColor = System.Drawing.Color.GreenYellow;
             this.label811.Location = new System.Drawing.Point(1716, 397);
             this.label811.Name = "label811";
-            this.label811.Size = new System.Drawing.Size(182, 31);
+            this.label811.Size = new System.Drawing.Size(122, 22);
             this.label811.TabIndex = 16;
             this.label811.Text = "常温氮气进气口";
             // 
@@ -21027,7 +21027,7 @@ namespace ProcessSystem
             this.label815.ForeColor = System.Drawing.Color.GreenYellow;
             this.label815.Location = new System.Drawing.Point(792, 773);
             this.label815.Name = "label815";
-            this.label815.Size = new System.Drawing.Size(182, 31);
+            this.label815.Size = new System.Drawing.Size(122, 22);
             this.label815.TabIndex = 16;
             this.label815.Text = "常温氮气进气口";
             // 
@@ -21038,7 +21038,7 @@ namespace ProcessSystem
             this.label809.ForeColor = System.Drawing.Color.GreenYellow;
             this.label809.Location = new System.Drawing.Point(2599, 750);
             this.label809.Name = "label809";
-            this.label809.Size = new System.Drawing.Size(182, 31);
+            this.label809.Size = new System.Drawing.Size(122, 22);
             this.label809.TabIndex = 16;
             this.label809.Text = "常温氮气进气口";
             // 
@@ -21049,7 +21049,7 @@ namespace ProcessSystem
             this.label712.ForeColor = System.Drawing.Color.GreenYellow;
             this.label712.Location = new System.Drawing.Point(2376, 962);
             this.label712.Name = "label712";
-            this.label712.Size = new System.Drawing.Size(134, 31);
+            this.label712.Size = new System.Drawing.Size(90, 22);
             this.label712.TabIndex = 16;
             this.label712.Text = "液氧暂存罐";
             // 
@@ -21060,7 +21060,7 @@ namespace ProcessSystem
             this.label688.ForeColor = System.Drawing.Color.GreenYellow;
             this.label688.Location = new System.Drawing.Point(21, 970);
             this.label688.Name = "label688";
-            this.label688.Size = new System.Drawing.Size(182, 31);
+            this.label688.Size = new System.Drawing.Size(122, 22);
             this.label688.TabIndex = 16;
             this.label688.Text = "试车台安全区域";
             // 
@@ -21071,7 +21071,7 @@ namespace ProcessSystem
             this.label385.ForeColor = System.Drawing.Color.YellowGreen;
             this.label385.Location = new System.Drawing.Point(172, 548);
             this.label385.Name = "label385";
-            this.label385.Size = new System.Drawing.Size(134, 31);
+            this.label385.Size = new System.Drawing.Size(90, 22);
             this.label385.TabIndex = 16;
             this.label385.Text = "热氮加注口";
             // 
@@ -21082,7 +21082,7 @@ namespace ProcessSystem
             this.label433.ForeColor = System.Drawing.Color.GreenYellow;
             this.label433.Location = new System.Drawing.Point(1994, 1025);
             this.label433.Name = "label433";
-            this.label433.Size = new System.Drawing.Size(134, 31);
+            this.label433.Size = new System.Drawing.Size(90, 22);
             this.label433.TabIndex = 16;
             this.label433.Text = "液氮加注口";
             // 
@@ -21827,7 +21827,7 @@ namespace ProcessSystem
             this.tabPage11.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage11.Location = new System.Drawing.Point(0, 40);
             this.tabPage11.Name = "tabPage11";
-            this.tabPage11.Size = new System.Drawing.Size(2441, 1092);
+            this.tabPage11.Size = new System.Drawing.Size(1588, 719);
             this.tabPage11.TabIndex = 1;
             this.tabPage11.Text = "Debug";
             // 
@@ -24591,7 +24591,7 @@ namespace ProcessSystem
             this.tabPage3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage3.Location = new System.Drawing.Point(121, 0);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1588, 759);
+            this.tabPage3.Size = new System.Drawing.Size(3317, 1151);
             this.tabPage3.TabIndex = 1;
             this.tabPage3.Text = "甲烷系统";
             // 
@@ -24607,7 +24607,7 @@ namespace ProcessSystem
             this.uiTabControl3.MainPage = "";
             this.uiTabControl3.Name = "uiTabControl3";
             this.uiTabControl3.SelectedIndex = 0;
-            this.uiTabControl3.Size = new System.Drawing.Size(1588, 759);
+            this.uiTabControl3.Size = new System.Drawing.Size(3317, 1151);
             this.uiTabControl3.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.uiTabControl3.TabIndex = 1;
             this.uiTabControl3.TipsFont = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -24813,7 +24813,7 @@ namespace ProcessSystem
             this.tabPage12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage12.Location = new System.Drawing.Point(0, 40);
             this.tabPage12.Name = "tabPage12";
-            this.tabPage12.Size = new System.Drawing.Size(1588, 719);
+            this.tabPage12.Size = new System.Drawing.Size(3317, 1111);
             this.tabPage12.TabIndex = 0;
             this.tabPage12.Text = "主界面";
             // 
@@ -27120,7 +27120,7 @@ namespace ProcessSystem
             this.label786.ForeColor = System.Drawing.Color.White;
             this.label786.Location = new System.Drawing.Point(6, 134);
             this.label786.Name = "label786";
-            this.label786.Size = new System.Drawing.Size(141, 25);
+            this.label786.Size = new System.Drawing.Size(94, 17);
             this.label786.TabIndex = 239;
             this.label786.Text = "可燃气体浓度2 :";
             // 
@@ -27131,7 +27131,7 @@ namespace ProcessSystem
             this.label826.ForeColor = System.Drawing.Color.White;
             this.label826.Location = new System.Drawing.Point(138, 202);
             this.label826.Name = "label826";
-            this.label826.Size = new System.Drawing.Size(141, 25);
+            this.label826.Size = new System.Drawing.Size(94, 17);
             this.label826.TabIndex = 239;
             this.label826.Text = "自动点火失败2 :";
             // 
@@ -27142,7 +27142,7 @@ namespace ProcessSystem
             this.label788.ForeColor = System.Drawing.Color.White;
             this.label788.Location = new System.Drawing.Point(6, 202);
             this.label788.Name = "label788";
-            this.label788.Size = new System.Drawing.Size(141, 25);
+            this.label788.Size = new System.Drawing.Size(94, 17);
             this.label788.TabIndex = 239;
             this.label788.Text = "自动点火失败1 :";
             // 
@@ -27153,7 +27153,7 @@ namespace ProcessSystem
             this.label787.ForeColor = System.Drawing.Color.White;
             this.label787.Location = new System.Drawing.Point(6, 168);
             this.label787.Name = "label787";
-            this.label787.Size = new System.Drawing.Size(130, 25);
+            this.label787.Size = new System.Drawing.Size(87, 17);
             this.label787.TabIndex = 239;
             this.label787.Text = "可燃气体超标 :";
             // 
@@ -27164,7 +27164,7 @@ namespace ProcessSystem
             this.label816.ForeColor = System.Drawing.Color.White;
             this.label816.Location = new System.Drawing.Point(6, 100);
             this.label816.Name = "label816";
-            this.label816.Size = new System.Drawing.Size(141, 25);
+            this.label816.Size = new System.Drawing.Size(94, 17);
             this.label816.TabIndex = 239;
             this.label816.Text = "可燃气体浓度1 :";
             // 
@@ -27187,7 +27187,7 @@ namespace ProcessSystem
             this.label818.ForeColor = System.Drawing.Color.White;
             this.label818.Location = new System.Drawing.Point(6, 66);
             this.label818.Name = "label818";
-            this.label818.Size = new System.Drawing.Size(105, 25);
+            this.label818.Size = new System.Drawing.Size(70, 17);
             this.label818.TabIndex = 240;
             this.label818.Text = "火炬压力2 :";
             // 
@@ -27210,7 +27210,7 @@ namespace ProcessSystem
             this.label820.ForeColor = System.Drawing.Color.White;
             this.label820.Location = new System.Drawing.Point(189, 67);
             this.label820.Name = "label820";
-            this.label820.Size = new System.Drawing.Size(61, 31);
+            this.label820.Size = new System.Drawing.Size(41, 22);
             this.label820.TabIndex = 241;
             this.label820.Text = "KPa";
             // 
@@ -27221,7 +27221,7 @@ namespace ProcessSystem
             this.label827.ForeColor = System.Drawing.Color.White;
             this.label827.Location = new System.Drawing.Point(190, 135);
             this.label827.Name = "label827";
-            this.label827.Size = new System.Drawing.Size(36, 31);
+            this.label827.Size = new System.Drawing.Size(25, 22);
             this.label827.TabIndex = 243;
             this.label827.Text = "%";
             // 
@@ -27231,7 +27231,7 @@ namespace ProcessSystem
             this.label821.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label821.Location = new System.Drawing.Point(146, 95);
             this.label821.Name = "label821";
-            this.label821.Size = new System.Drawing.Size(0, 25);
+            this.label821.Size = new System.Drawing.Size(0, 17);
             this.label821.TabIndex = 242;
             // 
             // label822
@@ -27241,7 +27241,7 @@ namespace ProcessSystem
             this.label822.ForeColor = System.Drawing.Color.White;
             this.label822.Location = new System.Drawing.Point(191, 101);
             this.label822.Name = "label822";
-            this.label822.Size = new System.Drawing.Size(36, 31);
+            this.label822.Size = new System.Drawing.Size(25, 22);
             this.label822.TabIndex = 243;
             this.label822.Text = "%";
             // 
@@ -27252,7 +27252,7 @@ namespace ProcessSystem
             this.label823.ForeColor = System.Drawing.Color.White;
             this.label823.Location = new System.Drawing.Point(189, 32);
             this.label823.Name = "label823";
-            this.label823.Size = new System.Drawing.Size(61, 31);
+            this.label823.Size = new System.Drawing.Size(41, 22);
             this.label823.TabIndex = 244;
             this.label823.Text = "KPa";
             // 
@@ -27263,7 +27263,7 @@ namespace ProcessSystem
             this.label824.ForeColor = System.Drawing.Color.White;
             this.label824.Location = new System.Drawing.Point(6, 32);
             this.label824.Name = "label824";
-            this.label824.Size = new System.Drawing.Size(105, 25);
+            this.label824.Size = new System.Drawing.Size(70, 17);
             this.label824.TabIndex = 245;
             this.label824.Text = "火炬压力1 :";
             // 
@@ -27323,7 +27323,7 @@ namespace ProcessSystem
             this.label829.ForeColor = System.Drawing.Color.White;
             this.label829.Location = new System.Drawing.Point(120, 483);
             this.label829.Name = "label829";
-            this.label829.Size = new System.Drawing.Size(61, 31);
+            this.label829.Size = new System.Drawing.Size(41, 22);
             this.label829.TabIndex = 244;
             this.label829.Text = "KPa";
             // 
@@ -27334,7 +27334,7 @@ namespace ProcessSystem
             this.label831.ForeColor = System.Drawing.Color.White;
             this.label831.Location = new System.Drawing.Point(115, 317);
             this.label831.Name = "label831";
-            this.label831.Size = new System.Drawing.Size(75, 31);
+            this.label831.Size = new System.Drawing.Size(51, 22);
             this.label831.TabIndex = 244;
             this.label831.Text = "m³/h";
             // 
@@ -27345,7 +27345,7 @@ namespace ProcessSystem
             this.label819.ForeColor = System.Drawing.Color.White;
             this.label819.Location = new System.Drawing.Point(118, 414);
             this.label819.Name = "label819";
-            this.label819.Size = new System.Drawing.Size(38, 31);
+            this.label819.Size = new System.Drawing.Size(26, 22);
             this.label819.TabIndex = 244;
             this.label819.Text = "℃";
             // 
@@ -27356,7 +27356,7 @@ namespace ProcessSystem
             this.label778.ForeColor = System.Drawing.Color.White;
             this.label778.Location = new System.Drawing.Point(114, 317);
             this.label778.Name = "label778";
-            this.label778.Size = new System.Drawing.Size(0, 31);
+            this.label778.Size = new System.Drawing.Size(0, 22);
             this.label778.TabIndex = 244;
             // 
             // label832
@@ -27366,7 +27366,7 @@ namespace ProcessSystem
             this.label832.ForeColor = System.Drawing.Color.YellowGreen;
             this.label832.Location = new System.Drawing.Point(361, 474);
             this.label832.Name = "label832";
-            this.label832.Size = new System.Drawing.Size(86, 31);
+            this.label832.Size = new System.Drawing.Size(58, 22);
             this.label832.TabIndex = 238;
             this.label832.Text = "热氮口";
             // 
@@ -27377,7 +27377,7 @@ namespace ProcessSystem
             this.label834.ForeColor = System.Drawing.Color.YellowGreen;
             this.label834.Location = new System.Drawing.Point(2497, 547);
             this.label834.Name = "label834";
-            this.label834.Size = new System.Drawing.Size(134, 31);
+            this.label834.Size = new System.Drawing.Size(90, 22);
             this.label834.TabIndex = 238;
             this.label834.Text = "常温氮气口";
             // 
@@ -27388,7 +27388,7 @@ namespace ProcessSystem
             this.label837.ForeColor = System.Drawing.Color.YellowGreen;
             this.label837.Location = new System.Drawing.Point(2075, 224);
             this.label837.Name = "label837";
-            this.label837.Size = new System.Drawing.Size(62, 31);
+            this.label837.Size = new System.Drawing.Size(42, 22);
             this.label837.TabIndex = 238;
             this.label837.Text = "排放";
             // 
@@ -27399,7 +27399,7 @@ namespace ProcessSystem
             this.label836.ForeColor = System.Drawing.Color.YellowGreen;
             this.label836.Location = new System.Drawing.Point(1933, 137);
             this.label836.Name = "label836";
-            this.label836.Size = new System.Drawing.Size(134, 31);
+            this.label836.Size = new System.Drawing.Size(90, 22);
             this.label836.TabIndex = 238;
             this.label836.Text = "甲烷加注口";
             // 
@@ -27410,7 +27410,7 @@ namespace ProcessSystem
             this.label835.ForeColor = System.Drawing.Color.YellowGreen;
             this.label835.Location = new System.Drawing.Point(1057, 241);
             this.label835.Name = "label835";
-            this.label835.Size = new System.Drawing.Size(134, 31);
+            this.label835.Size = new System.Drawing.Size(90, 22);
             this.label835.TabIndex = 238;
             this.label835.Text = "常温氮气口";
             // 
@@ -27421,7 +27421,7 @@ namespace ProcessSystem
             this.label830.ForeColor = System.Drawing.Color.YellowGreen;
             this.label830.Location = new System.Drawing.Point(1095, 654);
             this.label830.Name = "label830";
-            this.label830.Size = new System.Drawing.Size(134, 31);
+            this.label830.Size = new System.Drawing.Size(90, 22);
             this.label830.TabIndex = 238;
             this.label830.Text = "常温氮气口";
             // 
@@ -27432,7 +27432,7 @@ namespace ProcessSystem
             this.label833.ForeColor = System.Drawing.Color.YellowGreen;
             this.label833.Location = new System.Drawing.Point(2672, 605);
             this.label833.Name = "label833";
-            this.label833.Size = new System.Drawing.Size(110, 31);
+            this.label833.Size = new System.Drawing.Size(74, 22);
             this.label833.TabIndex = 238;
             this.label833.Text = "高点排气";
             // 
@@ -27443,7 +27443,7 @@ namespace ProcessSystem
             this.label828.ForeColor = System.Drawing.Color.YellowGreen;
             this.label828.Location = new System.Drawing.Point(1192, 674);
             this.label828.Name = "label828";
-            this.label828.Size = new System.Drawing.Size(110, 31);
+            this.label828.Size = new System.Drawing.Size(74, 22);
             this.label828.TabIndex = 238;
             this.label828.Text = "高点排气";
             // 
@@ -27492,7 +27492,7 @@ namespace ProcessSystem
             this.label732.ForeColor = System.Drawing.Color.YellowGreen;
             this.label732.Location = new System.Drawing.Point(88, 765);
             this.label732.Name = "label732";
-            this.label732.Size = new System.Drawing.Size(182, 31);
+            this.label732.Size = new System.Drawing.Size(122, 22);
             this.label732.TabIndex = 21;
             this.label732.Text = "试车台安全区域";
             // 
@@ -29180,7 +29180,7 @@ namespace ProcessSystem
             this.label733.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label733.Location = new System.Drawing.Point(374, 735);
             this.label733.Name = "label733";
-            this.label733.Size = new System.Drawing.Size(178, 42);
+            this.label733.Size = new System.Drawing.Size(117, 28);
             this.label733.TabIndex = 17;
             this.label733.Text = "预冷暂存罐";
             // 
@@ -29192,7 +29192,7 @@ namespace ProcessSystem
             this.label734.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label734.Location = new System.Drawing.Point(2890, 137);
             this.label734.Name = "label734";
-            this.label734.Size = new System.Drawing.Size(178, 42);
+            this.label734.Size = new System.Drawing.Size(117, 28);
             this.label734.TabIndex = 17;
             this.label734.Text = "甲烷过冷罐";
             // 
@@ -29204,7 +29204,7 @@ namespace ProcessSystem
             this.label731.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label731.Location = new System.Drawing.Point(580, 139);
             this.label731.Name = "label731";
-            this.label731.Size = new System.Drawing.Size(146, 42);
+            this.label731.Size = new System.Drawing.Size(96, 28);
             this.label731.TabIndex = 17;
             this.label731.Text = "甲烷储罐";
             // 
@@ -29445,7 +29445,7 @@ namespace ProcessSystem
             this.tabPage13.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage13.Location = new System.Drawing.Point(0, 40);
             this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Size = new System.Drawing.Size(2441, 1092);
+            this.tabPage13.Size = new System.Drawing.Size(1588, 719);
             this.tabPage13.TabIndex = 1;
             this.tabPage13.Text = "Debug";
             // 
@@ -30617,7 +30617,7 @@ namespace ProcessSystem
             this.tabPage4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage4.Location = new System.Drawing.Point(121, 0);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1588, 759);
+            this.tabPage4.Size = new System.Drawing.Size(3317, 1151);
             this.tabPage4.TabIndex = 2;
             this.tabPage4.Text = "煤油系统";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -30634,7 +30634,7 @@ namespace ProcessSystem
             this.uiTabControl4.MainPage = "";
             this.uiTabControl4.Name = "uiTabControl4";
             this.uiTabControl4.SelectedIndex = 0;
-            this.uiTabControl4.Size = new System.Drawing.Size(1588, 759);
+            this.uiTabControl4.Size = new System.Drawing.Size(3317, 1151);
             this.uiTabControl4.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.uiTabControl4.TabIndex = 1;
             this.uiTabControl4.TipsFont = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -30744,7 +30744,7 @@ namespace ProcessSystem
             this.tabPage15.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage15.Location = new System.Drawing.Point(0, 40);
             this.tabPage15.Name = "tabPage15";
-            this.tabPage15.Size = new System.Drawing.Size(1588, 719);
+            this.tabPage15.Size = new System.Drawing.Size(3317, 1111);
             this.tabPage15.TabIndex = 0;
             this.tabPage15.Text = "主界面";
             // 
@@ -31393,7 +31393,7 @@ namespace ProcessSystem
             this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label1.Location = new System.Drawing.Point(363, 901);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(178, 42);
+            this.label1.Size = new System.Drawing.Size(117, 28);
             this.label1.TabIndex = 494;
             this.label1.Text = "煤油暂存罐";
             // 
@@ -31920,7 +31920,7 @@ namespace ProcessSystem
             this.label694.ForeColor = System.Drawing.Color.White;
             this.label694.Location = new System.Drawing.Point(7, 132);
             this.label694.Name = "label694";
-            this.label694.Size = new System.Drawing.Size(170, 28);
+            this.label694.Size = new System.Drawing.Size(114, 20);
             this.label694.TabIndex = 239;
             this.label694.Text = "冷却水进水温度 :";
             // 
@@ -31931,7 +31931,7 @@ namespace ProcessSystem
             this.label693.ForeColor = System.Drawing.Color.White;
             this.label693.Location = new System.Drawing.Point(7, 99);
             this.label693.Name = "label693";
-            this.label693.Size = new System.Drawing.Size(170, 28);
+            this.label693.Size = new System.Drawing.Size(114, 20);
             this.label693.TabIndex = 239;
             this.label693.Text = "加热输出百分比 :";
             // 
@@ -31942,7 +31942,7 @@ namespace ProcessSystem
             this.label695.ForeColor = System.Drawing.Color.White;
             this.label695.Location = new System.Drawing.Point(5, 66);
             this.label695.Name = "label695";
-            this.label695.Size = new System.Drawing.Size(149, 28);
+            this.label695.Size = new System.Drawing.Size(100, 20);
             this.label695.TabIndex = 239;
             this.label695.Text = "煤油回油温度 :";
             // 
@@ -31964,7 +31964,7 @@ namespace ProcessSystem
             this.label697.ForeColor = System.Drawing.Color.White;
             this.label697.Location = new System.Drawing.Point(5, 33);
             this.label697.Name = "label697";
-            this.label697.Size = new System.Drawing.Size(149, 28);
+            this.label697.Size = new System.Drawing.Size(100, 20);
             this.label697.TabIndex = 240;
             this.label697.Text = "硅油出口温度 :";
             // 
@@ -31975,7 +31975,7 @@ namespace ProcessSystem
             this.label702.ForeColor = System.Drawing.Color.White;
             this.label702.Location = new System.Drawing.Point(193, 133);
             this.label702.Name = "label702";
-            this.label702.Size = new System.Drawing.Size(33, 28);
+            this.label702.Size = new System.Drawing.Size(23, 20);
             this.label702.TabIndex = 243;
             this.label702.Text = "℃";
             // 
@@ -31986,7 +31986,7 @@ namespace ProcessSystem
             this.label699.ForeColor = System.Drawing.Color.White;
             this.label699.Location = new System.Drawing.Point(193, 34);
             this.label699.Name = "label699";
-            this.label699.Size = new System.Drawing.Size(33, 28);
+            this.label699.Size = new System.Drawing.Size(23, 20);
             this.label699.TabIndex = 241;
             this.label699.Text = "℃";
             // 
@@ -31997,7 +31997,7 @@ namespace ProcessSystem
             this.label696.ForeColor = System.Drawing.Color.White;
             this.label696.Location = new System.Drawing.Point(193, 100);
             this.label696.Name = "label696";
-            this.label696.Size = new System.Drawing.Size(31, 28);
+            this.label696.Size = new System.Drawing.Size(21, 20);
             this.label696.TabIndex = 243;
             this.label696.Text = "%";
             // 
@@ -32008,7 +32008,7 @@ namespace ProcessSystem
             this.label700.ForeColor = System.Drawing.Color.White;
             this.label700.Location = new System.Drawing.Point(178, 66);
             this.label700.Name = "label700";
-            this.label700.Size = new System.Drawing.Size(0, 28);
+            this.label700.Size = new System.Drawing.Size(0, 20);
             this.label700.TabIndex = 242;
             // 
             // label701
@@ -32018,7 +32018,7 @@ namespace ProcessSystem
             this.label701.ForeColor = System.Drawing.Color.White;
             this.label701.Location = new System.Drawing.Point(193, 67);
             this.label701.Name = "label701";
-            this.label701.Size = new System.Drawing.Size(33, 28);
+            this.label701.Size = new System.Drawing.Size(23, 20);
             this.label701.TabIndex = 243;
             this.label701.Text = "℃";
             // 
@@ -32029,7 +32029,7 @@ namespace ProcessSystem
             this.label691.ForeColor = System.Drawing.Color.GreenYellow;
             this.label691.Location = new System.Drawing.Point(1012, 615);
             this.label691.Name = "label691";
-            this.label691.Size = new System.Drawing.Size(134, 31);
+            this.label691.Size = new System.Drawing.Size(90, 22);
             this.label691.TabIndex = 443;
             this.label691.Text = "常温氮气口";
             // 
@@ -32327,7 +32327,7 @@ namespace ProcessSystem
             this.label283.ForeColor = System.Drawing.Color.White;
             this.label283.Location = new System.Drawing.Point(6, 91);
             this.label283.Name = "label283";
-            this.label283.Size = new System.Drawing.Size(76, 31);
+            this.label283.Size = new System.Drawing.Size(52, 22);
             this.label283.TabIndex = 239;
             this.label283.Text = "液位 :";
             // 
@@ -32350,7 +32350,7 @@ namespace ProcessSystem
             this.label285.ForeColor = System.Drawing.Color.White;
             this.label285.Location = new System.Drawing.Point(6, 60);
             this.label285.Name = "label285";
-            this.label285.Size = new System.Drawing.Size(76, 31);
+            this.label285.Size = new System.Drawing.Size(52, 22);
             this.label285.TabIndex = 240;
             this.label285.Text = "压力 :";
             // 
@@ -32373,7 +32373,7 @@ namespace ProcessSystem
             this.label289.ForeColor = System.Drawing.Color.White;
             this.label289.Location = new System.Drawing.Point(137, 60);
             this.label289.Name = "label289";
-            this.label289.Size = new System.Drawing.Size(61, 31);
+            this.label289.Size = new System.Drawing.Size(41, 22);
             this.label289.TabIndex = 241;
             this.label289.Text = "Kpa";
             // 
@@ -32383,7 +32383,7 @@ namespace ProcessSystem
             this.label290.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label290.Location = new System.Drawing.Point(128, 94);
             this.label290.Name = "label290";
-            this.label290.Size = new System.Drawing.Size(0, 31);
+            this.label290.Size = new System.Drawing.Size(0, 22);
             this.label290.TabIndex = 242;
             // 
             // label291
@@ -32393,7 +32393,7 @@ namespace ProcessSystem
             this.label291.ForeColor = System.Drawing.Color.White;
             this.label291.Location = new System.Drawing.Point(132, 95);
             this.label291.Name = "label291";
-            this.label291.Size = new System.Drawing.Size(62, 31);
+            this.label291.Size = new System.Drawing.Size(42, 22);
             this.label291.TabIndex = 243;
             this.label291.Text = "mm";
             // 
@@ -32404,7 +32404,7 @@ namespace ProcessSystem
             this.label292.ForeColor = System.Drawing.Color.White;
             this.label292.Location = new System.Drawing.Point(130, 29);
             this.label292.Name = "label292";
-            this.label292.Size = new System.Drawing.Size(32, 31);
+            this.label292.Size = new System.Drawing.Size(22, 22);
             this.label292.TabIndex = 244;
             this.label292.Text = "A";
             // 
@@ -32415,7 +32415,7 @@ namespace ProcessSystem
             this.label685.ForeColor = System.Drawing.Color.White;
             this.label685.Location = new System.Drawing.Point(389, 180);
             this.label685.Name = "label685";
-            this.label685.Size = new System.Drawing.Size(115, 31);
+            this.label685.Size = new System.Drawing.Size(78, 22);
             this.label685.TabIndex = 245;
             this.label685.Text = "泵2自锁 :";
             // 
@@ -32426,7 +32426,7 @@ namespace ProcessSystem
             this.label684.ForeColor = System.Drawing.Color.White;
             this.label684.Location = new System.Drawing.Point(389, 151);
             this.label684.Name = "label684";
-            this.label684.Size = new System.Drawing.Size(115, 31);
+            this.label684.Size = new System.Drawing.Size(78, 22);
             this.label684.TabIndex = 245;
             this.label684.Text = "泵1自锁 :";
             // 
@@ -32437,7 +32437,7 @@ namespace ProcessSystem
             this.label677.ForeColor = System.Drawing.Color.White;
             this.label677.Location = new System.Drawing.Point(389, 120);
             this.label677.Name = "label677";
-            this.label677.Size = new System.Drawing.Size(139, 31);
+            this.label677.Size = new System.Drawing.Size(94, 22);
             this.label677.TabIndex = 245;
             this.label677.Text = "阀2关到位 :";
             // 
@@ -32448,7 +32448,7 @@ namespace ProcessSystem
             this.label676.ForeColor = System.Drawing.Color.White;
             this.label676.Location = new System.Drawing.Point(389, 91);
             this.label676.Name = "label676";
-            this.label676.Size = new System.Drawing.Size(139, 31);
+            this.label676.Size = new System.Drawing.Size(94, 22);
             this.label676.TabIndex = 245;
             this.label676.Text = "阀2开到位 :";
             // 
@@ -32459,7 +32459,7 @@ namespace ProcessSystem
             this.label683.ForeColor = System.Drawing.Color.White;
             this.label683.Location = new System.Drawing.Point(6, 224);
             this.label683.Name = "label683";
-            this.label683.Size = new System.Drawing.Size(115, 31);
+            this.label683.Size = new System.Drawing.Size(78, 22);
             this.label683.TabIndex = 245;
             this.label683.Text = "泵2过载 :";
             // 
@@ -32470,7 +32470,7 @@ namespace ProcessSystem
             this.label687.ForeColor = System.Drawing.Color.White;
             this.label687.Location = new System.Drawing.Point(389, 213);
             this.label687.Name = "label687";
-            this.label687.Size = new System.Drawing.Size(124, 31);
+            this.label687.Size = new System.Drawing.Size(84, 22);
             this.label687.TabIndex = 245;
             this.label687.Text = "液位到位 :";
             // 
@@ -32481,7 +32481,7 @@ namespace ProcessSystem
             this.label681.ForeColor = System.Drawing.Color.White;
             this.label681.Location = new System.Drawing.Point(196, 165);
             this.label681.Name = "label681";
-            this.label681.Size = new System.Drawing.Size(115, 31);
+            this.label681.Size = new System.Drawing.Size(78, 22);
             this.label681.TabIndex = 245;
             this.label681.Text = "泵1过载 :";
             // 
@@ -32492,7 +32492,7 @@ namespace ProcessSystem
             this.label682.ForeColor = System.Drawing.Color.White;
             this.label682.Location = new System.Drawing.Point(6, 191);
             this.label682.Name = "label682";
-            this.label682.Size = new System.Drawing.Size(115, 31);
+            this.label682.Size = new System.Drawing.Size(78, 22);
             this.label682.TabIndex = 245;
             this.label682.Text = "泵2运行 :";
             // 
@@ -32503,7 +32503,7 @@ namespace ProcessSystem
             this.label686.ForeColor = System.Drawing.Color.White;
             this.label686.Location = new System.Drawing.Point(196, 199);
             this.label686.Name = "label686";
-            this.label686.Size = new System.Drawing.Size(124, 31);
+            this.label686.Size = new System.Drawing.Size(84, 22);
             this.label686.TabIndex = 245;
             this.label686.Text = "压力到位 :";
             // 
@@ -32514,7 +32514,7 @@ namespace ProcessSystem
             this.label679.ForeColor = System.Drawing.Color.White;
             this.label679.Location = new System.Drawing.Point(6, 163);
             this.label679.Name = "label679";
-            this.label679.Size = new System.Drawing.Size(148, 31);
+            this.label679.Size = new System.Drawing.Size(100, 22);
             this.label679.TabIndex = 245;
             this.label679.Text = "进气关到位 :";
             // 
@@ -32525,7 +32525,7 @@ namespace ProcessSystem
             this.label680.ForeColor = System.Drawing.Color.White;
             this.label680.Location = new System.Drawing.Point(196, 131);
             this.label680.Name = "label680";
-            this.label680.Size = new System.Drawing.Size(115, 31);
+            this.label680.Size = new System.Drawing.Size(78, 22);
             this.label680.TabIndex = 245;
             this.label680.Text = "泵1运行 :";
             // 
@@ -32536,7 +32536,7 @@ namespace ProcessSystem
             this.label286.ForeColor = System.Drawing.Color.White;
             this.label286.Location = new System.Drawing.Point(196, 97);
             this.label286.Name = "label286";
-            this.label286.Size = new System.Drawing.Size(124, 31);
+            this.label286.Size = new System.Drawing.Size(84, 22);
             this.label286.TabIndex = 245;
             this.label286.Text = "远程信号 :";
             // 
@@ -32547,7 +32547,7 @@ namespace ProcessSystem
             this.label678.ForeColor = System.Drawing.Color.White;
             this.label678.Location = new System.Drawing.Point(6, 132);
             this.label678.Name = "label678";
-            this.label678.Size = new System.Drawing.Size(148, 31);
+            this.label678.Size = new System.Drawing.Size(100, 22);
             this.label678.TabIndex = 245;
             this.label678.Text = "进气开到位 :";
             // 
@@ -32558,7 +32558,7 @@ namespace ProcessSystem
             this.label524.ForeColor = System.Drawing.Color.White;
             this.label524.Location = new System.Drawing.Point(389, 60);
             this.label524.Name = "label524";
-            this.label524.Size = new System.Drawing.Size(139, 31);
+            this.label524.Size = new System.Drawing.Size(94, 22);
             this.label524.TabIndex = 245;
             this.label524.Text = "阀1关到位 :";
             // 
@@ -32569,7 +32569,7 @@ namespace ProcessSystem
             this.label284.ForeColor = System.Drawing.Color.White;
             this.label284.Location = new System.Drawing.Point(196, 63);
             this.label284.Name = "label284";
-            this.label284.Size = new System.Drawing.Size(172, 31);
+            this.label284.Size = new System.Drawing.Size(116, 22);
             this.label284.TabIndex = 245;
             this.label284.Text = "远程自动运行 :";
             // 
@@ -32580,7 +32580,7 @@ namespace ProcessSystem
             this.label523.ForeColor = System.Drawing.Color.White;
             this.label523.Location = new System.Drawing.Point(389, 29);
             this.label523.Name = "label523";
-            this.label523.Size = new System.Drawing.Size(139, 31);
+            this.label523.Size = new System.Drawing.Size(94, 22);
             this.label523.TabIndex = 245;
             this.label523.Text = "阀1开到位 :";
             // 
@@ -32591,7 +32591,7 @@ namespace ProcessSystem
             this.label282.ForeColor = System.Drawing.Color.White;
             this.label282.Location = new System.Drawing.Point(196, 29);
             this.label282.Name = "label282";
-            this.label282.Size = new System.Drawing.Size(124, 31);
+            this.label282.Size = new System.Drawing.Size(84, 22);
             this.label282.TabIndex = 245;
             this.label282.Text = "远程急停 :";
             // 
@@ -32602,7 +32602,7 @@ namespace ProcessSystem
             this.label293.ForeColor = System.Drawing.Color.White;
             this.label293.Location = new System.Drawing.Point(6, 29);
             this.label293.Name = "label293";
-            this.label293.Size = new System.Drawing.Size(76, 31);
+            this.label293.Size = new System.Drawing.Size(52, 22);
             this.label293.TabIndex = 245;
             this.label293.Text = "电流 :";
             // 
@@ -32765,7 +32765,7 @@ namespace ProcessSystem
             this.label234.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label234.Location = new System.Drawing.Point(497, 211);
             this.label234.Name = "label234";
-            this.label234.Size = new System.Drawing.Size(146, 42);
+            this.label234.Size = new System.Drawing.Size(96, 28);
             this.label234.TabIndex = 228;
             this.label234.Text = "煤油储罐";
             // 
@@ -32802,7 +32802,7 @@ namespace ProcessSystem
             this.label690.ForeColor = System.Drawing.Color.GreenYellow;
             this.label690.Location = new System.Drawing.Point(1789, 301);
             this.label690.Name = "label690";
-            this.label690.Size = new System.Drawing.Size(134, 31);
+            this.label690.Size = new System.Drawing.Size(90, 22);
             this.label690.TabIndex = 50;
             this.label690.Text = "常温氮气口";
             // 
@@ -33696,7 +33696,7 @@ namespace ProcessSystem
             this.tabPage17.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage17.Location = new System.Drawing.Point(0, 40);
             this.tabPage17.Name = "tabPage17";
-            this.tabPage17.Size = new System.Drawing.Size(2441, 1092);
+            this.tabPage17.Size = new System.Drawing.Size(1588, 719);
             this.tabPage17.TabIndex = 1;
             this.tabPage17.Text = "Debug";
             // 
@@ -35409,9 +35409,9 @@ namespace ProcessSystem
             this.panel1.Controls.Add(this.lbl_SysTime);
             this.panel1.Controls.Add(this.none20);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 962);
+            this.panel1.Location = new System.Drawing.Point(0, 1335);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1709, 39);
+            this.panel1.Size = new System.Drawing.Size(3438, 39);
             this.panel1.TabIndex = 4;
             // 
             // Total1
@@ -35419,7 +35419,7 @@ namespace ProcessSystem
             this.Total1.Enabled = false;
             this.Total1.Location = new System.Drawing.Point(2773, 3);
             this.Total1.Name = "Total1";
-            this.Total1.Size = new System.Drawing.Size(70, 39);
+            this.Total1.Size = new System.Drawing.Size(70, 29);
             this.Total1.TabIndex = 8;
             this.Total1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -35444,7 +35444,7 @@ namespace ProcessSystem
             this.Total2.Enabled = false;
             this.Total2.Location = new System.Drawing.Point(3036, 3);
             this.Total2.Name = "Total2";
-            this.Total2.Size = new System.Drawing.Size(70, 39);
+            this.Total2.Size = new System.Drawing.Size(70, 29);
             this.Total2.TabIndex = 8;
             this.Total2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -35525,7 +35525,7 @@ namespace ProcessSystem
             this.label654.ForeColor = System.Drawing.Color.White;
             this.label654.Location = new System.Drawing.Point(402, 7);
             this.label654.Name = "label654";
-            this.label654.Size = new System.Drawing.Size(76, 31);
+            this.label654.Size = new System.Drawing.Size(52, 22);
             this.label654.TabIndex = 3;
             this.label654.Text = "气源 :";
             // 
@@ -35556,7 +35556,7 @@ namespace ProcessSystem
             this.label521.ForeColor = System.Drawing.Color.White;
             this.label521.Location = new System.Drawing.Point(307, 7);
             this.label521.Name = "label521";
-            this.label521.Size = new System.Drawing.Size(76, 31);
+            this.label521.Size = new System.Drawing.Size(52, 22);
             this.label521.TabIndex = 3;
             this.label521.Text = "配气 :";
             // 
@@ -35587,7 +35587,7 @@ namespace ProcessSystem
             this.none10.ForeColor = System.Drawing.Color.White;
             this.none10.Location = new System.Drawing.Point(211, 7);
             this.none10.Name = "none10";
-            this.none10.Size = new System.Drawing.Size(76, 31);
+            this.none10.Size = new System.Drawing.Size(52, 22);
             this.none10.TabIndex = 3;
             this.none10.Text = "中燃 :";
             // 
@@ -35597,7 +35597,7 @@ namespace ProcessSystem
             this.none7.ForeColor = System.Drawing.Color.White;
             this.none7.Location = new System.Drawing.Point(106, 6);
             this.none7.Name = "none7";
-            this.none7.Size = new System.Drawing.Size(92, 31);
+            this.none7.Size = new System.Drawing.Size(62, 22);
             this.none7.TabIndex = 3;
             this.none7.Text = "助燃II :";
             // 
@@ -35607,7 +35607,7 @@ namespace ProcessSystem
             this.none6.ForeColor = System.Drawing.Color.White;
             this.none6.Location = new System.Drawing.Point(7, 6);
             this.none6.Name = "none6";
-            this.none6.Size = new System.Drawing.Size(84, 31);
+            this.none6.Size = new System.Drawing.Size(57, 22);
             this.none6.TabIndex = 3;
             this.none6.Text = "助燃I :";
             // 
@@ -35617,7 +35617,7 @@ namespace ProcessSystem
             this.lbl_SysTime.ForeColor = System.Drawing.Color.White;
             this.lbl_SysTime.Location = new System.Drawing.Point(3237, 6);
             this.lbl_SysTime.Name = "lbl_SysTime";
-            this.lbl_SysTime.Size = new System.Drawing.Size(265, 31);
+            this.lbl_SysTime.Size = new System.Drawing.Size(179, 22);
             this.lbl_SysTime.TabIndex = 1;
             this.lbl_SysTime.Text = "2024-11-16 24:47:23";
             // 
@@ -35627,7 +35627,7 @@ namespace ProcessSystem
             this.none20.ForeColor = System.Drawing.Color.White;
             this.none20.Location = new System.Drawing.Point(3161, 6);
             this.none20.Name = "none20";
-            this.none20.Size = new System.Drawing.Size(124, 31);
+            this.none20.Size = new System.Drawing.Size(84, 22);
             this.none20.TabIndex = 2;
             this.none20.Text = "系统时间 :";
             // 
@@ -35638,10 +35638,10 @@ namespace ProcessSystem
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(59)))), ((int)(((byte)(138)))));
-            this.ClientSize = new System.Drawing.Size(1711, 1048);
+            this.ClientSize = new System.Drawing.Size(3440, 1421);
             this.Controls.Add(this.pl_Main);
             this.Controls.Add(this.pl_Top);
             this.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
