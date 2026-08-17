@@ -62,15 +62,14 @@ namespace ProcessSystem
                     if (this.IsDisposed) return;
 
                     int highIndex = Index * 4 + 2;
-                    int lowIndex = Index * 4;
 
                     if (e.Lock_Value != null && e.Lock_Value.Length > highIndex)
                     {
                         this.tb_HighValue.Text = (Convert.ToSingle(e.Lock_Value[highIndex]) / 100).ToString();
 
-                        if (SensorName == "LT206" && e.Lock_Value.Length > lowIndex)
+                        if (SensorName == "LT206")
                         {
-                            this.tb_LowValue.Text = e.Lock_Value[lowIndex].ToString();
+                            this.tb_LowValue.Text = (Convert.ToSingle(e.Lock_Value[highIndex + 1]) / 100).ToString();
                         }
                     }
                 });

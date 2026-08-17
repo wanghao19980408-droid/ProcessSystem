@@ -92,7 +92,7 @@
             this.tb_HighValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tb_HighValue.Location = new System.Drawing.Point(170, 85);
             this.tb_HighValue.Name = "tb_HighValue";
-            this.tb_HighValue.Size = new System.Drawing.Size(127, 39);
+            this.tb_HighValue.Size = new System.Drawing.Size(127, 29);
             this.tb_HighValue.TabIndex = 40;
             // 
             // btn_HighSet
@@ -108,6 +108,7 @@
             this.btn_HighSet.TabIndex = 38;
             this.btn_HighSet.Text = "设定";
             this.btn_HighSet.TipsFont = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_HighSet.Click += new System.EventHandler(this.btn_HighSet_Click);
             // 
             // label4
             // 
@@ -116,13 +117,13 @@
             this.label4.Location = new System.Drawing.Point(38, 88);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(189, 31);
+            this.label4.Size = new System.Drawing.Size(127, 22);
             this.label4.TabIndex = 39;
             this.label4.Text = "高限报警设定 ：";
             // 
             // TempLock
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(438, 149);
             this.Controls.Add(this.tb_HighValue);

@@ -183,6 +183,9 @@ namespace ProcessSystem
                 case "气源":
                     formMain.GaseSourceDataUpdated -= FormMain_DataUpdated;
                     break;
+                case "配气":
+                    formMain.GaseSensorDataUpdated -= FormMain_DataUpdated;
+                    break;
             }
             Tcp = null;
         }
