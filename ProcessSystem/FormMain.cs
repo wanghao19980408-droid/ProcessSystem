@@ -762,7 +762,7 @@ namespace ProcessSystem
             });
         }
         #endregion
-        #region 配气区域
+         #region 配气区域
 
         public delegate void GaseSensorDataUpdatedEventHandler(UDPValues e);
 

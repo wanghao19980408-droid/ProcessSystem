@@ -44,17 +44,17 @@ namespace ProcessSystem
             this.Controls.Add(cmbValve);
 
             startY += stepY;
-            this.Controls.Add(new UILabel { Text = "循环总时长(分钟):", Location = new Point(30, startY), Size = new Size(130, 30) });
+            this.Controls.Add(new UILabel { Text = "总时长(分钟):", Location = new Point(30, startY), Size = new Size(130, 30) });
             txtTotalMinutes = new UITextBox { Text = "300", Location = new Point(170, startY), Size = new Size(160, 30) };
             this.Controls.Add(txtTotalMinutes);
 
             startY += stepY;
-            this.Controls.Add(new UILabel { Text = "每次开阀时间(秒):", Location = new Point(30, startY), Size = new Size(130, 30) });
+            this.Controls.Add(new UILabel { Text = "开阀时间(秒):", Location = new Point(30, startY), Size = new Size(130, 30) });
             txtOpenSeconds = new UITextBox { Text = "200", Location = new Point(170, startY), Size = new Size(160, 30) };
             this.Controls.Add(txtOpenSeconds);
 
             startY += stepY;
-            this.Controls.Add(new UILabel { Text = "每次关阀时间(秒):", Location = new Point(30, startY), Size = new Size(130, 30) });
+            this.Controls.Add(new UILabel { Text = "关阀时间(秒):", Location = new Point(30, startY), Size = new Size(130, 30) });
             txtCloseSeconds = new UITextBox { Text = "80", Location = new Point(170, startY), Size = new Size(160, 30) };
             this.Controls.Add(txtCloseSeconds);
 
