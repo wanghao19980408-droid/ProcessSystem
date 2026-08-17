@@ -244,7 +244,6 @@ namespace ProcessSystem
 
             this.lv_Log.Columns[1].Width = this.lv_Log.Width - this.lv_Log.Columns[0].Width - 20;
             this.lv_WaLog.Columns[1].Width = this.lv_WaLog.Width - this.lv_WaLog.Columns[0].Width - 20;
-
             try
             {
                 var fuelTask = ReadPLCConfigAsync(FuelAreaExcelPath);
@@ -701,10 +700,14 @@ namespace ProcessSystem
         #endregion
 
         #region 中燃区域
+        public delegate void FuelDataUpdatedEventHandler(UDPValues e);
+
+        public event FuelDataUpdatedEventHandler FuelDataUpdated;
         private void UDPManager_FuelAreaDataUpdated(object sender, UDPValues e)
         {
             if (e == null) return;
             lock (UiLock) FuelLatest = e;
+            FuelDataUpdated?.Invoke(e);
         }
 
         private void FuelAreaInit()
@@ -718,10 +721,14 @@ namespace ProcessSystem
         }
         #endregion
         #region 助燃I区域
+        public delegate void FiringIDataUpdatedEventHandler(UDPValues e);
+
+        public event FiringIIDataUpdatedEventHandler FiringIDataUpdated;
         private void UDPManager_FiringIDataUpdated(object sender, UDPValues e)
         {
             if (e == null) return;
             lock (UiLock) FiringILatest = e;
+            FiringIDataUpdated?.Invoke(e);
         }
         private void FiringIInit()
         {
@@ -734,10 +741,15 @@ namespace ProcessSystem
         }
         #endregion
         #region 助燃II区域
+
+        public delegate void FiringIIDataUpdatedEventHandler(UDPValues e);
+
+        public event FiringIIDataUpdatedEventHandler FiringIIDataUpdated;
         private void UDPManager_FiringIIDataUpdated(object sender, UDPValues e)
         {
             if (e == null) return;
             lock (UiLock) FiringIILatest = e;
+            FiringIIDataUpdated?.Invoke(e);
         }
 
         private void FiringIIGaseInit()
@@ -751,6 +763,7 @@ namespace ProcessSystem
         }
         #endregion
         #region 配气区域
+
         public delegate void GaseSensorDataUpdatedEventHandler(UDPValues e);
 
         public event GaseSensorDataUpdatedEventHandler GaseSensorDataUpdated;
@@ -771,10 +784,14 @@ namespace ProcessSystem
         }
         #endregion
         #region 气源区域
+        public delegate void GaseSourceDataUpdatedEventHandler(UDPValues e);
+
+        public event GaseSourceDataUpdatedEventHandler GaseSourceDataUpdated;
         private void UDPManager_GaseSourceDataUpdated(object sender, UDPValues e)
         {
             if (e == null) return;
             lock (UiLock) GaseSourceLatest = e;
+            GaseSourceDataUpdated?.Invoke(e);
         }
         private void GaseSourceInit()
         {
@@ -991,7 +1008,7 @@ namespace ProcessSystem
                     default:
                         break;
                 }
-                PIDSetting pIDSetting = new PIDSetting(tcp, index, name);
+                PIDSetting pIDSetting = new PIDSetting(area, tcp, index, name, this);
                 pIDSetting.AddLog += AddLog;
                 pIDSetting.ShowDialog();
             }
@@ -1009,45 +1026,42 @@ namespace ProcessSystem
                 byte index = Convert.ToByte(info[1], 10);
                 int mIndex = Convert.ToInt32(info[2]);
                 string name = info[3];
-                SiemensDevice device = null;
+
                 TCPManager tcp = null;
                 switch (area)
                 {
                     case "中燃":
                         tcp = FuelAreaTCPManager;
-                        device = FuelDevice;
                         break;
                     case "助燃I":
                         tcp = FiringITCPManager;
-                        device = Firing1Device;
                         break;
                     case "助燃II":
                         tcp = FiringIITCPManager;
-                        device = Firing2Device;
                         break;
                     case "气源":
                         tcp = GaseSourceCPManager;
-                        device = GaseSourceDevice;
                         break;
                     case "配气":
                         tcp = GaseTCPManager;
-                        device = GaseSupplyDevice;
                         break;
                     default:
                         break;
                 }
-                LockSetting pIDSetting;
+
+                LockSetting lockSetting;
                 if (info.ContainsIndex(4))
                 {
                     string title = info[4];
-                    pIDSetting = new LockSetting(tcp, index, mIndex, name, device, title);
+                    lockSetting = new LockSetting(area, tcp, index, mIndex, name, this, title);
                 }
                 else
                 {
-                    pIDSetting = new LockSetting(tcp, index, mIndex, name, device);
+                    lockSetting = new LockSetting(area, tcp, index, mIndex, name, this);
                 }
-                pIDSetting.AddLog += AddLog;
-                pIDSetting.ShowDialog();
+
+                lockSetting.AddLog += AddLog;
+                lockSetting.ShowDialog();
             }
         }
         private void PreLock_Click(object sender, EventArgs e)
@@ -1063,27 +1077,29 @@ namespace ProcessSystem
                 byte index = Convert.ToByte(info[1], 10);
                 int mIndex = Convert.ToInt32(info[2]);
                 string name = info[3];
-                SiemensDevice device = null;
                 TCPManager tcp = null;
+                LockNew pIDSetting;
                 switch (area)
                 {
                     case "中燃":
                         tcp = FuelAreaTCPManager;
-                        device = FuelDevice;
                         break;
                     case "助燃I":
                         tcp = FiringITCPManager;
-                        device = Firing1Device;
                         break;
                     case "助燃II":
                         tcp = FiringIITCPManager;
-                        device = Firing2Device;
+                        break;
+                    case "气源":
+                        tcp = GaseSourceCPManager;
+                        break;
+                    case "配气":
+                        tcp = GaseTCPManager;
                         break;
                     default:
                         break;
                 }
-                LockNew pIDSetting;
-                pIDSetting = new LockNew(tcp, index, mIndex, name, device);
+                pIDSetting = new LockNew(area, tcp, index, mIndex, name, this);
                 pIDSetting.AddLog += AddLog;
                 pIDSetting.ShowDialog();
             }
@@ -1101,33 +1117,27 @@ namespace ProcessSystem
                 byte index = Convert.ToByte(info[1], 10);
                 int mIndex = Convert.ToInt32(info[2]);
                 string name = info[3];
-                SiemensDevice device = null;
                 TCPManager tcp = null;
                 switch (area)
                 {
                     case "中燃":
                         tcp = FuelAreaTCPManager;
-                        device = FuelDevice;
                         break;
                     case "助燃I":
                         tcp = FiringITCPManager;
-                        device = Firing1Device;
                         break;
                     case "助燃II":
                         tcp = FiringIITCPManager;
-                        device = Firing2Device;
                         break;
                     case "气源":
                         tcp = GaseSourceCPManager;
-                        device = GaseSourceDevice;
                         break;
                     default:
                         break;
                 }
-                TempLock pIDSetting;
-                pIDSetting = new TempLock(tcp, index, name, device);
-                pIDSetting.AddLog += AddLog;
-                pIDSetting.ShowDialog();
+                TempLock tpl = new TempLock(area, tcp, index, name, this);
+                tpl.AddLog += AddLog;
+                tpl.ShowDialog();
             }
         }
         private void LiquidLock_Click(object sender, EventArgs e)
@@ -1143,27 +1153,23 @@ namespace ProcessSystem
                 byte index = Convert.ToByte(info[1], 10);
                 int mIndex = Convert.ToInt32(info[2]);
                 string name = info[3];
-                SiemensDevice device = null;
                 TCPManager tcp = null;
                 switch (area)
                 {
                     case "中燃":
                         tcp = FuelAreaTCPManager;
-                        device = FuelDevice;
                         break;
                     case "助燃I":
                         tcp = FiringITCPManager;
-                        device = Firing1Device;
                         break;
                     case "助燃II":
                         tcp = FiringIITCPManager;
-                        device = Firing2Device;
                         break;
                     default:
                         break;
                 }
                 LiquidLock pIDSetting;
-                pIDSetting = new LiquidLock(tcp, index, name, device);
+                pIDSetting = new LiquidLock(area,tcp, index, name, this);
                 pIDSetting.AddLog += AddLog;
                 pIDSetting.ShowDialog();
             }
@@ -2264,13 +2270,13 @@ namespace ProcessSystem
 
         private void btn_User_Click(object sender, EventArgs e)
         {
-            if (this.btn_User.Symbol == 560023) 
+            if (this.btn_User.Symbol == 560023)
             {
-                if (UserInfo != null && UserInfo.RoleType == "管理员")
+                if (UserInfo != null && UserInfo.RoleType == "管理员" && UserInfo.LoginName == "刘德华")
                 {
                     this.IsLoginOut = false;
 
-                    new FrmUser(this).ShowDialog(); 
+                    new FrmUser(this).ShowDialog();
 
                     if (this.IsLoginOut)
                     {
@@ -2282,7 +2288,7 @@ namespace ProcessSystem
 
                     }
                 }
-                else 
+                else
                 {
                     DialogResult dr = new FrmMsgWithAck("请确认是否登出！", "登出确认").ShowDialog();
                     if (dr == DialogResult.OK)
@@ -2304,7 +2310,7 @@ namespace ProcessSystem
                     }
                 }
             }
-            else 
+            else
             {
                 DialogResult dr = new FrmLogin(this).ShowDialog();
                 if (dr == DialogResult.OK)
@@ -2348,7 +2354,6 @@ namespace ProcessSystem
                     if (e.TabPage.Text == "煤油系统")
                     {
                         e.Cancel = true;
-                        new FrmMsgNoAck($"当前账号无权限使用{e.TabPage.Text},请联系管理员！", "权限确认").ShowDialog();
                         return;
                     }
                 }
@@ -2357,7 +2362,6 @@ namespace ProcessSystem
                     if (e.TabPage.Text == "甲烷系统")
                     {
                         e.Cancel = true;
-                        new FrmMsgNoAck($"当前账号无权限使用{e.TabPage.Text},请联系管理员！", "权限确认").ShowDialog();
                         return;
                     }
                 }

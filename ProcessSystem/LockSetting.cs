@@ -1,17 +1,10 @@
 ﻿using DataConvertLib;
 using NodeSettings;
 using ProcessSystemLib;
+using ProcessSystemLib.Model;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProcessControlLib;
 
 namespace ProcessSystem
 {
@@ -24,17 +17,21 @@ namespace ProcessSystem
         private TCPManager Tcp = null;
         private byte Index { get; set; }
         private int Mindex { get; set; }
-
         private string SensorName { get; set; }
+        private string Area { get; set; }
+        public FormMain formMain { get; set; }
+        public bool FirstOpen { get; set; } = false;
 
-        private SiemensDevice siemensDevice { get; set; }
-        public LockSetting(TCPManager tcp, byte index, int modeIndex, string name, SiemensDevice device, string titleName = null)
+        public LockSetting(string area, TCPManager tcp, byte index, int modeIndex, string name, FormMain formMain, string titleName = null)
         {
             InitializeComponent();
+            this.Area = area;
             this.Tcp = tcp;
             this.Index = index;
             this.Mindex = modeIndex;
             this.SensorName = name;
+            this.formMain = formMain;
+
             if (titleName != null)
             {
                 this.lb_Title.Text = titleName;
@@ -43,12 +40,11 @@ namespace ProcessSystem
             {
                 this.lb_Title.Text = $"{this.SensorName}联锁";
             }
-            this.siemensDevice = device;
+
             this.Load += LockSetting_Load;
         }
 
         #region 无边框拖动
-
         private Point mPoint;
         private void Panel_MouseDown(object sender, MouseEventArgs e)
         {
@@ -82,51 +78,98 @@ namespace ProcessSystem
                     break;
             }
 
-            if (siemensDevice != null && siemensDevice.IsConnected)
+            if (this.Area == "配气") 
             {
-                if (siemensDevice.DeviceName == "配气区")
+                this.cb_ModeValue.SelectedIndex = 0;
+                if (SensorName.Substring(0, 3) == "CPb")
                 {
-                    this.cb_ModeValue.SelectedIndex = 0;
-                    if (SensorName.Substring(0, 3) == "CPb")
-                    {
-                        this.pl_CPb.Visible = true;
-                    }
-                    else if (SensorName == "HPb2" || SensorName == "HPb3")
-                    {
-                        this.pl_HPb23.Visible = true;
-
-                    }
-                    else if (SensorName == "GPb16")
-                    {
-                        this.pl_GPb16.Visible = true;
-                    }
-                    else
-                    {
-                        this.pl_Normal.Visible = true;
-                    }
+                    this.pl_CPb.Visible = true;
+                }
+                else if (SensorName == "HPb2" || SensorName == "HPb3")
+                {
+                    this.pl_HPb23.Visible = true;
+                }
+                else if (SensorName == "GPb16")
+                {
+                    this.pl_GPb16.Visible = true;
                 }
                 else
                 {
-                    int selectIndex = Convert.ToInt32(siemensDevice?[$"{SensorName}Start"]) -1  ;
-                    this.cb_ModeValue.SelectedIndex = selectIndex;
+                    this.pl_Normal.Visible = true;
                 }
-                if (this.pl_mode.Visible)
-                {
+            }
 
-                }
-                this.tb_LowValue.Text = siemensDevice?[$"{SensorName}Low"].ToString();
-                this.tb_HighValue.Text = siemensDevice?[$"{SensorName}High"].ToString();
-                this.tb_Value.Text = siemensDevice?[$"{SensorName}Point"].ToString();
+            switch (Area)
+            {
+                case "助燃II":
+                    formMain.FiringIIDataUpdated += FormMain_DataUpdated;
+                    break;
+                case "助燃I":
+                    formMain.FiringIDataUpdated += FormMain_DataUpdated;
+                    break;
+                case "中燃":
+                    formMain.FuelDataUpdated += FormMain_DataUpdated;
+                    break;
+                case "气源":
+                    formMain.GaseSourceDataUpdated += FormMain_DataUpdated;
+                    break;
+                case "配气":
+                    formMain.GaseSensorDataUpdated += FormMain_DataUpdated;
+                    break;
             }
         }
+
+        private void FormMain_DataUpdated(UDPValues e)
+        {
+            if (!FirstOpen)
+            {
+                formMain.InvokeIfRequired(() =>
+                {
+                    int offset = Index * 4;
+
+                    if (e.Lock_Value != null && e.Lock_Value.Length >= offset + 4)
+                    {
+                        if (Area != "配气")
+                        {
+                            int selectIndex = Convert.ToInt32(e.Lock_Value[offset]) - 1;
+                            if (selectIndex >= 0 && selectIndex < this.cb_ModeValue.Items.Count)
+                            {
+                                this.cb_ModeValue.SelectedIndex = selectIndex;
+                            }
+                        }
+                        this.tb_Value.Text = (Convert.ToSingle(e.Lock_Value[offset + 1]) / 100f).ToString("f2");
+                        this.tb_HighValue.Text = (Convert.ToSingle(e.Lock_Value[offset + 2]) / 100f).ToString("f2");
+                        this.tb_LowValue.Text = (Convert.ToSingle(e.Lock_Value[offset + 3]) / 100f).ToString("f2");
+                    }
+                });
+            }
+            FirstOpen = true;
+        }
+
         private void btn_Close_Click(object sender, EventArgs e)
         {
-            this.siemensDevice = null;
+            switch (Area)
+            {
+                case "助燃II":
+                    formMain.FiringIIDataUpdated -= FormMain_DataUpdated;
+                    break;
+                case "助燃I":
+                    formMain.FiringIDataUpdated -= FormMain_DataUpdated;
+                    break;
+                case "中燃":
+                    formMain.FuelDataUpdated -= FormMain_DataUpdated;
+                    break;
+                case "气源":
+                    formMain.GaseSourceDataUpdated -= FormMain_DataUpdated;
+                    break;
+            }
+
+            Tcp = null;
             SensorName = null;
             this.Close();
         }
 
-        private OperateResult LockControlResult;
+        #region 参数设定下发逻辑
 
         private void btn_ModeSet_Click(object sender, EventArgs e)
         {
@@ -135,21 +178,18 @@ namespace ProcessSystem
                 AddLog(2, $"TCP连接异常,{this.SensorName}模式设定失败");
                 return;
             }
-            LockControlResult = Tcp.Send_PLC_Command(
+            var result = Tcp.Send_PLC_Command(
                 (byte)CMD.lock_command,
                 lockIndex: Index,
                 lockParamSeq: LockParamSeq.Mode,
                 lockParamValue: cb_ModeValue.SelectedIndex);
-            if (LockControlResult.IsSuccess)
-            {
-                AddLog(0, $"{this.SensorName}模式设定为{cb_ModeValue.SelectedItem.ToString()}成功");
-            }
+
+            if (result.IsSuccess)
+                AddLog(0, $"{this.SensorName}模式设定为{cb_ModeValue.SelectedItem}成功");
             else
-            {
-                AddLog(1, $"{this.SensorName}模式设定为{cb_ModeValue.SelectedItem.ToString()}失败");
-            }
-            LockControlResult = null;
+                AddLog(1, $"{this.SensorName}模式设定为{cb_ModeValue.SelectedItem}失败");
         }
+
         private void btn_GaseModeSet_Click(object sender, EventArgs e)
         {
             if (Tcp == null || !Tcp.IsConnected)
@@ -160,23 +200,19 @@ namespace ProcessSystem
             if (sender is Button btn)
             {
                 int modeIndex = Convert.ToInt32(btn.Tag.ToString());
-                LockControlResult = Tcp.Send_PLC_Command(
-                (byte)CMD.lock_command,
-                lockIndex: Index,
-                lockParamSeq: LockParamSeq.Mode,
-                lockParamValue: modeIndex);
-                if (LockControlResult.IsSuccess)
-                {
-                    AddLog(0, $"{this.SensorName}{btn.Text}成功");
-                }
-                else
-                {
-                    AddLog(1, $"{this.SensorName}{btn.Text}失败");
-                }
-            }
+                var result = Tcp.Send_PLC_Command(
+                    (byte)CMD.lock_command,
+                    lockIndex: Index,
+                    lockParamSeq: LockParamSeq.Mode,
+                    lockParamValue: modeIndex);
 
-            LockControlResult = null;
+                if (result.IsSuccess)
+                    AddLog(0, $"{this.SensorName}{btn.Text}成功");
+                else
+                    AddLog(1, $"{this.SensorName}{btn.Text}失败");
+            }
         }
+
         private void btn_ValueSet_Click(object sender, EventArgs e)
         {
             if (Tcp == null || !Tcp.IsConnected)
@@ -184,20 +220,16 @@ namespace ProcessSystem
                 AddLog(2, $"TCP连接异常,{this.SensorName}数值设定失败");
                 return;
             }
-            LockControlResult = Tcp.Send_PLC_Command(
+            var result = Tcp.Send_PLC_Command(
                 (byte)CMD.lock_command,
                 lockIndex: Index,
                 lockParamSeq: LockParamSeq.SetValue,
                 lockParamValue: tb_Value.Text);
-            if (LockControlResult.IsSuccess)
-            {
+
+            if (result.IsSuccess)
                 AddLog(0, $"{this.SensorName}数值设定{tb_Value.Text}成功");
-            }
             else
-            {
                 AddLog(1, $"{this.SensorName}数值设定{tb_Value.Text}失败");
-            }
-            LockControlResult = null;
         }
 
         private void btn_HighSet_Click(object sender, EventArgs e)
@@ -207,20 +239,16 @@ namespace ProcessSystem
                 AddLog(2, $"TCP连接异常,{this.SensorName}高限设定失败");
                 return;
             }
-            LockControlResult = Tcp.Send_PLC_Command(
+            var result = Tcp.Send_PLC_Command(
                 (byte)CMD.lock_command,
                 lockIndex: Index,
                 lockParamSeq: LockParamSeq.HighLimit,
                 lockParamValue: tb_HighValue.Text);
-            if (LockControlResult.IsSuccess)
-            {
+
+            if (result.IsSuccess)
                 AddLog(0, $"{this.SensorName}高限设定{tb_HighValue.Text}成功");
-            }
             else
-            {
                 AddLog(1, $"{this.SensorName}高限设定{tb_HighValue.Text}失败");
-            }
-            LockControlResult = null;
         }
 
         private void btn_LowSet_Click(object sender, EventArgs e)
@@ -230,20 +258,18 @@ namespace ProcessSystem
                 AddLog(2, $"TCP连接异常,{this.SensorName}低限设定失败");
                 return;
             }
-            LockControlResult = Tcp.Send_PLC_Command(
+            var result = Tcp.Send_PLC_Command(
                 (byte)CMD.lock_command,
                 lockIndex: Index,
                 lockParamSeq: LockParamSeq.LowLimit,
                 lockParamValue: tb_LowValue.Text);
-            if (LockControlResult.IsSuccess)
-            {
+
+            if (result.IsSuccess)
                 AddLog(0, $"{this.SensorName}低限设定{tb_LowValue.Text}成功");
-            }
             else
-            {
                 AddLog(1, $"{this.SensorName}低限设定{tb_LowValue.Text}失败");
-            }
-            LockControlResult = null;
         }
+
+        #endregion
     }
 }

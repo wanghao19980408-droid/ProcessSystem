@@ -18,6 +18,7 @@ namespace ProcessControlLib
             InitializeComponent();
             this.panel1.Paint += Panel1_Paint;
         }
+
         [Browsable(true)]
         [Category("自定义事件")]
         [Description("操控阀门触发事件")]
@@ -27,6 +28,7 @@ namespace ProcessControlLib
         {
             ValveClick?.Invoke(this, e);
         }
+
         private void FiringISwitchIcon_Click(object sender, EventArgs e)
         {
             if (!this.enable) return;
@@ -52,6 +54,7 @@ namespace ProcessControlLib
                 }
             }
         }
+
         private void Panel1_Paint(object sender, PaintEventArgs e)
         {
             if (this.enable) return;
@@ -63,7 +66,6 @@ namespace ProcessControlLib
             int h = this.panel1.Height;
 
             DrawModernDisabled_Lock(g, w, h);
-
             DrawModernDisabled_Stripes(g, w, h);
         }
 
@@ -137,6 +139,7 @@ namespace ProcessControlLib
                 g.DrawRectangle(borderPen, 1, 1, w - 3, h - 3);
             }
         }
+
         private ushort diOpenAndClose;
         [Browsable(true)]
         [Category("自定义属性")]
@@ -152,17 +155,14 @@ namespace ProcessControlLib
                 }
             }
         }
+
         private string valveName { get; set; }
         [Browsable(true)]
         [Category("自定义属性")]
         [Description("获取或设置阀门名称")]
         public string ValveName
         {
-            get
-            {
-                return valveName;
-
-            }
+            get { return valveName; }
             set
             {
                 valveName = value;
@@ -171,7 +171,6 @@ namespace ProcessControlLib
         }
 
         private ValveState state = ValveState.close;
-
         [Browsable(true)]
         [Category("自定义属性")]
         [Description("获取或设置阀门状态")]
@@ -180,15 +179,14 @@ namespace ProcessControlLib
             get { return state; }
             set
             {
-
                 if (state != value)
                 {
                     state = value;
-
                     UpdateImage(this.isVertical, state);
                 }
             }
         }
+
         private ushort dqOpenAndClose;
         [Browsable(true)]
         [Category("自定义属性")]
@@ -204,16 +202,14 @@ namespace ProcessControlLib
                 }
             }
         }
+
         private string workStation { get; set; }
         [Browsable(true)]
         [Category("自定义属性")]
         [Description("获取或设置所属工位")]
         public string WorkStation
         {
-            get
-            {
-                return workStation;
-            }
+            get { return workStation; }
             set
             {
                 if (workStation != value)
@@ -295,11 +291,10 @@ namespace ProcessControlLib
             }
         }
 
-
         private bool showName = false;
         [Browsable(true)]
         [Category("自定义属性")]
-        [Description("获取或设置阀门的水平或垂直状态")]
+        [Description("获取或设置阀门的水平或垂直状态 (false为显示名称, true为隐藏名称)")]
         public bool ShowName
         {
             get { return showName; }
@@ -307,11 +302,17 @@ namespace ProcessControlLib
             {
                 showName = value;
                 this.label1.Visible = !value;
+
                 if (value)
                 {
-                    this.Size = new Size(30, 30);
-                    this.panel1.Size = new Size(30, 30);
-                    this.panel1.Dock = DockStyle.Fill;
+                    tableLayoutPanel1.ColumnCount = 1;
+                    tableLayoutPanel1.RowCount = 1;
+                    tableLayoutPanel1.ColumnStyles.Clear();
+                    tableLayoutPanel1.RowStyles.Clear();
+                    tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100f));
+                    tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100f));
+                    tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
+                    panel1.Anchor = AnchorStyles.None;
                 }
                 else
                 {
@@ -336,23 +337,42 @@ namespace ProcessControlLib
 
         private void WhenVertical()
         {
-            if (showName)
-                return;
-            this.Size = new Size(90, 35);
-            this.panel1.Size = new Size(35, 35);
-            this.panel1.Dock = DockStyle.Left;
-            this.label1.Dock = DockStyle.Right;
+            if (showName) return;
+
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.RowCount = 1;
+            tableLayoutPanel1.ColumnStyles.Clear();
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 50f));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100f));
+            tableLayoutPanel1.RowStyles.Clear();
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100f));
+
+            tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
+            tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
+
+            panel1.Anchor = AnchorStyles.None;
+            label1.TextAlign = ContentAlignment.MiddleLeft;
         }
 
         private void WhenHorizontal()
         {
-            if (showName)
-                return;
-            this.Size = new Size(55, 65);
-            this.label1.Dock = DockStyle.Top;
-            this.panel1.Dock = DockStyle.Fill;
-            this.panel1.Size = new Size(55, 48);
+            if (showName) return;
+
+            tableLayoutPanel1.ColumnCount = 1;
+            tableLayoutPanel1.RowCount = 2;
+            tableLayoutPanel1.ColumnStyles.Clear();
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100f));
+            tableLayoutPanel1.RowStyles.Clear();
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100f));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 50f));
+
+            tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
+            tableLayoutPanel1.Controls.Add(this.panel1, 0, 1);
+
+            panel1.Anchor = AnchorStyles.None;
+            label1.TextAlign = ContentAlignment.BottomCenter;
         }
+
         private void UpdateImage(bool isVertical, ValveState state)
         {
             switch (state)
@@ -369,12 +389,10 @@ namespace ProcessControlLib
                         this.panel1.BackgroundImage = Properties.Resources.AirValveOpenH;
                     }
                     break;
-
                 case ValveState.close:
                     if (isVertical)
                     {
                         WhenVertical();
-
                         this.panel1.BackgroundImage = Properties.Resources.AirValveCloseV;
                     }
                     else
@@ -383,12 +401,10 @@ namespace ProcessControlLib
                         this.panel1.BackgroundImage = Properties.Resources.AirValveCloseH;
                     }
                     break;
-
                 case ValveState.warning:
                     if (isVertical)
                     {
                         WhenVertical();
-
                         this.panel1.BackgroundImage = Properties.Resources.AirValveWarV;
                     }
                     else
@@ -397,12 +413,10 @@ namespace ProcessControlLib
                         this.panel1.BackgroundImage = Properties.Resources.AirValveWarH;
                     }
                     break;
-
                 case ValveState.low:
                     if (isVertical)
                     {
                         WhenVertical();
-
                         this.panel1.BackgroundImage = Properties.Resources.AirValveLowV;
                     }
                     else
@@ -415,7 +429,6 @@ namespace ProcessControlLib
                     if (isVertical)
                     {
                         WhenVertical();
-
                         this.panel1.BackgroundImage = Properties.Resources.AirValveCloseV;
                     }
                     else
@@ -426,7 +439,5 @@ namespace ProcessControlLib
                     break;
             }
         }
-
-
     }
 }

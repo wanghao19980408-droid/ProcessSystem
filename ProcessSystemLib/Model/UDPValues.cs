@@ -15,5 +15,7 @@ namespace ProcessSystemLib
         public bool[] PLC_status { get; set; }
         public short[] AI_value { get; set; }
         public short[] HIGH_AI_value { get; set; }
+        public short[] Lock_Value { get; set; }
+        public short[] PID_Value { get; set; }
     }
 }

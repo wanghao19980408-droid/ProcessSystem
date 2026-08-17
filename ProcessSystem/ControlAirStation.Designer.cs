@@ -625,7 +625,7 @@ namespace ProcessSystem
             this.panel2.ForeColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(2, 54);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(3386, 979);
+            this.panel2.Size = new System.Drawing.Size(2560, 979);
             this.panel2.TabIndex = 3;
             // 
             // uiTextBox10
@@ -2642,7 +2642,7 @@ namespace ProcessSystem
             this.label43.ForeColor = System.Drawing.Color.White;
             this.label43.Location = new System.Drawing.Point(222, 532);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(41, 22);
+            this.label43.Size = new System.Drawing.Size(61, 31);
             this.label43.TabIndex = 3;
             this.label43.Text = "CY1";
             // 
@@ -2653,7 +2653,7 @@ namespace ProcessSystem
             this.label37.ForeColor = System.Drawing.Color.White;
             this.label37.Location = new System.Drawing.Point(543, 538);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(41, 22);
+            this.label37.Size = new System.Drawing.Size(61, 31);
             this.label37.TabIndex = 3;
             this.label37.Text = "CY6";
             // 
@@ -2664,7 +2664,7 @@ namespace ProcessSystem
             this.label31.ForeColor = System.Drawing.Color.White;
             this.label31.Location = new System.Drawing.Point(872, 532);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(51, 22);
+            this.label31.Size = new System.Drawing.Size(76, 31);
             this.label31.TabIndex = 3;
             this.label31.Text = "CY11";
             // 
@@ -2675,7 +2675,7 @@ namespace ProcessSystem
             this.label25.ForeColor = System.Drawing.Color.White;
             this.label25.Location = new System.Drawing.Point(1189, 532);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(51, 22);
+            this.label25.Size = new System.Drawing.Size(76, 31);
             this.label25.TabIndex = 3;
             this.label25.Text = "CY16";
             // 
@@ -2686,7 +2686,7 @@ namespace ProcessSystem
             this.label76.ForeColor = System.Drawing.Color.White;
             this.label76.Location = new System.Drawing.Point(2812, 533);
             this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(51, 22);
+            this.label76.Size = new System.Drawing.Size(76, 31);
             this.label76.TabIndex = 3;
             this.label76.Text = "CY41";
             // 
@@ -2697,7 +2697,7 @@ namespace ProcessSystem
             this.label69.ForeColor = System.Drawing.Color.White;
             this.label69.Location = new System.Drawing.Point(2501, 533);
             this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(51, 22);
+            this.label69.Size = new System.Drawing.Size(76, 31);
             this.label69.TabIndex = 3;
             this.label69.Text = "CY36";
             // 
@@ -2708,7 +2708,7 @@ namespace ProcessSystem
             this.label55.ForeColor = System.Drawing.Color.White;
             this.label55.Location = new System.Drawing.Point(2172, 532);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(51, 22);
+            this.label55.Size = new System.Drawing.Size(76, 31);
             this.label55.TabIndex = 3;
             this.label55.Text = "CY31";
             // 
@@ -2719,7 +2719,7 @@ namespace ProcessSystem
             this.label49.ForeColor = System.Drawing.Color.White;
             this.label49.Location = new System.Drawing.Point(1843, 532);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(51, 22);
+            this.label49.Size = new System.Drawing.Size(76, 31);
             this.label49.TabIndex = 3;
             this.label49.Text = "CY26";
             // 
@@ -2730,7 +2730,7 @@ namespace ProcessSystem
             this.label19.ForeColor = System.Drawing.Color.White;
             this.label19.Location = new System.Drawing.Point(1507, 532);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(51, 22);
+            this.label19.Size = new System.Drawing.Size(76, 31);
             this.label19.TabIndex = 3;
             this.label19.Text = "CY21";
             // 
@@ -2741,7 +2741,7 @@ namespace ProcessSystem
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(3108, 533);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(51, 22);
+            this.label9.Size = new System.Drawing.Size(76, 31);
             this.label9.TabIndex = 3;
             this.label9.Text = "CY46";
             // 
@@ -2752,7 +2752,7 @@ namespace ProcessSystem
             this.label42.ForeColor = System.Drawing.Color.White;
             this.label42.Location = new System.Drawing.Point(295, 312);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(41, 22);
+            this.label42.Size = new System.Drawing.Size(61, 31);
             this.label42.TabIndex = 3;
             this.label42.Text = "CY5";
             // 
@@ -2763,7 +2763,7 @@ namespace ProcessSystem
             this.label36.ForeColor = System.Drawing.Color.White;
             this.label36.Location = new System.Drawing.Point(617, 318);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(51, 22);
+            this.label36.Size = new System.Drawing.Size(76, 31);
             this.label36.TabIndex = 3;
             this.label36.Text = "CY10";
             // 
@@ -2774,7 +2774,7 @@ namespace ProcessSystem
             this.label30.ForeColor = System.Drawing.Color.White;
             this.label30.Location = new System.Drawing.Point(946, 312);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(51, 22);
+            this.label30.Size = new System.Drawing.Size(76, 31);
             this.label30.TabIndex = 3;
             this.label30.Text = "CY15";
             // 
@@ -2785,7 +2785,7 @@ namespace ProcessSystem
             this.label24.ForeColor = System.Drawing.Color.White;
             this.label24.Location = new System.Drawing.Point(1263, 312);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(51, 22);
+            this.label24.Size = new System.Drawing.Size(76, 31);
             this.label24.TabIndex = 3;
             this.label24.Text = "CY20";
             // 
@@ -2796,7 +2796,7 @@ namespace ProcessSystem
             this.label75.ForeColor = System.Drawing.Color.White;
             this.label75.Location = new System.Drawing.Point(2886, 313);
             this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(51, 22);
+            this.label75.Size = new System.Drawing.Size(76, 31);
             this.label75.TabIndex = 3;
             this.label75.Text = "CY45";
             // 
@@ -2807,7 +2807,7 @@ namespace ProcessSystem
             this.label68.ForeColor = System.Drawing.Color.White;
             this.label68.Location = new System.Drawing.Point(2575, 313);
             this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(51, 22);
+            this.label68.Size = new System.Drawing.Size(76, 31);
             this.label68.TabIndex = 3;
             this.label68.Text = "CY40";
             // 
@@ -2818,7 +2818,7 @@ namespace ProcessSystem
             this.label54.ForeColor = System.Drawing.Color.White;
             this.label54.Location = new System.Drawing.Point(2246, 312);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(51, 22);
+            this.label54.Size = new System.Drawing.Size(76, 31);
             this.label54.TabIndex = 3;
             this.label54.Text = "CY35";
             // 
@@ -2829,7 +2829,7 @@ namespace ProcessSystem
             this.label48.ForeColor = System.Drawing.Color.White;
             this.label48.Location = new System.Drawing.Point(1917, 312);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(51, 22);
+            this.label48.Size = new System.Drawing.Size(76, 31);
             this.label48.TabIndex = 3;
             this.label48.Text = "CY30";
             // 
@@ -2840,7 +2840,7 @@ namespace ProcessSystem
             this.label18.ForeColor = System.Drawing.Color.White;
             this.label18.Location = new System.Drawing.Point(1581, 312);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(51, 22);
+            this.label18.Size = new System.Drawing.Size(76, 31);
             this.label18.TabIndex = 3;
             this.label18.Text = "CY25";
             // 
@@ -2851,7 +2851,7 @@ namespace ProcessSystem
             this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(3182, 313);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(51, 22);
+            this.label13.Size = new System.Drawing.Size(76, 31);
             this.label13.TabIndex = 3;
             this.label13.Text = "CY50";
             // 
@@ -2862,7 +2862,7 @@ namespace ProcessSystem
             this.label41.ForeColor = System.Drawing.Color.White;
             this.label41.Location = new System.Drawing.Point(363, 404);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(41, 22);
+            this.label41.Size = new System.Drawing.Size(61, 31);
             this.label41.TabIndex = 3;
             this.label41.Text = "CY4";
             // 
@@ -2873,7 +2873,7 @@ namespace ProcessSystem
             this.label35.ForeColor = System.Drawing.Color.White;
             this.label35.Location = new System.Drawing.Point(696, 410);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(41, 22);
+            this.label35.Size = new System.Drawing.Size(61, 31);
             this.label35.TabIndex = 3;
             this.label35.Text = "CY9";
             // 
@@ -2884,7 +2884,7 @@ namespace ProcessSystem
             this.label29.ForeColor = System.Drawing.Color.White;
             this.label29.Location = new System.Drawing.Point(1025, 404);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(51, 22);
+            this.label29.Size = new System.Drawing.Size(76, 31);
             this.label29.TabIndex = 3;
             this.label29.Text = "CY14";
             // 
@@ -2895,7 +2895,7 @@ namespace ProcessSystem
             this.label23.ForeColor = System.Drawing.Color.White;
             this.label23.Location = new System.Drawing.Point(1342, 404);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(51, 22);
+            this.label23.Size = new System.Drawing.Size(76, 31);
             this.label23.TabIndex = 3;
             this.label23.Text = "CY19";
             // 
@@ -2906,7 +2906,7 @@ namespace ProcessSystem
             this.label74.ForeColor = System.Drawing.Color.White;
             this.label74.Location = new System.Drawing.Point(2965, 405);
             this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(51, 22);
+            this.label74.Size = new System.Drawing.Size(76, 31);
             this.label74.TabIndex = 3;
             this.label74.Text = "CY44";
             // 
@@ -2917,7 +2917,7 @@ namespace ProcessSystem
             this.label67.ForeColor = System.Drawing.Color.White;
             this.label67.Location = new System.Drawing.Point(2654, 405);
             this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(51, 22);
+            this.label67.Size = new System.Drawing.Size(76, 31);
             this.label67.TabIndex = 3;
             this.label67.Text = "CY39";
             // 
@@ -2928,7 +2928,7 @@ namespace ProcessSystem
             this.label53.ForeColor = System.Drawing.Color.White;
             this.label53.Location = new System.Drawing.Point(2325, 404);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(51, 22);
+            this.label53.Size = new System.Drawing.Size(76, 31);
             this.label53.TabIndex = 3;
             this.label53.Text = "CY34";
             // 
@@ -2939,7 +2939,7 @@ namespace ProcessSystem
             this.label47.ForeColor = System.Drawing.Color.White;
             this.label47.Location = new System.Drawing.Point(1996, 404);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(51, 22);
+            this.label47.Size = new System.Drawing.Size(76, 31);
             this.label47.TabIndex = 3;
             this.label47.Text = "CY29";
             // 
@@ -2950,7 +2950,7 @@ namespace ProcessSystem
             this.label17.ForeColor = System.Drawing.Color.White;
             this.label17.Location = new System.Drawing.Point(1660, 404);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(51, 22);
+            this.label17.Size = new System.Drawing.Size(76, 31);
             this.label17.TabIndex = 3;
             this.label17.Text = "CY24";
             // 
@@ -2961,7 +2961,7 @@ namespace ProcessSystem
             this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(3261, 405);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(51, 22);
+            this.label12.Size = new System.Drawing.Size(76, 31);
             this.label12.TabIndex = 3;
             this.label12.Text = "CY49";
             // 
@@ -2972,7 +2972,7 @@ namespace ProcessSystem
             this.label40.ForeColor = System.Drawing.Color.White;
             this.label40.Location = new System.Drawing.Point(222, 382);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(41, 22);
+            this.label40.Size = new System.Drawing.Size(61, 31);
             this.label40.TabIndex = 3;
             this.label40.Text = "CY3";
             // 
@@ -2983,7 +2983,7 @@ namespace ProcessSystem
             this.label34.ForeColor = System.Drawing.Color.White;
             this.label34.Location = new System.Drawing.Point(545, 389);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(41, 22);
+            this.label34.Size = new System.Drawing.Size(61, 31);
             this.label34.TabIndex = 3;
             this.label34.Text = "CY8";
             // 
@@ -2994,7 +2994,7 @@ namespace ProcessSystem
             this.label28.ForeColor = System.Drawing.Color.White;
             this.label28.Location = new System.Drawing.Point(874, 383);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(51, 22);
+            this.label28.Size = new System.Drawing.Size(76, 31);
             this.label28.TabIndex = 3;
             this.label28.Text = "CY13";
             // 
@@ -3005,7 +3005,7 @@ namespace ProcessSystem
             this.label22.ForeColor = System.Drawing.Color.White;
             this.label22.Location = new System.Drawing.Point(1191, 383);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(51, 22);
+            this.label22.Size = new System.Drawing.Size(76, 31);
             this.label22.TabIndex = 3;
             this.label22.Text = "CY18";
             // 
@@ -3016,7 +3016,7 @@ namespace ProcessSystem
             this.label73.ForeColor = System.Drawing.Color.White;
             this.label73.Location = new System.Drawing.Point(2814, 384);
             this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(51, 22);
+            this.label73.Size = new System.Drawing.Size(76, 31);
             this.label73.TabIndex = 3;
             this.label73.Text = "CY43";
             // 
@@ -3027,7 +3027,7 @@ namespace ProcessSystem
             this.label66.ForeColor = System.Drawing.Color.White;
             this.label66.Location = new System.Drawing.Point(2503, 384);
             this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(51, 22);
+            this.label66.Size = new System.Drawing.Size(76, 31);
             this.label66.TabIndex = 3;
             this.label66.Text = "CY38";
             // 
@@ -3038,7 +3038,7 @@ namespace ProcessSystem
             this.label52.ForeColor = System.Drawing.Color.White;
             this.label52.Location = new System.Drawing.Point(2174, 383);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(51, 22);
+            this.label52.Size = new System.Drawing.Size(76, 31);
             this.label52.TabIndex = 3;
             this.label52.Text = "CY33";
             // 
@@ -3049,7 +3049,7 @@ namespace ProcessSystem
             this.label46.ForeColor = System.Drawing.Color.White;
             this.label46.Location = new System.Drawing.Point(1845, 383);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(51, 22);
+            this.label46.Size = new System.Drawing.Size(76, 31);
             this.label46.TabIndex = 3;
             this.label46.Text = "CY28";
             // 
@@ -3060,7 +3060,7 @@ namespace ProcessSystem
             this.label16.ForeColor = System.Drawing.Color.White;
             this.label16.Location = new System.Drawing.Point(1509, 383);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(51, 22);
+            this.label16.Size = new System.Drawing.Size(76, 31);
             this.label16.TabIndex = 3;
             this.label16.Text = "CY23";
             // 
@@ -3071,7 +3071,7 @@ namespace ProcessSystem
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(3110, 384);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(51, 22);
+            this.label11.Size = new System.Drawing.Size(76, 31);
             this.label11.TabIndex = 3;
             this.label11.Text = "CY48";
             // 
@@ -3082,7 +3082,7 @@ namespace ProcessSystem
             this.label72.ForeColor = System.Drawing.Color.White;
             this.label72.Location = new System.Drawing.Point(2729, 385);
             this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(51, 22);
+            this.label72.Size = new System.Drawing.Size(76, 31);
             this.label72.TabIndex = 3;
             this.label72.Text = "CY42";
             // 
@@ -3093,7 +3093,7 @@ namespace ProcessSystem
             this.label65.ForeColor = System.Drawing.Color.White;
             this.label65.Location = new System.Drawing.Point(2418, 385);
             this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(51, 22);
+            this.label65.Size = new System.Drawing.Size(76, 31);
             this.label65.TabIndex = 3;
             this.label65.Text = "CY37";
             // 
@@ -3104,7 +3104,7 @@ namespace ProcessSystem
             this.label62.ForeColor = System.Drawing.Color.White;
             this.label62.Location = new System.Drawing.Point(2089, 384);
             this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(51, 22);
+            this.label62.Size = new System.Drawing.Size(76, 31);
             this.label62.TabIndex = 3;
             this.label62.Text = "CY32";
             // 
@@ -3115,7 +3115,7 @@ namespace ProcessSystem
             this.label61.ForeColor = System.Drawing.Color.White;
             this.label61.Location = new System.Drawing.Point(1761, 384);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(51, 22);
+            this.label61.Size = new System.Drawing.Size(76, 31);
             this.label61.TabIndex = 3;
             this.label61.Text = "CY27";
             // 
@@ -3126,7 +3126,7 @@ namespace ProcessSystem
             this.label60.ForeColor = System.Drawing.Color.White;
             this.label60.Location = new System.Drawing.Point(1424, 384);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(51, 22);
+            this.label60.Size = new System.Drawing.Size(76, 31);
             this.label60.TabIndex = 3;
             this.label60.Text = "CY22";
             // 
@@ -3137,7 +3137,7 @@ namespace ProcessSystem
             this.label59.ForeColor = System.Drawing.Color.White;
             this.label59.Location = new System.Drawing.Point(1106, 384);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(51, 22);
+            this.label59.Size = new System.Drawing.Size(76, 31);
             this.label59.TabIndex = 3;
             this.label59.Text = "CY17";
             // 
@@ -3148,7 +3148,7 @@ namespace ProcessSystem
             this.label58.ForeColor = System.Drawing.Color.White;
             this.label58.Location = new System.Drawing.Point(790, 383);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(51, 22);
+            this.label58.Size = new System.Drawing.Size(76, 31);
             this.label58.TabIndex = 3;
             this.label58.Text = "CY12";
             // 
@@ -3159,7 +3159,7 @@ namespace ProcessSystem
             this.label57.ForeColor = System.Drawing.Color.White;
             this.label57.Location = new System.Drawing.Point(463, 387);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(41, 22);
+            this.label57.Size = new System.Drawing.Size(61, 31);
             this.label57.TabIndex = 3;
             this.label57.Text = "CY7";
             // 
@@ -3170,7 +3170,7 @@ namespace ProcessSystem
             this.label56.ForeColor = System.Drawing.Color.White;
             this.label56.Location = new System.Drawing.Point(138, 381);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(41, 22);
+            this.label56.Size = new System.Drawing.Size(61, 31);
             this.label56.TabIndex = 3;
             this.label56.Text = "CY2";
             // 
@@ -3181,7 +3181,7 @@ namespace ProcessSystem
             this.label82.ForeColor = System.Drawing.Color.White;
             this.label82.Location = new System.Drawing.Point(107, 761);
             this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(53, 22);
+            this.label82.Size = new System.Drawing.Size(77, 31);
             this.label82.TabIndex = 3;
             this.label82.Text = "CPb1";
             // 
@@ -3192,7 +3192,7 @@ namespace ProcessSystem
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(3028, 385);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 22);
+            this.label8.Size = new System.Drawing.Size(76, 31);
             this.label8.TabIndex = 3;
             this.label8.Text = "CY47";
             // 
@@ -3203,7 +3203,7 @@ namespace ProcessSystem
             this.label39.ForeColor = System.Drawing.Color.White;
             this.label39.Location = new System.Drawing.Point(317, 593);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(53, 22);
+            this.label39.Size = new System.Drawing.Size(77, 31);
             this.label39.TabIndex = 3;
             this.label39.Text = "CPb2";
             // 
@@ -3214,7 +3214,7 @@ namespace ProcessSystem
             this.label33.ForeColor = System.Drawing.Color.White;
             this.label33.Location = new System.Drawing.Point(650, 599);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(53, 22);
+            this.label33.Size = new System.Drawing.Size(77, 31);
             this.label33.TabIndex = 3;
             this.label33.Text = "CPb4";
             // 
@@ -3225,7 +3225,7 @@ namespace ProcessSystem
             this.label27.ForeColor = System.Drawing.Color.White;
             this.label27.Location = new System.Drawing.Point(979, 593);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(53, 22);
+            this.label27.Size = new System.Drawing.Size(77, 31);
             this.label27.TabIndex = 3;
             this.label27.Text = "CPb6";
             // 
@@ -3236,7 +3236,7 @@ namespace ProcessSystem
             this.label21.ForeColor = System.Drawing.Color.White;
             this.label21.Location = new System.Drawing.Point(1296, 593);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(53, 22);
+            this.label21.Size = new System.Drawing.Size(77, 31);
             this.label21.TabIndex = 3;
             this.label21.Text = "CPb8";
             // 
@@ -3247,7 +3247,7 @@ namespace ProcessSystem
             this.label71.ForeColor = System.Drawing.Color.White;
             this.label71.Location = new System.Drawing.Point(2919, 594);
             this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(63, 22);
+            this.label71.Size = new System.Drawing.Size(92, 31);
             this.label71.TabIndex = 3;
             this.label71.Text = "CPb18";
             // 
@@ -3258,7 +3258,7 @@ namespace ProcessSystem
             this.label64.ForeColor = System.Drawing.Color.White;
             this.label64.Location = new System.Drawing.Point(2608, 594);
             this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(63, 22);
+            this.label64.Size = new System.Drawing.Size(92, 31);
             this.label64.TabIndex = 3;
             this.label64.Text = "CPb16";
             // 
@@ -3269,7 +3269,7 @@ namespace ProcessSystem
             this.label51.ForeColor = System.Drawing.Color.White;
             this.label51.Location = new System.Drawing.Point(2279, 593);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(63, 22);
+            this.label51.Size = new System.Drawing.Size(92, 31);
             this.label51.TabIndex = 3;
             this.label51.Text = "CPb14";
             // 
@@ -3280,7 +3280,7 @@ namespace ProcessSystem
             this.label45.ForeColor = System.Drawing.Color.White;
             this.label45.Location = new System.Drawing.Point(1950, 593);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(63, 22);
+            this.label45.Size = new System.Drawing.Size(92, 31);
             this.label45.TabIndex = 3;
             this.label45.Text = "CPb12";
             // 
@@ -3291,7 +3291,7 @@ namespace ProcessSystem
             this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(1614, 593);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(63, 22);
+            this.label15.Size = new System.Drawing.Size(92, 31);
             this.label15.TabIndex = 3;
             this.label15.Text = "CPb10";
             // 
@@ -3302,7 +3302,7 @@ namespace ProcessSystem
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(3215, 594);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 22);
+            this.label10.Size = new System.Drawing.Size(92, 31);
             this.label10.TabIndex = 3;
             this.label10.Text = "CPb20";
             // 
@@ -3313,7 +3313,7 @@ namespace ProcessSystem
             this.label38.ForeColor = System.Drawing.Color.White;
             this.label38.Location = new System.Drawing.Point(317, 131);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(53, 22);
+            this.label38.Size = new System.Drawing.Size(77, 31);
             this.label38.TabIndex = 3;
             this.label38.Text = "CPb3";
             // 
@@ -3324,7 +3324,7 @@ namespace ProcessSystem
             this.label32.ForeColor = System.Drawing.Color.White;
             this.label32.Location = new System.Drawing.Point(650, 137);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(53, 22);
+            this.label32.Size = new System.Drawing.Size(77, 31);
             this.label32.TabIndex = 3;
             this.label32.Text = "CPb5";
             // 
@@ -3335,7 +3335,7 @@ namespace ProcessSystem
             this.label26.ForeColor = System.Drawing.Color.White;
             this.label26.Location = new System.Drawing.Point(979, 131);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(53, 22);
+            this.label26.Size = new System.Drawing.Size(77, 31);
             this.label26.TabIndex = 3;
             this.label26.Text = "CPb7";
             // 
@@ -3346,7 +3346,7 @@ namespace ProcessSystem
             this.label20.ForeColor = System.Drawing.Color.White;
             this.label20.Location = new System.Drawing.Point(1296, 131);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(53, 22);
+            this.label20.Size = new System.Drawing.Size(77, 31);
             this.label20.TabIndex = 3;
             this.label20.Text = "CPb9";
             // 
@@ -3357,7 +3357,7 @@ namespace ProcessSystem
             this.label70.ForeColor = System.Drawing.Color.White;
             this.label70.Location = new System.Drawing.Point(2919, 132);
             this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(63, 22);
+            this.label70.Size = new System.Drawing.Size(92, 31);
             this.label70.TabIndex = 3;
             this.label70.Text = "CPb19";
             // 
@@ -3368,7 +3368,7 @@ namespace ProcessSystem
             this.label63.ForeColor = System.Drawing.Color.White;
             this.label63.Location = new System.Drawing.Point(2608, 132);
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(63, 22);
+            this.label63.Size = new System.Drawing.Size(92, 31);
             this.label63.TabIndex = 3;
             this.label63.Text = "CPb17";
             // 
@@ -3379,7 +3379,7 @@ namespace ProcessSystem
             this.label50.ForeColor = System.Drawing.Color.White;
             this.label50.Location = new System.Drawing.Point(2279, 131);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(63, 22);
+            this.label50.Size = new System.Drawing.Size(92, 31);
             this.label50.TabIndex = 3;
             this.label50.Text = "CPb15";
             // 
@@ -3390,7 +3390,7 @@ namespace ProcessSystem
             this.label44.ForeColor = System.Drawing.Color.White;
             this.label44.Location = new System.Drawing.Point(1950, 131);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(63, 22);
+            this.label44.Size = new System.Drawing.Size(92, 31);
             this.label44.TabIndex = 3;
             this.label44.Text = "CPb13";
             // 
@@ -3401,7 +3401,7 @@ namespace ProcessSystem
             this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(1614, 131);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(63, 22);
+            this.label14.Size = new System.Drawing.Size(92, 31);
             this.label14.TabIndex = 3;
             this.label14.Text = "CPb11";
             // 
@@ -3412,7 +3412,7 @@ namespace ProcessSystem
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(3215, 132);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 22);
+            this.label7.Size = new System.Drawing.Size(92, 31);
             this.label7.TabIndex = 3;
             this.label7.Text = "CPb21";
             // 
@@ -5954,7 +5954,7 @@ namespace ProcessSystem
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(3386, 52);
+            this.label1.Size = new System.Drawing.Size(2560, 52);
             this.label1.TabIndex = 0;
             this.label1.Text = "操纵气配气台";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -5972,7 +5972,7 @@ namespace ProcessSystem
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(3386, 52);
+            this.panel1.Size = new System.Drawing.Size(2560, 52);
             this.panel1.TabIndex = 2;
             // 
             // btn_Allow
@@ -5982,7 +5982,7 @@ namespace ProcessSystem
             this.btn_Allow.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_Allow.FillColor = System.Drawing.Color.Transparent;
             this.btn_Allow.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_Allow.Location = new System.Drawing.Point(3204, 0);
+            this.btn_Allow.Location = new System.Drawing.Point(2378, 0);
             this.btn_Allow.MinimumSize = new System.Drawing.Size(1, 1);
             this.btn_Allow.Name = "btn_Allow";
             this.btn_Allow.RectColor = System.Drawing.Color.Transparent;
@@ -6011,7 +6011,7 @@ namespace ProcessSystem
             this.uiSymbolButton1.ForeHoverColor = System.Drawing.Color.Red;
             this.uiSymbolButton1.ForePressColor = System.Drawing.Color.Red;
             this.uiSymbolButton1.ForeSelectedColor = System.Drawing.Color.Red;
-            this.uiSymbolButton1.Location = new System.Drawing.Point(3295, 0);
+            this.uiSymbolButton1.Location = new System.Drawing.Point(2469, 0);
             this.uiSymbolButton1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSymbolButton1.Name = "uiSymbolButton1";
             this.uiSymbolButton1.RectColor = System.Drawing.Color.Transparent;
@@ -6034,9 +6034,9 @@ namespace ProcessSystem
             // 
             // ControlAirStation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(3390, 1035);
+            this.ClientSize = new System.Drawing.Size(2564, 1035);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -6046,6 +6046,7 @@ namespace ProcessSystem
             this.Padding = new System.Windows.Forms.Padding(2);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MethaneSystem";
+            this.VisibleChanged += new System.EventHandler(this.ControlAirStation_VisibleChanged);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);

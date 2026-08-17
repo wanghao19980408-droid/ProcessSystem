@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DualFault));
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.btn_OK = new System.Windows.Forms.Button();
             this.TopPanel = new System.Windows.Forms.Panel();
             this.btn_CLose = new Sunny.UI.UISymbolButton();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_Message = new System.Windows.Forms.Label();
-            this.btn_OK = new System.Windows.Forms.Button();
             this.MainPanel.SuspendLayout();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -53,6 +53,23 @@
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(512, 291);
             this.MainPanel.TabIndex = 1;
+            // 
+            // btn_OK
+            // 
+            this.btn_OK.BackgroundImage = global::ProcessSystem.Properties.Resources.btnbg03;
+            this.btn_OK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_OK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_OK.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_OK.FlatAppearance.BorderSize = 0;
+            this.btn_OK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_OK.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_OK.Location = new System.Drawing.Point(194, 225);
+            this.btn_OK.Name = "btn_OK";
+            this.btn_OK.Size = new System.Drawing.Size(124, 40);
+            this.btn_OK.TabIndex = 6;
+            this.btn_OK.Text = "确 定";
+            this.btn_OK.UseVisualStyleBackColor = true;
+            this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click_1);
             // 
             // TopPanel
             // 
@@ -101,7 +118,7 @@
             this.lbl_Title.ForeColor = System.Drawing.Color.White;
             this.lbl_Title.Location = new System.Drawing.Point(61, 15);
             this.lbl_Title.Name = "lbl_Title";
-            this.lbl_Title.Size = new System.Drawing.Size(191, 39);
+            this.lbl_Title.Size = new System.Drawing.Size(126, 26);
             this.lbl_Title.TabIndex = 3;
             this.lbl_Title.Text = "双路故障提示";
             // 
@@ -132,29 +149,12 @@
             this.lbl_Message.Name = "lbl_Message";
             this.lbl_Message.Size = new System.Drawing.Size(503, 133);
             this.lbl_Message.TabIndex = 3;
-            this.lbl_Message.Text = "严重警告】煤油系统双路传感器均发生严重偏差，自动增压已挂起，请立即人工介入！";
+            this.lbl_Message.Text = "【严重警告】煤油系统双路传感器均发生严重偏差，自动增压已挂起，请立即人工介入！";
             this.lbl_Message.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btn_OK
-            // 
-            this.btn_OK.BackgroundImage = global::ProcessSystem.Properties.Resources.btnbg03;
-            this.btn_OK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_OK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_OK.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_OK.FlatAppearance.BorderSize = 0;
-            this.btn_OK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_OK.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_OK.Location = new System.Drawing.Point(194, 225);
-            this.btn_OK.Name = "btn_OK";
-            this.btn_OK.Size = new System.Drawing.Size(124, 40);
-            this.btn_OK.TabIndex = 6;
-            this.btn_OK.Text = "确 定";
-            this.btn_OK.UseVisualStyleBackColor = true;
-            this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click_1);
             // 
             // DualFault
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(514, 293);
             this.Controls.Add(this.MainPanel);

@@ -157,16 +157,24 @@ namespace ProcessSystemLib
                     byte[] DQ = new byte[Struct_count[2]];
                     byte[] AQ = new byte[Struct_count[3]];
                     byte[] AI = new byte[Struct_count[5]];
+                    byte[] Lock = new byte[Struct_count[7]];
+                    byte[] pid = new byte[Struct_count[8]];
+
 
                     Array.Copy(bytes, 2, DI, 0, Struct_count[1]);
                     Array.Copy(bytes, 2 + Struct_count[1], DQ, 0, Struct_count[2]);
                     Array.Copy(bytes, 2 + Struct_count[1] + Struct_count[2], AQ, 0, Struct_count[3]);
                     Array.Copy(bytes, 2 + Struct_count[1] + Struct_count[2] + Struct_count[3], AI, 0, Struct_count[5]);
+                    Array.Copy(bytes, 2 + Struct_count[1] + Struct_count[2] + Struct_count[3] + Struct_count[5], Lock, 0, Struct_count[7]);
+                    Array.Copy(bytes, 2 + Struct_count[1] + Struct_count[2] + Struct_count[3] + Struct_count[5] + Struct_count[7], pid, 0, Struct_count[8]);
 
                     values.DI_value = BitLib.GetBitArrayFromByteArray(DI);
                     values.DQ_value = BitLib.GetBitArrayFromByteArray(DQ);
                     values.AQ_value = ShortLib.GetShortArrayFromByteArray(AQ);
                     values.AI_value = ShortLib.GetShortArrayFromByteArray(AI);
+                    values.Lock_Value = ShortLib.GetShortArrayFromByteArray(Lock);
+                    values.PID_Value = ShortLib.GetShortArrayFromByteArray(pid);
+
                 }
 
                 DataUpdated?.Invoke(this, values);

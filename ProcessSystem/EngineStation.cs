@@ -33,25 +33,12 @@ namespace ProcessSystem
             this.Load += EngineStation_Load;
         }
         TitleDataService titleDataService = new TitleDataService();
-        private async void EngineStation_Load(object sender, EventArgs e)
+        private  void EngineStation_Load(object sender, EventArgs e)
         {
             btn_Allow.Symbol = 61475;
             btn_Allow.SymbolColor = Color.Red;
 
-            var res = await Task.Run(() =>
-                titleDataService.QueryTitles("EngineStation"));
 
-            if (!res.IsSuccess) return;
-
-            var titles = res.Content;
-
-            int i = 0;
-            foreach (var item in panel2.Controls.OfType<UITextBox>().OrderBy(t => t.TabIndex))
-            {
-                item.Text = i < titles.Count ? titles[i] : string.Empty;
-                item.Enabled = false;
-                i++;
-            }
         }
         public void MainForm_GaseSensorDataUpdated(UDPValues e)
         {
@@ -222,5 +209,21 @@ namespace ProcessSystem
             }
         }
 
+        private async void EngineStation_VisibleChanged(object sender, EventArgs e)
+        {
+            var res = await Task.Run(() =>titleDataService.QueryTitles("EngineStation"));
+
+            if (!res.IsSuccess) return;
+
+            var titles = res.Content;
+
+            int i = 0;
+            foreach (var item in panel2.Controls.OfType<UITextBox>().OrderBy(t => t.TabIndex))
+            {
+                item.Text = i < titles.Count ? titles[i] : string.Empty;
+                item.Enabled = false;
+                i++;
+            }
+        }
     }
 }

@@ -2,40 +2,89 @@
 using NodeSettings;
 using ProcessSystemLib;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using static ProcessSystemLib.TCPManager;
 
 namespace ProcessSystem
 {
     public partial class TempLock : Form
     {
-
+        #region 字段属性
         public Action<int, string> AddLog;
-
         private TCPManager Tcp = null;
         private byte Index { get; set; }
         private string SensorName { get; set; }
-        private SiemensDevice siemensDevice { get; set; }
-        public TempLock(TCPManager tcp, byte index, string name, SiemensDevice device)
+        private FormMain formMain { get; set; }
+        private string Area { get; set; }
+        public bool FirstOpen { get; set; } = false;
+
+        private readonly bool IsLowLimitMode;
+        #endregion
+
+        public TempLock(string area, TCPManager tcp, byte index, string name, FormMain mainForm)
         {
             InitializeComponent();
             this.Tcp = tcp;
             this.Index = index;
+            this.Area = area;
             this.SensorName = name;
+            this.formMain = mainForm;
             this.lb_Title.Text = $"{this.SensorName}联锁";
-            this.siemensDevice = device;
-            this.Load += LockSetting_Load;
+
+            this.IsLowLimitMode = (SensorName == "TT222" || SensorName == "TT215");
+
+            this.Load += TempLock_Load;
+            this.FormClosed += TempLock_FormClosed;
+        }
+
+        private void TempLock_Load(object sender, EventArgs e)
+        {
+            if (IsLowLimitMode)
+            {
+                this.label4.Text = "低限报警设定 ：";
+            }
+
+            switch (Area)
+            {
+                case "助燃II":
+                    this.formMain.FiringIIDataUpdated += FormMain_DataUpdated;
+                    break;
+                case "助燃I":
+                    this.formMain.FiringIDataUpdated += FormMain_DataUpdated;
+                    break;
+                case "中燃":
+                    this.formMain.FuelDataUpdated += FormMain_DataUpdated;
+                    break;
+                case "气源":
+                    this.formMain.GaseSourceDataUpdated += FormMain_DataUpdated;
+                    break;
+            }
+        }
+
+        private void FormMain_DataUpdated(UDPValues e)
+        {
+            if (this.IsDisposed || !this.IsHandleCreated) return;
+
+            if (!FirstOpen)
+            {
+                formMain.InvokeIfRequired(() =>
+                {
+                    if (this.IsDisposed) return; 
+
+                    int dataIndex = IsLowLimitMode ? (Index * 4 + 3) : (Index * 4 + 2);
+
+                    if (e.Lock_Value != null && e.Lock_Value.Length > dataIndex)
+                    {
+                        this.tb_HighValue.Text = (Convert.ToSingle(e.Lock_Value[dataIndex]) / 100).ToString();
+                    }
+                });
+
+                FirstOpen = true; 
+            }
         }
 
         #region 无边框拖动
-
         private Point mPoint;
         private void Panel_MouseDown(object sender, MouseEventArgs e)
         {
@@ -50,82 +99,73 @@ namespace ProcessSystem
         }
         #endregion
 
-        private void LockSetting_Load(object sender, EventArgs e)
-        {
-
-            if (SensorName == "TT222" || SensorName == "TT215")
-            {
-                this.label4.Text = "低限报警设定 ：";
-                this.btn_HighSet.Click += btn_LowSet_Click;
-                if (siemensDevice.IsConnected)
-                {
-                    this.tb_HighValue.Text = siemensDevice?[$"{SensorName}Low"].ToString();
-                }
-            }
-            else
-            {
-                this.btn_HighSet.Click += btn_HighSet_Click;
-                if (siemensDevice.IsConnected)
-                {
-                    this.tb_HighValue.Text = siemensDevice?[$"{SensorName}High"].ToString();
-                }
-            }
-        }
-
         private void btn_Close_Click(object sender, EventArgs e)
         {
-            SensorName = null;
-            siemensDevice = null;
-            Tcp = null;
             this.Close();
         }
 
-        private OperateResult LockControlResult;
+        private void TempLock_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            switch (Area)
+            {
+                case "助燃II":
+                    this.formMain.FiringIIDataUpdated -= FormMain_DataUpdated;
+                    break;
+                case "助燃I":
+                    this.formMain.FiringIDataUpdated -= FormMain_DataUpdated;
+                    break;
+                case "中燃":
+                    this.formMain.FuelDataUpdated -= FormMain_DataUpdated;
+                    break;
+                case "气源":
+                    this.formMain.GaseSourceDataUpdated -= FormMain_DataUpdated;
+                    break;
+            }
+            SensorName = null;
+            Tcp = null;
+        }
+
+        #region 参数下发逻辑
+
 
         private void btn_HighSet_Click(object sender, EventArgs e)
         {
-            if (Tcp == null || !Tcp.IsConnected)
-            {
-                AddLog(2, $"网络连接异常,传感器{SensorName}高限设定{tb_HighValue.Text}失败");
-                return;
-            }
-            LockControlResult = Tcp.Send_PLC_Command(
-                (byte)CMD.lock_command,
-                lockIndex: Index,
-                lockParamSeq: LockParamSeq.HighLimit,
-                lockParamValue: tb_HighValue.Text);
-            if (LockControlResult.IsSuccess)
-            {
-                AddLog(0, $"传感器{SensorName}高限设定{tb_HighValue.Text}成功");
-            }
-            else
-            {
-                AddLog(1, $"传感器{SensorName}高限设定{tb_HighValue.Text}失败");
-            }
-            LockControlResult = null;
+            string limitName = IsLowLimitMode ? "低限" : "高限";
+            LockParamSeq seq = IsLowLimitMode ? LockParamSeq.LowLimit : LockParamSeq.HighLimit;
+
+            ApplyLimitSetting(tb_HighValue.Text, seq, limitName);
         }
 
-        private void btn_LowSet_Click(object sender, EventArgs e)
+
+        private void ApplyLimitSetting(string uiValue, LockParamSeq seq, string limitName)
         {
             if (Tcp == null || !Tcp.IsConnected)
             {
-                AddLog(2, $"TCP连接异常,传感器{SensorName}低限设定失败");
+                AddLog(2, $"网络连接异常,传感器{SensorName}{limitName}设定{uiValue}失败");
                 return;
             }
-            LockControlResult = Tcp.Send_PLC_Command(
+
+            if (!float.TryParse(uiValue, out _))
+            {
+                AddLog(1, $"传感器{SensorName}{limitName}格式输入错误");
+                return;
+            }
+
+            OperateResult result = Tcp.Send_PLC_Command(
                 (byte)CMD.lock_command,
                 lockIndex: Index,
-                lockParamSeq: LockParamSeq.LowLimit,
-                lockParamValue: tb_HighValue.Text);
-            if (LockControlResult.IsSuccess)
+                lockParamSeq: seq,
+                lockParamValue: uiValue);
+
+            if (result.IsSuccess)
             {
-                AddLog(0, $"传感器{SensorName}低限设定{tb_HighValue.Text}成功");
+                AddLog(0, $"传感器{SensorName}{limitName}设定{uiValue}成功");
             }
             else
             {
-                AddLog(1, $"传感器{SensorName}低限设定{tb_HighValue.Text}失败");
+                AddLog(1, $"传感器{SensorName}{limitName}设定{uiValue}失败");
             }
-            LockControlResult = null;
         }
+        #endregion
     }
 }

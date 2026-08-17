@@ -496,12 +496,6 @@ namespace ProcessSystem
             this.motor3 = new ProcessControlLib.Motor();
             this.motor1 = new ProcessControlLib.Motor();
             this.tabPage27 = new System.Windows.Forms.TabPage();
-            this.gaseSupplySolenoid118 = new ProcessControlLib.GaseSupplySolenoid();
-            this.gaseSupplySolenoid117 = new ProcessControlLib.GaseSupplySolenoid();
-            this.gaseSupplySensor105 = new ProcessControlLib.GaseSupplySensor();
-            this.gaseSupplySensor104 = new ProcessControlLib.GaseSupplySensor();
-            this.gaseSupplySensor103 = new ProcessControlLib.GaseSupplySensor();
-            this.gaseSupplySensor102 = new ProcessControlLib.GaseSupplySensor();
             this.gaseSourceSensor16 = new ProcessControlLib.GaseSourceSensor();
             this.gaseSupplySensor22 = new ProcessControlLib.GaseSupplySensor();
             this.gaseSupplySensor94 = new ProcessControlLib.GaseSupplySensor();
@@ -675,11 +669,11 @@ namespace ProcessSystem
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.uiTabControl2 = new Sunny.UI.UITabControl();
             this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.firingIISwitchIcon8 = new ProcessControlLib.FiringIISwitchIcon();
             this.panel12 = new System.Windows.Forms.Panel();
             this.gaseSupplySensor106 = new ProcessControlLib.GaseSupplySensor();
             this.button4 = new System.Windows.Forms.Button();
             this.firingIISwitchIcon27 = new ProcessControlLib.FiringIISwitchIcon();
-            this.firingIISwitchIcon26 = new ProcessControlLib.FiringIISwitchIcon();
             this.firingIISwitchIcon25 = new ProcessControlLib.FiringIISwitchIcon();
             this.firingIISwitchIcon24 = new ProcessControlLib.FiringIISwitchIcon();
             this.firingIISwitchIcon23 = new ProcessControlLib.FiringIISwitchIcon();
@@ -742,7 +736,6 @@ namespace ProcessSystem
             this.firingIISwitchIcon13 = new ProcessControlLib.FiringIISwitchIcon();
             this.firingIISwitchIcon12 = new ProcessControlLib.FiringIISwitchIcon();
             this.firingIISwitchIcon10 = new ProcessControlLib.FiringIISwitchIcon();
-            this.firingIISwitchIcon8 = new ProcessControlLib.FiringIISwitchIcon();
             this.firingIISwitchIcon6 = new ProcessControlLib.FiringIISwitchIcon();
             this.firingIISwitchIcon4 = new ProcessControlLib.FiringIISwitchIcon();
             this.firingIISwitchIcon11 = new ProcessControlLib.FiringIISwitchIcon();
@@ -1526,6 +1519,16 @@ namespace ProcessSystem
             this.lbl_SysTime = new System.Windows.Forms.Label();
             this.none20 = new System.Windows.Forms.Label();
             this.tr_SonSystem = new System.Windows.Forms.Timer(this.components);
+            this.firingIISwitchIcon26 = new ProcessControlLib.FiringIISwitchIcon();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.uiSymbolLabel3 = new Sunny.UI.UISymbolLabel();
+            this.gaseSupplySolenoid118 = new ProcessControlLib.GaseSupplySolenoid();
+            this.gaseSupplySolenoid117 = new ProcessControlLib.GaseSupplySolenoid();
+            this.gaseSupplySensor105 = new ProcessControlLib.GaseSupplySensor();
+            this.gaseSupplySensor104 = new ProcessControlLib.GaseSupplySensor();
+            this.gaseSupplySensor103 = new ProcessControlLib.GaseSupplySensor();
+            this.gaseSupplySensor102 = new ProcessControlLib.GaseSupplySensor();
             this.pl_Top.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -1559,6 +1562,8 @@ namespace ProcessSystem
             this.panel8.SuspendLayout();
             this.tabPage17.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel15.SuspendLayout();
             this.SuspendLayout();
             // 
             // lv_Log
@@ -1616,7 +1621,7 @@ namespace ProcessSystem
             this.pl_Top.ForeColor = System.Drawing.Color.White;
             this.pl_Top.Location = new System.Drawing.Point(0, 0);
             this.pl_Top.Name = "pl_Top";
-            this.pl_Top.Size = new System.Drawing.Size(3440, 45);
+            this.pl_Top.Size = new System.Drawing.Size(3432, 50);
             this.pl_Top.TabIndex = 4;
             this.pl_Top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDown);
             this.pl_Top.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseMove);
@@ -1627,14 +1632,14 @@ namespace ProcessSystem
             this.btn_TimerValve.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_TimerValve.FillColor = System.Drawing.Color.Transparent;
             this.btn_TimerValve.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_TimerValve.Location = new System.Drawing.Point(2981, 0);
+            this.btn_TimerValve.Location = new System.Drawing.Point(2973, 0);
             this.btn_TimerValve.MinimumSize = new System.Drawing.Size(1, 1);
             this.btn_TimerValve.Name = "btn_TimerValve";
             this.btn_TimerValve.RectColor = System.Drawing.Color.Transparent;
             this.btn_TimerValve.RectHoverColor = System.Drawing.Color.Transparent;
             this.btn_TimerValve.RectPressColor = System.Drawing.Color.Transparent;
             this.btn_TimerValve.RectSelectedColor = System.Drawing.Color.Transparent;
-            this.btn_TimerValve.Size = new System.Drawing.Size(91, 41);
+            this.btn_TimerValve.Size = new System.Drawing.Size(91, 46);
             this.btn_TimerValve.Style = Sunny.UI.UIStyle.Custom;
             this.btn_TimerValve.Symbol = 558405;
             this.btn_TimerValve.SymbolHoverColor = System.Drawing.Color.Lime;
@@ -1653,14 +1658,14 @@ namespace ProcessSystem
             this.btn_User.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_User.FillColor = System.Drawing.Color.Transparent;
             this.btn_User.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_User.Location = new System.Drawing.Point(3072, 0);
+            this.btn_User.Location = new System.Drawing.Point(3064, 0);
             this.btn_User.MinimumSize = new System.Drawing.Size(1, 1);
             this.btn_User.Name = "btn_User";
             this.btn_User.RectColor = System.Drawing.Color.Transparent;
             this.btn_User.RectHoverColor = System.Drawing.Color.Transparent;
             this.btn_User.RectPressColor = System.Drawing.Color.Transparent;
             this.btn_User.RectSelectedColor = System.Drawing.Color.Transparent;
-            this.btn_User.Size = new System.Drawing.Size(91, 41);
+            this.btn_User.Size = new System.Drawing.Size(91, 46);
             this.btn_User.Style = Sunny.UI.UIStyle.Custom;
             this.btn_User.Symbol = 61447;
             this.btn_User.SymbolHoverColor = System.Drawing.Color.Lime;
@@ -1688,7 +1693,7 @@ namespace ProcessSystem
             this.gaseSupplySensor60.InputType = ProcessSystemLib.InputValueType.PLC_Digital;
             this.gaseSupplySensor60.IsPT100 = false;
             this.gaseSupplySensor60.KValue = 1F;
-            this.gaseSupplySensor60.Location = new System.Drawing.Point(2714, 10);
+            this.gaseSupplySensor60.Location = new System.Drawing.Point(2612, 10);
             this.gaseSupplySensor60.Margin = new System.Windows.Forms.Padding(5);
             this.gaseSupplySensor60.MaxSensorRange = 1F;
             this.gaseSupplySensor60.MinSensorRange = 0F;
@@ -1723,7 +1728,7 @@ namespace ProcessSystem
             this.uiMarkLabel1.Name = "uiMarkLabel1";
             this.uiMarkLabel1.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.uiMarkLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.uiMarkLabel1.Size = new System.Drawing.Size(290, 41);
+            this.uiMarkLabel1.Size = new System.Drawing.Size(285, 46);
             this.uiMarkLabel1.TabIndex = 431;
             this.uiMarkLabel1.Text = "寰宇乾堃航天 · 工艺系统";
             this.uiMarkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1754,7 +1759,7 @@ namespace ProcessSystem
             this.uiButton92.RectHoverColor = System.Drawing.Color.Transparent;
             this.uiButton92.RectPressColor = System.Drawing.Color.Transparent;
             this.uiButton92.RectSelectedColor = System.Drawing.Color.Transparent;
-            this.uiButton92.Size = new System.Drawing.Size(177, 41);
+            this.uiButton92.Size = new System.Drawing.Size(177, 46);
             this.uiButton92.TabIndex = 430;
             this.uiButton92.TipsFont = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             // 
@@ -1764,14 +1769,14 @@ namespace ProcessSystem
             this.uiSymbolButton136.Dock = System.Windows.Forms.DockStyle.Right;
             this.uiSymbolButton136.FillColor = System.Drawing.Color.Transparent;
             this.uiSymbolButton136.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiSymbolButton136.Location = new System.Drawing.Point(3163, 0);
+            this.uiSymbolButton136.Location = new System.Drawing.Point(3155, 0);
             this.uiSymbolButton136.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSymbolButton136.Name = "uiSymbolButton136";
             this.uiSymbolButton136.RectColor = System.Drawing.Color.Transparent;
             this.uiSymbolButton136.RectHoverColor = System.Drawing.Color.Transparent;
             this.uiSymbolButton136.RectPressColor = System.Drawing.Color.Transparent;
             this.uiSymbolButton136.RectSelectedColor = System.Drawing.Color.Transparent;
-            this.uiSymbolButton136.Size = new System.Drawing.Size(91, 41);
+            this.uiSymbolButton136.Size = new System.Drawing.Size(91, 46);
             this.uiSymbolButton136.Style = Sunny.UI.UIStyle.Custom;
             this.uiSymbolButton136.Symbol = 162454;
             this.uiSymbolButton136.SymbolHoverColor = System.Drawing.Color.Lime;
@@ -1791,14 +1796,14 @@ namespace ProcessSystem
             this.btn_ExportLog.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_ExportLog.FillColor = System.Drawing.Color.Transparent;
             this.btn_ExportLog.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_ExportLog.Location = new System.Drawing.Point(3254, 0);
+            this.btn_ExportLog.Location = new System.Drawing.Point(3246, 0);
             this.btn_ExportLog.MinimumSize = new System.Drawing.Size(1, 1);
             this.btn_ExportLog.Name = "btn_ExportLog";
             this.btn_ExportLog.RectColor = System.Drawing.Color.Transparent;
             this.btn_ExportLog.RectHoverColor = System.Drawing.Color.Transparent;
             this.btn_ExportLog.RectPressColor = System.Drawing.Color.Transparent;
             this.btn_ExportLog.RectSelectedColor = System.Drawing.Color.Transparent;
-            this.btn_ExportLog.Size = new System.Drawing.Size(91, 41);
+            this.btn_ExportLog.Size = new System.Drawing.Size(91, 46);
             this.btn_ExportLog.Style = Sunny.UI.UIStyle.Custom;
             this.btn_ExportLog.Symbol = 61462;
             this.btn_ExportLog.SymbolHoverColor = System.Drawing.Color.Lime;
@@ -1821,14 +1826,14 @@ namespace ProcessSystem
             this.btn_CLose.ForeHoverColor = System.Drawing.Color.Red;
             this.btn_CLose.ForePressColor = System.Drawing.Color.Red;
             this.btn_CLose.ForeSelectedColor = System.Drawing.Color.Red;
-            this.btn_CLose.Location = new System.Drawing.Point(3345, 0);
+            this.btn_CLose.Location = new System.Drawing.Point(3337, 0);
             this.btn_CLose.MinimumSize = new System.Drawing.Size(1, 1);
             this.btn_CLose.Name = "btn_CLose";
             this.btn_CLose.RectColor = System.Drawing.Color.Transparent;
             this.btn_CLose.RectHoverColor = System.Drawing.Color.Transparent;
             this.btn_CLose.RectPressColor = System.Drawing.Color.Transparent;
             this.btn_CLose.RectSelectedColor = System.Drawing.Color.Transparent;
-            this.btn_CLose.Size = new System.Drawing.Size(91, 41);
+            this.btn_CLose.Size = new System.Drawing.Size(91, 46);
             this.btn_CLose.Style = Sunny.UI.UIStyle.Custom;
             this.btn_CLose.Symbol = 61457;
             this.btn_CLose.SymbolHoverColor = System.Drawing.Color.Red;
@@ -1846,12 +1851,13 @@ namespace ProcessSystem
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(59)))), ((int)(((byte)(138)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.panel14);
             this.panel2.Controls.Add(this.panel10);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 1132);
+            this.panel2.Location = new System.Drawing.Point(0, 1127);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(3438, 203);
+            this.panel2.Size = new System.Drawing.Size(3430, 203);
             this.panel2.TabIndex = 6;
             // 
             // panel10
@@ -1860,10 +1866,10 @@ namespace ProcessSystem
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel10.Controls.Add(this.lv_WaLog);
             this.panel10.Controls.Add(this.uiSymbolLabel2);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel10.Location = new System.Drawing.Point(2001, 0);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel10.Location = new System.Drawing.Point(1995, 0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1435, 201);
+            this.panel10.Size = new System.Drawing.Size(1012, 201);
             this.panel10.TabIndex = 9;
             // 
             // lv_WaLog
@@ -1881,7 +1887,7 @@ namespace ProcessSystem
             this.lv_WaLog.Location = new System.Drawing.Point(0, 30);
             this.lv_WaLog.Name = "lv_WaLog";
             this.lv_WaLog.ShowItemToolTips = true;
-            this.lv_WaLog.Size = new System.Drawing.Size(1433, 169);
+            this.lv_WaLog.Size = new System.Drawing.Size(1010, 169);
             this.lv_WaLog.SmallImageList = this.logIco;
             this.lv_WaLog.TabIndex = 3;
             this.lv_WaLog.UseCompatibleStateImageBehavior = false;
@@ -1945,10 +1951,10 @@ namespace ProcessSystem
             this.pl_Main.Controls.Add(this.panel2);
             this.pl_Main.Controls.Add(this.panel1);
             this.pl_Main.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pl_Main.Location = new System.Drawing.Point(0, 45);
+            this.pl_Main.Location = new System.Drawing.Point(0, 50);
             this.pl_Main.Margin = new System.Windows.Forms.Padding(10);
             this.pl_Main.Name = "pl_Main";
-            this.pl_Main.Size = new System.Drawing.Size(3440, 1376);
+            this.pl_Main.Size = new System.Drawing.Size(3432, 1371);
             this.pl_Main.TabIndex = 5;
             // 
             // tbm_Main
@@ -1967,7 +1973,7 @@ namespace ProcessSystem
             this.tbm_Main.Multiline = true;
             this.tbm_Main.Name = "tbm_Main";
             this.tbm_Main.SelectedIndex = 0;
-            this.tbm_Main.Size = new System.Drawing.Size(3438, 1132);
+            this.tbm_Main.Size = new System.Drawing.Size(3430, 1127);
             this.tbm_Main.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tbm_Main.Style = Sunny.UI.UIStyle.Custom;
             this.tbm_Main.TabBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(59)))), ((int)(((byte)(138)))));
@@ -1985,7 +1991,7 @@ namespace ProcessSystem
             this.tabPage1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage1.Location = new System.Drawing.Point(121, 0);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(3317, 1132);
+            this.tabPage1.Size = new System.Drawing.Size(3309, 1127);
             this.tabPage1.TabIndex = 6;
             this.tabPage1.Text = "配气系统";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -2002,7 +2008,7 @@ namespace ProcessSystem
             this.uiTabControl7.MainPage = "";
             this.uiTabControl7.Name = "uiTabControl7";
             this.uiTabControl7.SelectedIndex = 0;
-            this.uiTabControl7.Size = new System.Drawing.Size(3317, 1170);
+            this.uiTabControl7.Size = new System.Drawing.Size(3309, 1170);
             this.uiTabControl7.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.uiTabControl7.TabIndex = 2;
             this.uiTabControl7.TipsFont = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -2381,7 +2387,7 @@ namespace ProcessSystem
             this.lb_Pump1.ForeColor = System.Drawing.Color.White;
             this.lb_Pump1.Location = new System.Drawing.Point(0, 40);
             this.lb_Pump1.Name = "lb_Pump1";
-            this.lb_Pump1.Size = new System.Drawing.Size(3317, 1130);
+            this.lb_Pump1.Size = new System.Drawing.Size(3309, 1130);
             this.lb_Pump1.TabIndex = 0;
             this.lb_Pump1.Text = "主界面";
             // 
@@ -4556,11 +4562,11 @@ namespace ProcessSystem
             this.firingIISwitchIcon22.Enable = true;
             this.firingIISwitchIcon22.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.firingIISwitchIcon22.IsVertical = true;
-            this.firingIISwitchIcon22.Location = new System.Drawing.Point(1461, 218);
+            this.firingIISwitchIcon22.Location = new System.Drawing.Point(1458, 191);
             this.firingIISwitchIcon22.Margin = new System.Windows.Forms.Padding(5);
             this.firingIISwitchIcon22.Name = "firingIISwitchIcon22";
             this.firingIISwitchIcon22.ShowName = false;
-            this.firingIISwitchIcon22.Size = new System.Drawing.Size(90, 35);
+            this.firingIISwitchIcon22.Size = new System.Drawing.Size(99, 55);
             this.firingIISwitchIcon22.State = ProcessSystemLib.ValveState.close;
             this.firingIISwitchIcon22.TabIndex = 436;
             this.firingIISwitchIcon22.ValveName = "YT3(c)";
@@ -4579,11 +4585,11 @@ namespace ProcessSystem
             this.firingIISwitchIcon20.Enable = true;
             this.firingIISwitchIcon20.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.firingIISwitchIcon20.IsVertical = true;
-            this.firingIISwitchIcon20.Location = new System.Drawing.Point(1721, 218);
+            this.firingIISwitchIcon20.Location = new System.Drawing.Point(1718, 191);
             this.firingIISwitchIcon20.Margin = new System.Windows.Forms.Padding(5);
             this.firingIISwitchIcon20.Name = "firingIISwitchIcon20";
             this.firingIISwitchIcon20.ShowName = false;
-            this.firingIISwitchIcon20.Size = new System.Drawing.Size(90, 35);
+            this.firingIISwitchIcon20.Size = new System.Drawing.Size(99, 55);
             this.firingIISwitchIcon20.State = ProcessSystemLib.ValveState.close;
             this.firingIISwitchIcon20.TabIndex = 437;
             this.firingIISwitchIcon20.ValveName = "YT3(a)";
@@ -4602,11 +4608,11 @@ namespace ProcessSystem
             this.firingIISwitchIcon21.Enable = true;
             this.firingIISwitchIcon21.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.firingIISwitchIcon21.IsVertical = true;
-            this.firingIISwitchIcon21.Location = new System.Drawing.Point(1594, 218);
+            this.firingIISwitchIcon21.Location = new System.Drawing.Point(1591, 191);
             this.firingIISwitchIcon21.Margin = new System.Windows.Forms.Padding(5);
             this.firingIISwitchIcon21.Name = "firingIISwitchIcon21";
             this.firingIISwitchIcon21.ShowName = false;
-            this.firingIISwitchIcon21.Size = new System.Drawing.Size(90, 35);
+            this.firingIISwitchIcon21.Size = new System.Drawing.Size(99, 55);
             this.firingIISwitchIcon21.State = ProcessSystemLib.ValveState.close;
             this.firingIISwitchIcon21.TabIndex = 438;
             this.firingIISwitchIcon21.ValveName = "YT3(b)";
@@ -4625,11 +4631,11 @@ namespace ProcessSystem
             this.firingISwitchIcon35.Enable = true;
             this.firingISwitchIcon35.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.firingISwitchIcon35.IsVertical = true;
-            this.firingISwitchIcon35.Location = new System.Drawing.Point(903, 218);
+            this.firingISwitchIcon35.Location = new System.Drawing.Point(900, 191);
             this.firingISwitchIcon35.Margin = new System.Windows.Forms.Padding(5);
             this.firingISwitchIcon35.Name = "firingISwitchIcon35";
             this.firingISwitchIcon35.ShowName = false;
-            this.firingISwitchIcon35.Size = new System.Drawing.Size(90, 35);
+            this.firingISwitchIcon35.Size = new System.Drawing.Size(99, 55);
             this.firingISwitchIcon35.State = ProcessSystemLib.ValveState.close;
             this.firingISwitchIcon35.TabIndex = 430;
             this.firingISwitchIcon35.ValveName = "YT7(c)";
@@ -4648,11 +4654,11 @@ namespace ProcessSystem
             this.firingISwitchIcon34.Enable = true;
             this.firingISwitchIcon34.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.firingISwitchIcon34.IsVertical = true;
-            this.firingISwitchIcon34.Location = new System.Drawing.Point(1035, 218);
+            this.firingISwitchIcon34.Location = new System.Drawing.Point(1032, 191);
             this.firingISwitchIcon34.Margin = new System.Windows.Forms.Padding(5);
             this.firingISwitchIcon34.Name = "firingISwitchIcon34";
             this.firingISwitchIcon34.ShowName = false;
-            this.firingISwitchIcon34.Size = new System.Drawing.Size(90, 35);
+            this.firingISwitchIcon34.Size = new System.Drawing.Size(99, 55);
             this.firingISwitchIcon34.State = ProcessSystemLib.ValveState.close;
             this.firingISwitchIcon34.TabIndex = 431;
             this.firingISwitchIcon34.ValveName = "YT7(b)";
@@ -4672,11 +4678,11 @@ namespace ProcessSystem
             this.firingISwitchIcon33.Enable = true;
             this.firingISwitchIcon33.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.firingISwitchIcon33.IsVertical = true;
-            this.firingISwitchIcon33.Location = new System.Drawing.Point(1170, 218);
+            this.firingISwitchIcon33.Location = new System.Drawing.Point(1167, 191);
             this.firingISwitchIcon33.Margin = new System.Windows.Forms.Padding(5);
             this.firingISwitchIcon33.Name = "firingISwitchIcon33";
             this.firingISwitchIcon33.ShowName = false;
-            this.firingISwitchIcon33.Size = new System.Drawing.Size(90, 35);
+            this.firingISwitchIcon33.Size = new System.Drawing.Size(99, 55);
             this.firingISwitchIcon33.State = ProcessSystemLib.ValveState.close;
             this.firingISwitchIcon33.TabIndex = 432;
             this.firingISwitchIcon33.ValveName = "YT7(a)";
@@ -4695,11 +4701,11 @@ namespace ProcessSystem
             this.fuelSwitchIcon42.Enable = true;
             this.fuelSwitchIcon42.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.fuelSwitchIcon42.IsVertical = true;
-            this.fuelSwitchIcon42.Location = new System.Drawing.Point(2041, 218);
+            this.fuelSwitchIcon42.Location = new System.Drawing.Point(2037, 191);
             this.fuelSwitchIcon42.Margin = new System.Windows.Forms.Padding(5);
             this.fuelSwitchIcon42.Name = "fuelSwitchIcon42";
             this.fuelSwitchIcon42.ShowName = false;
-            this.fuelSwitchIcon42.Size = new System.Drawing.Size(90, 35);
+            this.fuelSwitchIcon42.Size = new System.Drawing.Size(99, 55);
             this.fuelSwitchIcon42.State = ProcessSystemLib.ValveState.close;
             this.fuelSwitchIcon42.TabIndex = 428;
             this.fuelSwitchIcon42.ValveName = "RT3(c)";
@@ -4718,11 +4724,11 @@ namespace ProcessSystem
             this.fuelSwitchIcon41.Enable = true;
             this.fuelSwitchIcon41.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.fuelSwitchIcon41.IsVertical = true;
-            this.fuelSwitchIcon41.Location = new System.Drawing.Point(2170, 218);
+            this.fuelSwitchIcon41.Location = new System.Drawing.Point(2166, 191);
             this.fuelSwitchIcon41.Margin = new System.Windows.Forms.Padding(5);
             this.fuelSwitchIcon41.Name = "fuelSwitchIcon41";
             this.fuelSwitchIcon41.ShowName = false;
-            this.fuelSwitchIcon41.Size = new System.Drawing.Size(90, 35);
+            this.fuelSwitchIcon41.Size = new System.Drawing.Size(99, 55);
             this.fuelSwitchIcon41.State = ProcessSystemLib.ValveState.close;
             this.fuelSwitchIcon41.TabIndex = 429;
             this.fuelSwitchIcon41.ValveName = "RT3(b)";
@@ -4741,11 +4747,11 @@ namespace ProcessSystem
             this.fuelSwitchIcon40.Enable = true;
             this.fuelSwitchIcon40.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.fuelSwitchIcon40.IsVertical = true;
-            this.fuelSwitchIcon40.Location = new System.Drawing.Point(2305, 218);
+            this.fuelSwitchIcon40.Location = new System.Drawing.Point(2301, 191);
             this.fuelSwitchIcon40.Margin = new System.Windows.Forms.Padding(5);
             this.fuelSwitchIcon40.Name = "fuelSwitchIcon40";
             this.fuelSwitchIcon40.ShowName = false;
-            this.fuelSwitchIcon40.Size = new System.Drawing.Size(90, 35);
+            this.fuelSwitchIcon40.Size = new System.Drawing.Size(99, 55);
             this.fuelSwitchIcon40.State = ProcessSystemLib.ValveState.close;
             this.fuelSwitchIcon40.TabIndex = 427;
             this.fuelSwitchIcon40.ValveName = "RT3(a)";
@@ -11203,12 +11209,6 @@ namespace ProcessSystem
             // tabPage27
             // 
             this.tabPage27.BackColor = System.Drawing.Color.MidnightBlue;
-            this.tabPage27.Controls.Add(this.gaseSupplySolenoid118);
-            this.tabPage27.Controls.Add(this.gaseSupplySolenoid117);
-            this.tabPage27.Controls.Add(this.gaseSupplySensor105);
-            this.tabPage27.Controls.Add(this.gaseSupplySensor104);
-            this.tabPage27.Controls.Add(this.gaseSupplySensor103);
-            this.tabPage27.Controls.Add(this.gaseSupplySensor102);
             this.tabPage27.Controls.Add(this.gaseSourceSensor16);
             this.tabPage27.Controls.Add(this.gaseSupplySensor22);
             this.tabPage27.Controls.Add(this.gaseSupplySensor94);
@@ -11382,197 +11382,9 @@ namespace ProcessSystem
             this.tabPage27.ForeColor = System.Drawing.Color.White;
             this.tabPage27.Location = new System.Drawing.Point(0, 40);
             this.tabPage27.Name = "tabPage27";
-            this.tabPage27.Size = new System.Drawing.Size(3317, 1130);
+            this.tabPage27.Size = new System.Drawing.Size(3309, 1130);
             this.tabPage27.TabIndex = 1;
             this.tabPage27.Text = "Debug";
-            // 
-            // gaseSupplySolenoid118
-            // 
-            this.gaseSupplySolenoid118.BackColor = System.Drawing.Color.Transparent;
-            this.gaseSupplySolenoid118.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.gaseSupplySolenoid118.DiOpenAndClose = ((ushort)(0));
-            this.gaseSupplySolenoid118.DqClose = ((ushort)(0));
-            this.gaseSupplySolenoid118.DqOpen = ((ushort)(0));
-            this.gaseSupplySolenoid118.DqOpenAndClose = ((ushort)(0));
-            this.gaseSupplySolenoid118.Enable = false;
-            this.gaseSupplySolenoid118.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gaseSupplySolenoid118.IsVertical = false;
-            this.gaseSupplySolenoid118.Location = new System.Drawing.Point(2024, 397);
-            this.gaseSupplySolenoid118.Margin = new System.Windows.Forms.Padding(5);
-            this.gaseSupplySolenoid118.Name = "gaseSupplySolenoid118";
-            this.gaseSupplySolenoid118.Size = new System.Drawing.Size(40, 46);
-            this.gaseSupplySolenoid118.State = ProcessSystemLib.ValveState.close;
-            this.gaseSupplySolenoid118.TabIndex = 546;
-            this.gaseSupplySolenoid118.ValveName = "电磁阀";
-            this.gaseSupplySolenoid118.WorkStation = null;
-            // 
-            // gaseSupplySolenoid117
-            // 
-            this.gaseSupplySolenoid117.BackColor = System.Drawing.Color.Transparent;
-            this.gaseSupplySolenoid117.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.gaseSupplySolenoid117.DiOpenAndClose = ((ushort)(0));
-            this.gaseSupplySolenoid117.DqClose = ((ushort)(0));
-            this.gaseSupplySolenoid117.DqOpen = ((ushort)(0));
-            this.gaseSupplySolenoid117.DqOpenAndClose = ((ushort)(0));
-            this.gaseSupplySolenoid117.Enable = false;
-            this.gaseSupplySolenoid117.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gaseSupplySolenoid117.IsVertical = false;
-            this.gaseSupplySolenoid117.Location = new System.Drawing.Point(1948, 397);
-            this.gaseSupplySolenoid117.Margin = new System.Windows.Forms.Padding(5);
-            this.gaseSupplySolenoid117.Name = "gaseSupplySolenoid117";
-            this.gaseSupplySolenoid117.Size = new System.Drawing.Size(40, 46);
-            this.gaseSupplySolenoid117.State = ProcessSystemLib.ValveState.close;
-            this.gaseSupplySolenoid117.TabIndex = 546;
-            this.gaseSupplySolenoid117.ValveName = "电磁阀";
-            this.gaseSupplySolenoid117.WorkStation = null;
-            // 
-            // gaseSupplySensor105
-            // 
-            this.gaseSupplySensor105.AI = ((ushort)(0));
-            this.gaseSupplySensor105.BackColor = System.Drawing.Color.Transparent;
-            this.gaseSupplySensor105.BValue = 0F;
-            this.gaseSupplySensor105.CurrentRange = ProcessSystemLib.CurrentRange.FourToTwenty;
-            this.gaseSupplySensor105.DecimalPlaces = 2;
-            this.gaseSupplySensor105.Density = 1000F;
-            this.gaseSupplySensor105.DigitalRange = 27648;
-            this.gaseSupplySensor105.DirectCalibration = false;
-            this.gaseSupplySensor105.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gaseSupplySensor105.Gravity = 9.8F;
-            this.gaseSupplySensor105.InputType = ProcessSystemLib.InputValueType.PLC_Digital;
-            this.gaseSupplySensor105.IsPT100 = false;
-            this.gaseSupplySensor105.KValue = 1F;
-            this.gaseSupplySensor105.Location = new System.Drawing.Point(1939, 346);
-            this.gaseSupplySensor105.Margin = new System.Windows.Forms.Padding(5);
-            this.gaseSupplySensor105.MaxSensorRange = 1F;
-            this.gaseSupplySensor105.MinSensorRange = 0F;
-            this.gaseSupplySensor105.Name = "gaseSupplySensor105";
-            this.gaseSupplySensor105.OriginalPressureUnit = ProcessSystemLib.Unit.Pa;
-            this.gaseSupplySensor105.SensitivityCalibrationFactor = 1F;
-            this.gaseSupplySensor105.SensorName = "助燃I传感器";
-            this.gaseSupplySensor105.SensorNameColor = System.Drawing.Color.White;
-            this.gaseSupplySensor105.SensorPostion = true;
-            this.gaseSupplySensor105.SensorUnitColor = System.Drawing.Color.White;
-            this.gaseSupplySensor105.SensorValue = null;
-            this.gaseSupplySensor105.SensorValueColor = System.Drawing.Color.White;
-            this.gaseSupplySensor105.Size = new System.Drawing.Size(183, 25);
-            this.gaseSupplySensor105.SpeedValue = 0F;
-            this.gaseSupplySensor105.TabIndex = 545;
-            this.gaseSupplySensor105.TankArea = 1F;
-            this.gaseSupplySensor105.TFMState = false;
-            this.gaseSupplySensor105.Unit = ProcessSystemLib.Unit.MPa;
-            this.gaseSupplySensor105.VoltageRange = ProcessSystemLib.VoltageRange.ZeroToFive;
-            this.gaseSupplySensor105.ZeroOffset = 0F;
-            // 
-            // gaseSupplySensor104
-            // 
-            this.gaseSupplySensor104.AI = ((ushort)(0));
-            this.gaseSupplySensor104.BackColor = System.Drawing.Color.Transparent;
-            this.gaseSupplySensor104.BValue = 0F;
-            this.gaseSupplySensor104.CurrentRange = ProcessSystemLib.CurrentRange.FourToTwenty;
-            this.gaseSupplySensor104.DecimalPlaces = 2;
-            this.gaseSupplySensor104.Density = 1000F;
-            this.gaseSupplySensor104.DigitalRange = 27648;
-            this.gaseSupplySensor104.DirectCalibration = false;
-            this.gaseSupplySensor104.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gaseSupplySensor104.Gravity = 9.8F;
-            this.gaseSupplySensor104.InputType = ProcessSystemLib.InputValueType.PLC_Digital;
-            this.gaseSupplySensor104.IsPT100 = false;
-            this.gaseSupplySensor104.KValue = 1F;
-            this.gaseSupplySensor104.Location = new System.Drawing.Point(1939, 305);
-            this.gaseSupplySensor104.Margin = new System.Windows.Forms.Padding(5);
-            this.gaseSupplySensor104.MaxSensorRange = 1F;
-            this.gaseSupplySensor104.MinSensorRange = 0F;
-            this.gaseSupplySensor104.Name = "gaseSupplySensor104";
-            this.gaseSupplySensor104.OriginalPressureUnit = ProcessSystemLib.Unit.Pa;
-            this.gaseSupplySensor104.SensitivityCalibrationFactor = 1F;
-            this.gaseSupplySensor104.SensorName = "助燃I传感器";
-            this.gaseSupplySensor104.SensorNameColor = System.Drawing.Color.White;
-            this.gaseSupplySensor104.SensorPostion = true;
-            this.gaseSupplySensor104.SensorUnitColor = System.Drawing.Color.White;
-            this.gaseSupplySensor104.SensorValue = null;
-            this.gaseSupplySensor104.SensorValueColor = System.Drawing.Color.White;
-            this.gaseSupplySensor104.Size = new System.Drawing.Size(183, 25);
-            this.gaseSupplySensor104.SpeedValue = 0F;
-            this.gaseSupplySensor104.TabIndex = 545;
-            this.gaseSupplySensor104.TankArea = 1F;
-            this.gaseSupplySensor104.TFMState = false;
-            this.gaseSupplySensor104.Unit = ProcessSystemLib.Unit.MPa;
-            this.gaseSupplySensor104.VoltageRange = ProcessSystemLib.VoltageRange.ZeroToFive;
-            this.gaseSupplySensor104.ZeroOffset = 0F;
-            // 
-            // gaseSupplySensor103
-            // 
-            this.gaseSupplySensor103.AI = ((ushort)(0));
-            this.gaseSupplySensor103.BackColor = System.Drawing.Color.Transparent;
-            this.gaseSupplySensor103.BValue = 0F;
-            this.gaseSupplySensor103.CurrentRange = ProcessSystemLib.CurrentRange.FourToTwenty;
-            this.gaseSupplySensor103.DecimalPlaces = 2;
-            this.gaseSupplySensor103.Density = 1000F;
-            this.gaseSupplySensor103.DigitalRange = 27648;
-            this.gaseSupplySensor103.DirectCalibration = false;
-            this.gaseSupplySensor103.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gaseSupplySensor103.Gravity = 9.8F;
-            this.gaseSupplySensor103.InputType = ProcessSystemLib.InputValueType.PLC_Digital;
-            this.gaseSupplySensor103.IsPT100 = false;
-            this.gaseSupplySensor103.KValue = 1F;
-            this.gaseSupplySensor103.Location = new System.Drawing.Point(1939, 264);
-            this.gaseSupplySensor103.Margin = new System.Windows.Forms.Padding(5);
-            this.gaseSupplySensor103.MaxSensorRange = 1F;
-            this.gaseSupplySensor103.MinSensorRange = 0F;
-            this.gaseSupplySensor103.Name = "gaseSupplySensor103";
-            this.gaseSupplySensor103.OriginalPressureUnit = ProcessSystemLib.Unit.Pa;
-            this.gaseSupplySensor103.SensitivityCalibrationFactor = 1F;
-            this.gaseSupplySensor103.SensorName = "助燃I传感器";
-            this.gaseSupplySensor103.SensorNameColor = System.Drawing.Color.White;
-            this.gaseSupplySensor103.SensorPostion = true;
-            this.gaseSupplySensor103.SensorUnitColor = System.Drawing.Color.White;
-            this.gaseSupplySensor103.SensorValue = null;
-            this.gaseSupplySensor103.SensorValueColor = System.Drawing.Color.White;
-            this.gaseSupplySensor103.Size = new System.Drawing.Size(183, 25);
-            this.gaseSupplySensor103.SpeedValue = 0F;
-            this.gaseSupplySensor103.TabIndex = 545;
-            this.gaseSupplySensor103.TankArea = 1F;
-            this.gaseSupplySensor103.TFMState = false;
-            this.gaseSupplySensor103.Unit = ProcessSystemLib.Unit.MPa;
-            this.gaseSupplySensor103.VoltageRange = ProcessSystemLib.VoltageRange.ZeroToFive;
-            this.gaseSupplySensor103.ZeroOffset = 0F;
-            // 
-            // gaseSupplySensor102
-            // 
-            this.gaseSupplySensor102.AI = ((ushort)(0));
-            this.gaseSupplySensor102.BackColor = System.Drawing.Color.Transparent;
-            this.gaseSupplySensor102.BValue = 0F;
-            this.gaseSupplySensor102.CurrentRange = ProcessSystemLib.CurrentRange.FourToTwenty;
-            this.gaseSupplySensor102.DecimalPlaces = 2;
-            this.gaseSupplySensor102.Density = 1000F;
-            this.gaseSupplySensor102.DigitalRange = 27648;
-            this.gaseSupplySensor102.DirectCalibration = false;
-            this.gaseSupplySensor102.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gaseSupplySensor102.Gravity = 9.8F;
-            this.gaseSupplySensor102.InputType = ProcessSystemLib.InputValueType.PLC_Digital;
-            this.gaseSupplySensor102.IsPT100 = false;
-            this.gaseSupplySensor102.KValue = 1F;
-            this.gaseSupplySensor102.Location = new System.Drawing.Point(1939, 223);
-            this.gaseSupplySensor102.Margin = new System.Windows.Forms.Padding(5);
-            this.gaseSupplySensor102.MaxSensorRange = 1F;
-            this.gaseSupplySensor102.MinSensorRange = 0F;
-            this.gaseSupplySensor102.Name = "gaseSupplySensor102";
-            this.gaseSupplySensor102.OriginalPressureUnit = ProcessSystemLib.Unit.Pa;
-            this.gaseSupplySensor102.SensitivityCalibrationFactor = 1F;
-            this.gaseSupplySensor102.SensorName = "助燃I传感器";
-            this.gaseSupplySensor102.SensorNameColor = System.Drawing.Color.White;
-            this.gaseSupplySensor102.SensorPostion = true;
-            this.gaseSupplySensor102.SensorUnitColor = System.Drawing.Color.White;
-            this.gaseSupplySensor102.SensorValue = null;
-            this.gaseSupplySensor102.SensorValueColor = System.Drawing.Color.White;
-            this.gaseSupplySensor102.Size = new System.Drawing.Size(183, 25);
-            this.gaseSupplySensor102.SpeedValue = 0F;
-            this.gaseSupplySensor102.TabIndex = 545;
-            this.gaseSupplySensor102.TankArea = 1F;
-            this.gaseSupplySensor102.TFMState = false;
-            this.gaseSupplySensor102.Unit = ProcessSystemLib.Unit.MPa;
-            this.gaseSupplySensor102.VoltageRange = ProcessSystemLib.VoltageRange.ZeroToFive;
-            this.gaseSupplySensor102.ZeroOffset = 0F;
             // 
             // gaseSourceSensor16
             // 
@@ -15739,7 +15551,7 @@ namespace ProcessSystem
             this.tabPage2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage2.Location = new System.Drawing.Point(121, 0);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(3317, 1151);
+            this.tabPage2.Size = new System.Drawing.Size(3309, 1127);
             this.tabPage2.TabIndex = 0;
             this.tabPage2.Text = "液氧系统";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -15756,7 +15568,7 @@ namespace ProcessSystem
             this.uiTabControl2.MainPage = "";
             this.uiTabControl2.Name = "uiTabControl2";
             this.uiTabControl2.SelectedIndex = 0;
-            this.uiTabControl2.Size = new System.Drawing.Size(3317, 1151);
+            this.uiTabControl2.Size = new System.Drawing.Size(3309, 1127);
             this.uiTabControl2.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.uiTabControl2.TabIndex = 0;
             this.uiTabControl2.TipsFont = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -15764,6 +15576,7 @@ namespace ProcessSystem
             // tabPage10
             // 
             this.tabPage10.BackColor = System.Drawing.Color.MidnightBlue;
+            this.tabPage10.Controls.Add(this.firingIISwitchIcon8);
             this.tabPage10.Controls.Add(this.panel12);
             this.tabPage10.Controls.Add(this.firingIHighAISensor24);
             this.tabPage10.Controls.Add(this.firingIHighAISensor9);
@@ -15814,7 +15627,6 @@ namespace ProcessSystem
             this.tabPage10.Controls.Add(this.firingIISwitchIcon13);
             this.tabPage10.Controls.Add(this.firingIISwitchIcon12);
             this.tabPage10.Controls.Add(this.firingIISwitchIcon10);
-            this.tabPage10.Controls.Add(this.firingIISwitchIcon8);
             this.tabPage10.Controls.Add(this.firingIISwitchIcon6);
             this.tabPage10.Controls.Add(this.firingIISwitchIcon4);
             this.tabPage10.Controls.Add(this.firingIISwitchIcon11);
@@ -16001,9 +15813,32 @@ namespace ProcessSystem
             this.tabPage10.ForeColor = System.Drawing.Color.Red;
             this.tabPage10.Location = new System.Drawing.Point(0, 40);
             this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Size = new System.Drawing.Size(3317, 1111);
+            this.tabPage10.Size = new System.Drawing.Size(3309, 1087);
             this.tabPage10.TabIndex = 0;
             this.tabPage10.Text = "主界面";
+            // 
+            // firingIISwitchIcon8
+            // 
+            this.firingIISwitchIcon8.BackColor = System.Drawing.Color.Transparent;
+            this.firingIISwitchIcon8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.firingIISwitchIcon8.DiClose = ((ushort)(0));
+            this.firingIISwitchIcon8.DiOpen = ((ushort)(0));
+            this.firingIISwitchIcon8.DiOpenAndClose = ((ushort)(0));
+            this.firingIISwitchIcon8.DqClose = ((ushort)(0));
+            this.firingIISwitchIcon8.DqOpen = ((ushort)(0));
+            this.firingIISwitchIcon8.DqOpenAndClose = ((ushort)(0));
+            this.firingIISwitchIcon8.Enable = false;
+            this.firingIISwitchIcon8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.firingIISwitchIcon8.IsVertical = true;
+            this.firingIISwitchIcon8.Location = new System.Drawing.Point(547, 402);
+            this.firingIISwitchIcon8.Margin = new System.Windows.Forms.Padding(5);
+            this.firingIISwitchIcon8.Name = "firingIISwitchIcon8";
+            this.firingIISwitchIcon8.ShowName = false;
+            this.firingIISwitchIcon8.Size = new System.Drawing.Size(101, 52);
+            this.firingIISwitchIcon8.State = ProcessSystemLib.ValveState.close;
+            this.firingIISwitchIcon8.TabIndex = 525;
+            this.firingIISwitchIcon8.ValveName = "HV232";
+            this.firingIISwitchIcon8.WorkStation = null;
             // 
             // panel12
             // 
@@ -16011,8 +15846,8 @@ namespace ProcessSystem
             this.panel12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel12.Controls.Add(this.gaseSupplySensor106);
             this.panel12.Controls.Add(this.button4);
-            this.panel12.Controls.Add(this.firingIISwitchIcon27);
             this.panel12.Controls.Add(this.firingIISwitchIcon26);
+            this.panel12.Controls.Add(this.firingIISwitchIcon27);
             this.panel12.Controls.Add(this.firingIISwitchIcon25);
             this.panel12.Controls.Add(this.firingIISwitchIcon24);
             this.panel12.Controls.Add(this.firingIISwitchIcon23);
@@ -16094,38 +15929,15 @@ namespace ProcessSystem
             this.firingIISwitchIcon27.Enable = true;
             this.firingIISwitchIcon27.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.firingIISwitchIcon27.IsVertical = false;
-            this.firingIISwitchIcon27.Location = new System.Drawing.Point(569, 255);
+            this.firingIISwitchIcon27.Location = new System.Drawing.Point(534, 255);
             this.firingIISwitchIcon27.Margin = new System.Windows.Forms.Padding(5);
             this.firingIISwitchIcon27.Name = "firingIISwitchIcon27";
             this.firingIISwitchIcon27.ShowName = false;
-            this.firingIISwitchIcon27.Size = new System.Drawing.Size(55, 65);
+            this.firingIISwitchIcon27.Size = new System.Drawing.Size(79, 65);
             this.firingIISwitchIcon27.State = ProcessSystemLib.ValveState.close;
             this.firingIISwitchIcon27.TabIndex = 580;
-            this.firingIISwitchIcon27.ValveName = null;
+            this.firingIISwitchIcon27.ValveName = "储罐排放";
             this.firingIISwitchIcon27.WorkStation = null;
-            // 
-            // firingIISwitchIcon26
-            // 
-            this.firingIISwitchIcon26.BackColor = System.Drawing.Color.Transparent;
-            this.firingIISwitchIcon26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.firingIISwitchIcon26.DiClose = ((ushort)(0));
-            this.firingIISwitchIcon26.DiOpen = ((ushort)(0));
-            this.firingIISwitchIcon26.DiOpenAndClose = ((ushort)(0));
-            this.firingIISwitchIcon26.DqClose = ((ushort)(0));
-            this.firingIISwitchIcon26.DqOpen = ((ushort)(0));
-            this.firingIISwitchIcon26.DqOpenAndClose = ((ushort)(0));
-            this.firingIISwitchIcon26.Enable = true;
-            this.firingIISwitchIcon26.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.firingIISwitchIcon26.IsVertical = false;
-            this.firingIISwitchIcon26.Location = new System.Drawing.Point(432, 255);
-            this.firingIISwitchIcon26.Margin = new System.Windows.Forms.Padding(5);
-            this.firingIISwitchIcon26.Name = "firingIISwitchIcon26";
-            this.firingIISwitchIcon26.ShowName = false;
-            this.firingIISwitchIcon26.Size = new System.Drawing.Size(55, 65);
-            this.firingIISwitchIcon26.State = ProcessSystemLib.ValveState.close;
-            this.firingIISwitchIcon26.TabIndex = 581;
-            this.firingIISwitchIcon26.ValveName = null;
-            this.firingIISwitchIcon26.WorkStation = null;
             // 
             // firingIISwitchIcon25
             // 
@@ -16140,14 +15952,14 @@ namespace ProcessSystem
             this.firingIISwitchIcon25.Enable = true;
             this.firingIISwitchIcon25.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.firingIISwitchIcon25.IsVertical = false;
-            this.firingIISwitchIcon25.Location = new System.Drawing.Point(295, 255);
+            this.firingIISwitchIcon25.Location = new System.Drawing.Point(237, 255);
             this.firingIISwitchIcon25.Margin = new System.Windows.Forms.Padding(5);
             this.firingIISwitchIcon25.Name = "firingIISwitchIcon25";
             this.firingIISwitchIcon25.ShowName = false;
-            this.firingIISwitchIcon25.Size = new System.Drawing.Size(55, 65);
+            this.firingIISwitchIcon25.Size = new System.Drawing.Size(68, 65);
             this.firingIISwitchIcon25.State = ProcessSystemLib.ValveState.close;
             this.firingIISwitchIcon25.TabIndex = 582;
-            this.firingIISwitchIcon25.ValveName = null;
+            this.firingIISwitchIcon25.ValveName = "储罐根阀";
             this.firingIISwitchIcon25.WorkStation = null;
             // 
             // firingIISwitchIcon24
@@ -16163,14 +15975,14 @@ namespace ProcessSystem
             this.firingIISwitchIcon24.Enable = true;
             this.firingIISwitchIcon24.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.firingIISwitchIcon24.IsVertical = false;
-            this.firingIISwitchIcon24.Location = new System.Drawing.Point(158, 255);
+            this.firingIISwitchIcon24.Location = new System.Drawing.Point(129, 255);
             this.firingIISwitchIcon24.Margin = new System.Windows.Forms.Padding(5);
             this.firingIISwitchIcon24.Name = "firingIISwitchIcon24";
             this.firingIISwitchIcon24.ShowName = false;
             this.firingIISwitchIcon24.Size = new System.Drawing.Size(55, 65);
             this.firingIISwitchIcon24.State = ProcessSystemLib.ValveState.close;
             this.firingIISwitchIcon24.TabIndex = 583;
-            this.firingIISwitchIcon24.ValveName = null;
+            this.firingIISwitchIcon24.ValveName = "下加注";
             this.firingIISwitchIcon24.WorkStation = null;
             // 
             // firingIISwitchIcon23
@@ -16193,7 +16005,7 @@ namespace ProcessSystem
             this.firingIISwitchIcon23.Size = new System.Drawing.Size(55, 65);
             this.firingIISwitchIcon23.State = ProcessSystemLib.ValveState.close;
             this.firingIISwitchIcon23.TabIndex = 584;
-            this.firingIISwitchIcon23.ValveName = null;
+            this.firingIISwitchIcon23.ValveName = "上加注";
             this.firingIISwitchIcon23.WorkStation = null;
             // 
             // firingIIAdjustValve5
@@ -16208,9 +16020,9 @@ namespace ProcessSystem
             this.firingIIAdjustValve5.Location = new System.Drawing.Point(21, 196);
             this.firingIIAdjustValve5.Margin = new System.Windows.Forms.Padding(5);
             this.firingIIAdjustValve5.Name = "firingIIAdjustValve5";
-            this.firingIIAdjustValve5.Size = new System.Drawing.Size(279, 30);
+            this.firingIIAdjustValve5.Size = new System.Drawing.Size(318, 30);
             this.firingIIAdjustValve5.TabIndex = 579;
-            this.firingIIAdjustValve5.ValveName = "调节阀";
+            this.firingIIAdjustValve5.ValveName = "储罐排放调节阀";
             this.firingIIAdjustValve5.WorkStation = null;
             // 
             // firingIISensor37
@@ -16235,13 +16047,13 @@ namespace ProcessSystem
             this.firingIISensor37.Name = "firingIISensor37";
             this.firingIISensor37.OriginalPressureUnit = ProcessSystemLib.Unit.Pa;
             this.firingIISensor37.SensitivityCalibrationFactor = 1F;
-            this.firingIISensor37.SensorName = "助燃II传感器";
+            this.firingIISensor37.SensorName = "储罐测满";
             this.firingIISensor37.SensorNameColor = System.Drawing.Color.White;
             this.firingIISensor37.SensorPostion = true;
             this.firingIISensor37.SensorUnitColor = System.Drawing.Color.White;
             this.firingIISensor37.SensorValue = null;
             this.firingIISensor37.SensorValueColor = System.Drawing.Color.White;
-            this.firingIISensor37.Size = new System.Drawing.Size(178, 25);
+            this.firingIISensor37.Size = new System.Drawing.Size(183, 25);
             this.firingIISensor37.SpeedValue = 0F;
             this.firingIISensor37.TabIndex = 578;
             this.firingIISensor37.TankArea = 1F;
@@ -16303,20 +16115,20 @@ namespace ProcessSystem
             this.firingIISensor39.InputType = ProcessSystemLib.InputValueType.PLC_Digital;
             this.firingIISensor39.IsPT100 = false;
             this.firingIISensor39.KValue = 1F;
-            this.firingIISensor39.Location = new System.Drawing.Point(439, 29);
+            this.firingIISensor39.Location = new System.Drawing.Point(438, 29);
             this.firingIISensor39.Margin = new System.Windows.Forms.Padding(5);
             this.firingIISensor39.MaxSensorRange = 1F;
             this.firingIISensor39.MinSensorRange = 0F;
             this.firingIISensor39.Name = "firingIISensor39";
             this.firingIISensor39.OriginalPressureUnit = ProcessSystemLib.Unit.Pa;
             this.firingIISensor39.SensitivityCalibrationFactor = 1F;
-            this.firingIISensor39.SensorName = "助燃II传感器";
+            this.firingIISensor39.SensorName = "下游温度";
             this.firingIISensor39.SensorNameColor = System.Drawing.Color.White;
             this.firingIISensor39.SensorPostion = true;
             this.firingIISensor39.SensorUnitColor = System.Drawing.Color.White;
             this.firingIISensor39.SensorValue = null;
             this.firingIISensor39.SensorValueColor = System.Drawing.Color.White;
-            this.firingIISensor39.Size = new System.Drawing.Size(180, 25);
+            this.firingIISensor39.Size = new System.Drawing.Size(183, 25);
             this.firingIISensor39.SpeedValue = 0F;
             this.firingIISensor39.TabIndex = 578;
             this.firingIISensor39.TankArea = 1F;
@@ -16378,20 +16190,20 @@ namespace ProcessSystem
             this.firingIISensor38.InputType = ProcessSystemLib.InputValueType.PLC_Digital;
             this.firingIISensor38.IsPT100 = false;
             this.firingIISensor38.KValue = 1F;
-            this.firingIISensor38.Location = new System.Drawing.Point(229, 29);
+            this.firingIISensor38.Location = new System.Drawing.Point(221, 29);
             this.firingIISensor38.Margin = new System.Windows.Forms.Padding(5);
             this.firingIISensor38.MaxSensorRange = 1F;
             this.firingIISensor38.MinSensorRange = 0F;
             this.firingIISensor38.Name = "firingIISensor38";
             this.firingIISensor38.OriginalPressureUnit = ProcessSystemLib.Unit.Pa;
             this.firingIISensor38.SensitivityCalibrationFactor = 1F;
-            this.firingIISensor38.SensorName = "助燃II传感器";
+            this.firingIISensor38.SensorName = "下加注温度";
             this.firingIISensor38.SensorNameColor = System.Drawing.Color.White;
             this.firingIISensor38.SensorPostion = true;
             this.firingIISensor38.SensorUnitColor = System.Drawing.Color.White;
             this.firingIISensor38.SensorValue = null;
             this.firingIISensor38.SensorValueColor = System.Drawing.Color.White;
-            this.firingIISensor38.Size = new System.Drawing.Size(180, 25);
+            this.firingIISensor38.Size = new System.Drawing.Size(200, 25);
             this.firingIISensor38.SpeedValue = 0F;
             this.firingIISensor38.TabIndex = 578;
             this.firingIISensor38.TankArea = 1F;
@@ -16516,7 +16328,7 @@ namespace ProcessSystem
             // 
             this.button3.BackgroundImage = global::ProcessSystem.Properties.Resources.Pink;
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(305, 193);
+            this.button3.Location = new System.Drawing.Point(347, 193);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(86, 35);
             this.button3.TabIndex = 417;
@@ -18215,7 +18027,7 @@ namespace ProcessSystem
             this.firingIISwitchIcon13.Margin = new System.Windows.Forms.Padding(5);
             this.firingIISwitchIcon13.Name = "firingIISwitchIcon13";
             this.firingIISwitchIcon13.ShowName = false;
-            this.firingIISwitchIcon13.Size = new System.Drawing.Size(90, 35);
+            this.firingIISwitchIcon13.Size = new System.Drawing.Size(100, 52);
             this.firingIISwitchIcon13.State = ProcessSystemLib.ValveState.close;
             this.firingIISwitchIcon13.TabIndex = 528;
             this.firingIISwitchIcon13.ValveName = "HV235";
@@ -18257,38 +18069,15 @@ namespace ProcessSystem
             this.firingIISwitchIcon10.Enable = false;
             this.firingIISwitchIcon10.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.firingIISwitchIcon10.IsVertical = true;
-            this.firingIISwitchIcon10.Location = new System.Drawing.Point(645, 505);
+            this.firingIISwitchIcon10.Location = new System.Drawing.Point(645, 488);
             this.firingIISwitchIcon10.Margin = new System.Windows.Forms.Padding(5);
             this.firingIISwitchIcon10.Name = "firingIISwitchIcon10";
             this.firingIISwitchIcon10.ShowName = false;
-            this.firingIISwitchIcon10.Size = new System.Drawing.Size(90, 35);
+            this.firingIISwitchIcon10.Size = new System.Drawing.Size(99, 52);
             this.firingIISwitchIcon10.State = ProcessSystemLib.ValveState.close;
             this.firingIISwitchIcon10.TabIndex = 526;
             this.firingIISwitchIcon10.ValveName = "HV234";
             this.firingIISwitchIcon10.WorkStation = null;
-            // 
-            // firingIISwitchIcon8
-            // 
-            this.firingIISwitchIcon8.BackColor = System.Drawing.Color.Transparent;
-            this.firingIISwitchIcon8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.firingIISwitchIcon8.DiClose = ((ushort)(0));
-            this.firingIISwitchIcon8.DiOpen = ((ushort)(0));
-            this.firingIISwitchIcon8.DiOpenAndClose = ((ushort)(0));
-            this.firingIISwitchIcon8.DqClose = ((ushort)(0));
-            this.firingIISwitchIcon8.DqOpen = ((ushort)(0));
-            this.firingIISwitchIcon8.DqOpenAndClose = ((ushort)(0));
-            this.firingIISwitchIcon8.Enable = false;
-            this.firingIISwitchIcon8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.firingIISwitchIcon8.IsVertical = true;
-            this.firingIISwitchIcon8.Location = new System.Drawing.Point(557, 416);
-            this.firingIISwitchIcon8.Margin = new System.Windows.Forms.Padding(5);
-            this.firingIISwitchIcon8.Name = "firingIISwitchIcon8";
-            this.firingIISwitchIcon8.ShowName = false;
-            this.firingIISwitchIcon8.Size = new System.Drawing.Size(90, 35);
-            this.firingIISwitchIcon8.State = ProcessSystemLib.ValveState.close;
-            this.firingIISwitchIcon8.TabIndex = 525;
-            this.firingIISwitchIcon8.ValveName = "HV232";
-            this.firingIISwitchIcon8.WorkStation = null;
             // 
             // firingIISwitchIcon6
             // 
@@ -18372,11 +18161,11 @@ namespace ProcessSystem
             this.firingIISwitchIcon9.Enable = false;
             this.firingIISwitchIcon9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.firingIISwitchIcon9.IsVertical = true;
-            this.firingIISwitchIcon9.Location = new System.Drawing.Point(500, 503);
+            this.firingIISwitchIcon9.Location = new System.Drawing.Point(487, 486);
             this.firingIISwitchIcon9.Margin = new System.Windows.Forms.Padding(5);
             this.firingIISwitchIcon9.Name = "firingIISwitchIcon9";
             this.firingIISwitchIcon9.ShowName = false;
-            this.firingIISwitchIcon9.Size = new System.Drawing.Size(87, 35);
+            this.firingIISwitchIcon9.Size = new System.Drawing.Size(106, 52);
             this.firingIISwitchIcon9.State = ProcessSystemLib.ValveState.close;
             this.firingIISwitchIcon9.TabIndex = 521;
             this.firingIISwitchIcon9.ValveName = "HV233";
@@ -18399,7 +18188,7 @@ namespace ProcessSystem
             this.firingIISwitchIcon7.Margin = new System.Windows.Forms.Padding(5);
             this.firingIISwitchIcon7.Name = "firingIISwitchIcon7";
             this.firingIISwitchIcon7.ShowName = false;
-            this.firingIISwitchIcon7.Size = new System.Drawing.Size(90, 35);
+            this.firingIISwitchIcon7.Size = new System.Drawing.Size(108, 52);
             this.firingIISwitchIcon7.State = ProcessSystemLib.ValveState.close;
             this.firingIISwitchIcon7.TabIndex = 520;
             this.firingIISwitchIcon7.ValveName = "HV231";
@@ -18464,11 +18253,11 @@ namespace ProcessSystem
             this.firingIISwitchIcon1.Enable = false;
             this.firingIISwitchIcon1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.firingIISwitchIcon1.IsVertical = true;
-            this.firingIISwitchIcon1.Location = new System.Drawing.Point(214, 273);
+            this.firingIISwitchIcon1.Location = new System.Drawing.Point(210, 273);
             this.firingIISwitchIcon1.Margin = new System.Windows.Forms.Padding(5);
             this.firingIISwitchIcon1.Name = "firingIISwitchIcon1";
             this.firingIISwitchIcon1.ShowName = false;
-            this.firingIISwitchIcon1.Size = new System.Drawing.Size(90, 35);
+            this.firingIISwitchIcon1.Size = new System.Drawing.Size(102, 54);
             this.firingIISwitchIcon1.State = ProcessSystemLib.ValveState.close;
             this.firingIISwitchIcon1.TabIndex = 517;
             this.firingIISwitchIcon1.ValveName = "HV209";
@@ -18592,11 +18381,11 @@ namespace ProcessSystem
             this.firingISwitchIcon24.Enable = false;
             this.firingISwitchIcon24.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.firingISwitchIcon24.IsVertical = true;
-            this.firingISwitchIcon24.Location = new System.Drawing.Point(1512, 930);
+            this.firingISwitchIcon24.Location = new System.Drawing.Point(1510, 930);
             this.firingISwitchIcon24.Margin = new System.Windows.Forms.Padding(5);
             this.firingISwitchIcon24.Name = "firingISwitchIcon24";
             this.firingISwitchIcon24.ShowName = false;
-            this.firingISwitchIcon24.Size = new System.Drawing.Size(90, 35);
+            this.firingISwitchIcon24.Size = new System.Drawing.Size(103, 53);
             this.firingISwitchIcon24.State = ProcessSystemLib.ValveState.close;
             this.firingISwitchIcon24.TabIndex = 511;
             this.firingISwitchIcon24.ValveName = "HV238";
@@ -18615,11 +18404,11 @@ namespace ProcessSystem
             this.firingISwitchIcon22.Enable = false;
             this.firingISwitchIcon22.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.firingISwitchIcon22.IsVertical = true;
-            this.firingISwitchIcon22.Location = new System.Drawing.Point(1512, 647);
+            this.firingISwitchIcon22.Location = new System.Drawing.Point(1510, 647);
             this.firingISwitchIcon22.Margin = new System.Windows.Forms.Padding(5);
             this.firingISwitchIcon22.Name = "firingISwitchIcon22";
             this.firingISwitchIcon22.ShowName = false;
-            this.firingISwitchIcon22.Size = new System.Drawing.Size(90, 35);
+            this.firingISwitchIcon22.Size = new System.Drawing.Size(103, 53);
             this.firingISwitchIcon22.State = ProcessSystemLib.ValveState.close;
             this.firingISwitchIcon22.TabIndex = 500;
             this.firingISwitchIcon22.ValveName = "HV227";
@@ -18684,11 +18473,11 @@ namespace ProcessSystem
             this.firingISwitchIcon16.Enable = false;
             this.firingISwitchIcon16.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.firingISwitchIcon16.IsVertical = true;
-            this.firingISwitchIcon16.Location = new System.Drawing.Point(966, 325);
+            this.firingISwitchIcon16.Location = new System.Drawing.Point(962, 317);
             this.firingISwitchIcon16.Margin = new System.Windows.Forms.Padding(5);
             this.firingISwitchIcon16.Name = "firingISwitchIcon16";
             this.firingISwitchIcon16.ShowName = false;
-            this.firingISwitchIcon16.Size = new System.Drawing.Size(90, 35);
+            this.firingISwitchIcon16.Size = new System.Drawing.Size(103, 53);
             this.firingISwitchIcon16.State = ProcessSystemLib.ValveState.close;
             this.firingISwitchIcon16.TabIndex = 503;
             this.firingISwitchIcon16.ValveName = "HV228";
@@ -18707,11 +18496,11 @@ namespace ProcessSystem
             this.firingISwitchIcon14.Enable = false;
             this.firingISwitchIcon14.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.firingISwitchIcon14.IsVertical = true;
-            this.firingISwitchIcon14.Location = new System.Drawing.Point(2176, 363);
+            this.firingISwitchIcon14.Location = new System.Drawing.Point(2153, 382);
             this.firingISwitchIcon14.Margin = new System.Windows.Forms.Padding(5);
             this.firingISwitchIcon14.Name = "firingISwitchIcon14";
             this.firingISwitchIcon14.ShowName = false;
-            this.firingISwitchIcon14.Size = new System.Drawing.Size(86, 35);
+            this.firingISwitchIcon14.Size = new System.Drawing.Size(107, 53);
             this.firingISwitchIcon14.State = ProcessSystemLib.ValveState.close;
             this.firingISwitchIcon14.TabIndex = 504;
             this.firingISwitchIcon14.ValveName = "HV225";
@@ -18799,11 +18588,11 @@ namespace ProcessSystem
             this.firingISwitchIcon17.Enable = false;
             this.firingISwitchIcon17.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.firingISwitchIcon17.IsVertical = true;
-            this.firingISwitchIcon17.Location = new System.Drawing.Point(966, 111);
+            this.firingISwitchIcon17.Location = new System.Drawing.Point(962, 103);
             this.firingISwitchIcon17.Margin = new System.Windows.Forms.Padding(5);
             this.firingISwitchIcon17.Name = "firingISwitchIcon17";
             this.firingISwitchIcon17.ShowName = false;
-            this.firingISwitchIcon17.Size = new System.Drawing.Size(90, 35);
+            this.firingISwitchIcon17.Size = new System.Drawing.Size(103, 53);
             this.firingISwitchIcon17.State = ProcessSystemLib.ValveState.close;
             this.firingISwitchIcon17.TabIndex = 508;
             this.firingISwitchIcon17.ValveName = "HV229";
@@ -18845,11 +18634,11 @@ namespace ProcessSystem
             this.firingISwitchIcon13.Enable = false;
             this.firingISwitchIcon13.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.firingISwitchIcon13.IsVertical = true;
-            this.firingISwitchIcon13.Location = new System.Drawing.Point(2263, 397);
+            this.firingISwitchIcon13.Location = new System.Drawing.Point(2262, 382);
             this.firingISwitchIcon13.Margin = new System.Windows.Forms.Padding(5);
             this.firingISwitchIcon13.Name = "firingISwitchIcon13";
             this.firingISwitchIcon13.ShowName = false;
-            this.firingISwitchIcon13.Size = new System.Drawing.Size(90, 35);
+            this.firingISwitchIcon13.Size = new System.Drawing.Size(103, 53);
             this.firingISwitchIcon13.State = ProcessSystemLib.ValveState.close;
             this.firingISwitchIcon13.TabIndex = 510;
             this.firingISwitchIcon13.ValveName = "HV224";
@@ -18868,11 +18657,11 @@ namespace ProcessSystem
             this.firingISwitchIcon12.Enable = false;
             this.firingISwitchIcon12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.firingISwitchIcon12.IsVertical = true;
-            this.firingISwitchIcon12.Location = new System.Drawing.Point(1906, 259);
+            this.firingISwitchIcon12.Location = new System.Drawing.Point(1903, 259);
             this.firingISwitchIcon12.Margin = new System.Windows.Forms.Padding(5);
             this.firingISwitchIcon12.Name = "firingISwitchIcon12";
             this.firingISwitchIcon12.ShowName = false;
-            this.firingISwitchIcon12.Size = new System.Drawing.Size(90, 35);
+            this.firingISwitchIcon12.Size = new System.Drawing.Size(103, 53);
             this.firingISwitchIcon12.State = ProcessSystemLib.ValveState.close;
             this.firingISwitchIcon12.TabIndex = 490;
             this.firingISwitchIcon12.ValveName = "HV223";
@@ -19010,7 +18799,7 @@ namespace ProcessSystem
             this.firingISwitchIcon11.Margin = new System.Windows.Forms.Padding(5);
             this.firingISwitchIcon11.Name = "firingISwitchIcon11";
             this.firingISwitchIcon11.ShowName = false;
-            this.firingISwitchIcon11.Size = new System.Drawing.Size(90, 35);
+            this.firingISwitchIcon11.Size = new System.Drawing.Size(103, 53);
             this.firingISwitchIcon11.State = ProcessSystemLib.ValveState.close;
             this.firingISwitchIcon11.TabIndex = 496;
             this.firingISwitchIcon11.ValveName = "HV222";
@@ -19075,7 +18864,7 @@ namespace ProcessSystem
             this.firingISwitchIcon5.Enable = false;
             this.firingISwitchIcon5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.firingISwitchIcon5.IsVertical = false;
-            this.firingISwitchIcon5.Location = new System.Drawing.Point(2156, 5);
+            this.firingISwitchIcon5.Location = new System.Drawing.Point(2159, 5);
             this.firingISwitchIcon5.Margin = new System.Windows.Forms.Padding(5);
             this.firingISwitchIcon5.Name = "firingISwitchIcon5";
             this.firingISwitchIcon5.ShowName = false;
@@ -19102,7 +18891,7 @@ namespace ProcessSystem
             this.firingISwitchIcon3.Margin = new System.Windows.Forms.Padding(5);
             this.firingISwitchIcon3.Name = "firingISwitchIcon3";
             this.firingISwitchIcon3.ShowName = false;
-            this.firingISwitchIcon3.Size = new System.Drawing.Size(90, 35);
+            this.firingISwitchIcon3.Size = new System.Drawing.Size(103, 53);
             this.firingISwitchIcon3.State = ProcessSystemLib.ValveState.close;
             this.firingISwitchIcon3.TabIndex = 494;
             this.firingISwitchIcon3.ValveName = "HV206";
@@ -19176,7 +18965,7 @@ namespace ProcessSystem
             this.firingIAdjustValve1.AdjustValue = null;
             this.firingIAdjustValve1.BackColor = System.Drawing.Color.Transparent;
             this.firingIAdjustValve1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.firingIAdjustValve1.Location = new System.Drawing.Point(2307, 39);
+            this.firingIAdjustValve1.Location = new System.Drawing.Point(2310, 39);
             this.firingIAdjustValve1.Margin = new System.Windows.Forms.Padding(5);
             this.firingIAdjustValve1.Name = "firingIAdjustValve1";
             this.firingIAdjustValve1.Size = new System.Drawing.Size(270, 30);
@@ -19544,7 +19333,7 @@ namespace ProcessSystem
             this.sensor41.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.sensor41.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.sensor41.IsVertical = false;
-            this.sensor41.Location = new System.Drawing.Point(501, 395);
+            this.sensor41.Location = new System.Drawing.Point(491, 395);
             this.sensor41.Margin = new System.Windows.Forms.Padding(5);
             this.sensor41.Name = "sensor41";
             this.sensor41.Size = new System.Drawing.Size(37, 42);
@@ -19782,7 +19571,7 @@ namespace ProcessSystem
             this.flowControl195.EdgeColor = System.Drawing.Color.DimGray;
             this.flowControl195.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.flowControl195.LineCenterColor = System.Drawing.Color.LightGray;
-            this.flowControl195.Location = new System.Drawing.Point(2179, 291);
+            this.flowControl195.Location = new System.Drawing.Point(2159, 322);
             this.flowControl195.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.flowControl195.MoveSpeed = -0.2F;
             this.flowControl195.Name = "flowControl195";
@@ -19793,7 +19582,7 @@ namespace ProcessSystem
             this.flowControl195.PipeLineWidth = 5;
             this.flowControl195.PipeTurnLeft = ProcessControlLib.PipeTurnDirection.None;
             this.flowControl195.PipeTurnRight = ProcessControlLib.PipeTurnDirection.None;
-            this.flowControl195.Size = new System.Drawing.Size(10, 148);
+            this.flowControl195.Size = new System.Drawing.Size(10, 117);
             this.flowControl195.TabIndex = 44;
             // 
             // flowControl204
@@ -19866,7 +19655,7 @@ namespace ProcessSystem
             this.flowControl193.EdgeColor = System.Drawing.Color.DimGray;
             this.flowControl193.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.flowControl193.LineCenterColor = System.Drawing.Color.LightGray;
-            this.flowControl193.Location = new System.Drawing.Point(2267, 289);
+            this.flowControl193.Location = new System.Drawing.Point(2266, 289);
             this.flowControl193.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.flowControl193.MoveSpeed = -0.2F;
             this.flowControl193.Name = "flowControl193";
@@ -20539,7 +20328,7 @@ namespace ProcessSystem
             this.flowControl29.EdgeColor = System.Drawing.Color.DimGray;
             this.flowControl29.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.flowControl29.LineCenterColor = System.Drawing.Color.LightGray;
-            this.flowControl29.Location = new System.Drawing.Point(571, 373);
+            this.flowControl29.Location = new System.Drawing.Point(564, 373);
             this.flowControl29.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.flowControl29.MoveSpeed = 0.2F;
             this.flowControl29.Name = "flowControl29";
@@ -20550,7 +20339,7 @@ namespace ProcessSystem
             this.flowControl29.PipeLineWidth = 5;
             this.flowControl29.PipeTurnLeft = ProcessControlLib.PipeTurnDirection.Right;
             this.flowControl29.PipeTurnRight = ProcessControlLib.PipeTurnDirection.Down;
-            this.flowControl29.Size = new System.Drawing.Size(88, 10);
+            this.flowControl29.Size = new System.Drawing.Size(94, 10);
             this.flowControl29.TabIndex = 31;
             // 
             // switchValve1
@@ -20558,7 +20347,7 @@ namespace ProcessSystem
             this.switchValve1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("switchValve1.BackgroundImage")));
             this.switchValve1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.switchValve1.IsVertical = false;
-            this.switchValve1.Location = new System.Drawing.Point(2247, 17);
+            this.switchValve1.Location = new System.Drawing.Point(2250, 17);
             this.switchValve1.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.switchValve1.Name = "switchValve1";
             this.switchValve1.Size = new System.Drawing.Size(52, 52);
@@ -20586,7 +20375,7 @@ namespace ProcessSystem
             this.flowControl206.EdgeColor = System.Drawing.Color.DimGray;
             this.flowControl206.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.flowControl206.LineCenterColor = System.Drawing.Color.LightGray;
-            this.flowControl206.Location = new System.Drawing.Point(2151, 54);
+            this.flowControl206.Location = new System.Drawing.Point(2154, 54);
             this.flowControl206.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.flowControl206.MoveSpeed = 0.2F;
             this.flowControl206.Name = "flowControl206";
@@ -20607,7 +20396,7 @@ namespace ProcessSystem
             this.flowControl205.EdgeColor = System.Drawing.Color.DimGray;
             this.flowControl205.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.flowControl205.LineCenterColor = System.Drawing.Color.LightGray;
-            this.flowControl205.Location = new System.Drawing.Point(2220, 62);
+            this.flowControl205.Location = new System.Drawing.Point(2223, 62);
             this.flowControl205.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.flowControl205.MoveSpeed = -0.2F;
             this.flowControl205.Name = "flowControl205";
@@ -21093,7 +20882,7 @@ namespace ProcessSystem
             this.flowControl28.EdgeColor = System.Drawing.Color.DimGray;
             this.flowControl28.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.flowControl28.LineCenterColor = System.Drawing.Color.LightGray;
-            this.flowControl28.Location = new System.Drawing.Point(561, 328);
+            this.flowControl28.Location = new System.Drawing.Point(555, 328);
             this.flowControl28.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.flowControl28.MoveSpeed = 0.2F;
             this.flowControl28.Name = "flowControl28";
@@ -21114,7 +20903,7 @@ namespace ProcessSystem
             this.flowControl27.EdgeColor = System.Drawing.Color.DimGray;
             this.flowControl27.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.flowControl27.LineCenterColor = System.Drawing.Color.LightGray;
-            this.flowControl27.Location = new System.Drawing.Point(503, 328);
+            this.flowControl27.Location = new System.Drawing.Point(493, 328);
             this.flowControl27.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.flowControl27.MoveSpeed = 0.2F;
             this.flowControl27.Name = "flowControl27";
@@ -21306,7 +21095,7 @@ namespace ProcessSystem
             this.flowControl194.PipeLineWidth = 5;
             this.flowControl194.PipeTurnLeft = ProcessControlLib.PipeTurnDirection.None;
             this.flowControl194.PipeTurnRight = ProcessControlLib.PipeTurnDirection.Left;
-            this.flowControl194.Size = new System.Drawing.Size(270, 10);
+            this.flowControl194.Size = new System.Drawing.Size(250, 10);
             this.flowControl194.TabIndex = 0;
             // 
             // flowControl192
@@ -21474,7 +21263,7 @@ namespace ProcessSystem
             this.tank9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tank9.BackgroundImage")));
             this.tank9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tank9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tank9.Location = new System.Drawing.Point(2086, 99);
+            this.tank9.Location = new System.Drawing.Point(2088, 99);
             this.tank9.Margin = new System.Windows.Forms.Padding(5);
             this.tank9.Name = "tank9";
             this.tank9.Size = new System.Drawing.Size(293, 239);
@@ -21555,7 +21344,7 @@ namespace ProcessSystem
             this.firingIISensor17.InputType = ProcessSystemLib.InputValueType.PLC_Digital;
             this.firingIISensor17.IsPT100 = false;
             this.firingIISensor17.KValue = 1F;
-            this.firingIISensor17.Location = new System.Drawing.Point(397, 386);
+            this.firingIISensor17.Location = new System.Drawing.Point(387, 386);
             this.firingIISensor17.Margin = new System.Windows.Forms.Padding(5);
             this.firingIISensor17.MaxSensorRange = 1F;
             this.firingIISensor17.MinSensorRange = 0F;
@@ -21827,7 +21616,7 @@ namespace ProcessSystem
             this.tabPage11.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage11.Location = new System.Drawing.Point(0, 40);
             this.tabPage11.Name = "tabPage11";
-            this.tabPage11.Size = new System.Drawing.Size(1588, 719);
+            this.tabPage11.Size = new System.Drawing.Size(3309, 1087);
             this.tabPage11.TabIndex = 1;
             this.tabPage11.Text = "Debug";
             // 
@@ -24591,7 +24380,7 @@ namespace ProcessSystem
             this.tabPage3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage3.Location = new System.Drawing.Point(121, 0);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(3317, 1151);
+            this.tabPage3.Size = new System.Drawing.Size(3309, 1127);
             this.tabPage3.TabIndex = 1;
             this.tabPage3.Text = "甲烷系统";
             // 
@@ -24607,7 +24396,7 @@ namespace ProcessSystem
             this.uiTabControl3.MainPage = "";
             this.uiTabControl3.Name = "uiTabControl3";
             this.uiTabControl3.SelectedIndex = 0;
-            this.uiTabControl3.Size = new System.Drawing.Size(3317, 1151);
+            this.uiTabControl3.Size = new System.Drawing.Size(3309, 1127);
             this.uiTabControl3.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.uiTabControl3.TabIndex = 1;
             this.uiTabControl3.TipsFont = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -24813,7 +24602,7 @@ namespace ProcessSystem
             this.tabPage12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage12.Location = new System.Drawing.Point(0, 40);
             this.tabPage12.Name = "tabPage12";
-            this.tabPage12.Size = new System.Drawing.Size(3317, 1111);
+            this.tabPage12.Size = new System.Drawing.Size(3309, 1087);
             this.tabPage12.TabIndex = 0;
             this.tabPage12.Text = "主界面";
             // 
@@ -26415,11 +26204,11 @@ namespace ProcessSystem
             this.firingISwitchIcon27.Enable = true;
             this.firingISwitchIcon27.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.firingISwitchIcon27.IsVertical = true;
-            this.firingISwitchIcon27.Location = new System.Drawing.Point(3106, 689);
+            this.firingISwitchIcon27.Location = new System.Drawing.Point(3103, 673);
             this.firingISwitchIcon27.Margin = new System.Windows.Forms.Padding(5);
             this.firingISwitchIcon27.Name = "firingISwitchIcon27";
             this.firingISwitchIcon27.ShowName = false;
-            this.firingISwitchIcon27.Size = new System.Drawing.Size(90, 35);
+            this.firingISwitchIcon27.Size = new System.Drawing.Size(103, 53);
             this.firingISwitchIcon27.State = ProcessSystemLib.ValveState.close;
             this.firingISwitchIcon27.TabIndex = 464;
             this.firingISwitchIcon27.ValveName = "HV313";
@@ -26438,11 +26227,11 @@ namespace ProcessSystem
             this.firingISwitchIcon28.Enable = true;
             this.firingISwitchIcon28.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.firingISwitchIcon28.IsVertical = true;
-            this.firingISwitchIcon28.Location = new System.Drawing.Point(3206, 869);
+            this.firingISwitchIcon28.Location = new System.Drawing.Point(3203, 853);
             this.firingISwitchIcon28.Margin = new System.Windows.Forms.Padding(5);
             this.firingISwitchIcon28.Name = "firingISwitchIcon28";
             this.firingISwitchIcon28.ShowName = false;
-            this.firingISwitchIcon28.Size = new System.Drawing.Size(90, 35);
+            this.firingISwitchIcon28.Size = new System.Drawing.Size(103, 53);
             this.firingISwitchIcon28.State = ProcessSystemLib.ValveState.close;
             this.firingISwitchIcon28.TabIndex = 463;
             this.firingISwitchIcon28.ValveName = "HV324";
@@ -26530,11 +26319,11 @@ namespace ProcessSystem
             this.fuelSwitchIcon18.Enable = true;
             this.fuelSwitchIcon18.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.fuelSwitchIcon18.IsVertical = true;
-            this.fuelSwitchIcon18.Location = new System.Drawing.Point(705, 423);
+            this.fuelSwitchIcon18.Location = new System.Drawing.Point(702, 418);
             this.fuelSwitchIcon18.Margin = new System.Windows.Forms.Padding(5);
             this.fuelSwitchIcon18.Name = "fuelSwitchIcon18";
             this.fuelSwitchIcon18.ShowName = false;
-            this.fuelSwitchIcon18.Size = new System.Drawing.Size(90, 35);
+            this.fuelSwitchIcon18.Size = new System.Drawing.Size(103, 53);
             this.fuelSwitchIcon18.State = ProcessSystemLib.ValveState.close;
             this.fuelSwitchIcon18.TabIndex = 457;
             this.fuelSwitchIcon18.ValveName = "HV321";
@@ -26553,11 +26342,11 @@ namespace ProcessSystem
             this.fuelSwitchIcon16.Enable = true;
             this.fuelSwitchIcon16.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.fuelSwitchIcon16.IsVertical = true;
-            this.fuelSwitchIcon16.Location = new System.Drawing.Point(868, 172);
+            this.fuelSwitchIcon16.Location = new System.Drawing.Point(865, 172);
             this.fuelSwitchIcon16.Margin = new System.Windows.Forms.Padding(5);
             this.fuelSwitchIcon16.Name = "fuelSwitchIcon16";
             this.fuelSwitchIcon16.ShowName = false;
-            this.fuelSwitchIcon16.Size = new System.Drawing.Size(90, 35);
+            this.fuelSwitchIcon16.Size = new System.Drawing.Size(103, 53);
             this.fuelSwitchIcon16.State = ProcessSystemLib.ValveState.close;
             this.fuelSwitchIcon16.TabIndex = 454;
             this.fuelSwitchIcon16.ValveName = "HV319";
@@ -26576,11 +26365,11 @@ namespace ProcessSystem
             this.fuelSwitchIcon14.Enable = true;
             this.fuelSwitchIcon14.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.fuelSwitchIcon14.IsVertical = true;
-            this.fuelSwitchIcon14.Location = new System.Drawing.Point(2568, 295);
+            this.fuelSwitchIcon14.Location = new System.Drawing.Point(2566, 295);
             this.fuelSwitchIcon14.Margin = new System.Windows.Forms.Padding(5);
             this.fuelSwitchIcon14.Name = "fuelSwitchIcon14";
             this.fuelSwitchIcon14.ShowName = false;
-            this.fuelSwitchIcon14.Size = new System.Drawing.Size(90, 35);
+            this.fuelSwitchIcon14.Size = new System.Drawing.Size(103, 53);
             this.fuelSwitchIcon14.State = ProcessSystemLib.ValveState.close;
             this.fuelSwitchIcon14.TabIndex = 450;
             this.fuelSwitchIcon14.ValveName = "HV317";
@@ -26622,11 +26411,11 @@ namespace ProcessSystem
             this.fuelSwitchIcon17.Enable = true;
             this.fuelSwitchIcon17.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.fuelSwitchIcon17.IsVertical = true;
-            this.fuelSwitchIcon17.Location = new System.Drawing.Point(584, 423);
+            this.fuelSwitchIcon17.Location = new System.Drawing.Point(581, 418);
             this.fuelSwitchIcon17.Margin = new System.Windows.Forms.Padding(5);
             this.fuelSwitchIcon17.Name = "fuelSwitchIcon17";
             this.fuelSwitchIcon17.ShowName = false;
-            this.fuelSwitchIcon17.Size = new System.Drawing.Size(90, 35);
+            this.fuelSwitchIcon17.Size = new System.Drawing.Size(103, 53);
             this.fuelSwitchIcon17.State = ProcessSystemLib.ValveState.close;
             this.fuelSwitchIcon17.TabIndex = 452;
             this.fuelSwitchIcon17.ValveName = "HV320";
@@ -26645,11 +26434,11 @@ namespace ProcessSystem
             this.fuelSwitchIcon15.Enable = true;
             this.fuelSwitchIcon15.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.fuelSwitchIcon15.IsVertical = true;
-            this.fuelSwitchIcon15.Location = new System.Drawing.Point(2408, 297);
+            this.fuelSwitchIcon15.Location = new System.Drawing.Point(2406, 297);
             this.fuelSwitchIcon15.Margin = new System.Windows.Forms.Padding(5);
             this.fuelSwitchIcon15.Name = "fuelSwitchIcon15";
             this.fuelSwitchIcon15.ShowName = false;
-            this.fuelSwitchIcon15.Size = new System.Drawing.Size(90, 35);
+            this.fuelSwitchIcon15.Size = new System.Drawing.Size(103, 53);
             this.fuelSwitchIcon15.State = ProcessSystemLib.ValveState.close;
             this.fuelSwitchIcon15.TabIndex = 451;
             this.fuelSwitchIcon15.ValveName = "HV318";
@@ -26668,11 +26457,11 @@ namespace ProcessSystem
             this.fuelSwitchIcon13.Enable = true;
             this.fuelSwitchIcon13.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.fuelSwitchIcon13.IsVertical = true;
-            this.fuelSwitchIcon13.Location = new System.Drawing.Point(2409, 172);
+            this.fuelSwitchIcon13.Location = new System.Drawing.Point(2405, 163);
             this.fuelSwitchIcon13.Margin = new System.Windows.Forms.Padding(5);
             this.fuelSwitchIcon13.Name = "fuelSwitchIcon13";
             this.fuelSwitchIcon13.ShowName = false;
-            this.fuelSwitchIcon13.Size = new System.Drawing.Size(90, 35);
+            this.fuelSwitchIcon13.Size = new System.Drawing.Size(103, 53);
             this.fuelSwitchIcon13.State = ProcessSystemLib.ValveState.close;
             this.fuelSwitchIcon13.TabIndex = 455;
             this.fuelSwitchIcon13.ValveName = "HV316";
@@ -26691,11 +26480,11 @@ namespace ProcessSystem
             this.fuelSwitchIcon12.Enable = true;
             this.fuelSwitchIcon12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.fuelSwitchIcon12.IsVertical = true;
-            this.fuelSwitchIcon12.Location = new System.Drawing.Point(1094, 305);
+            this.fuelSwitchIcon12.Location = new System.Drawing.Point(1092, 305);
             this.fuelSwitchIcon12.Margin = new System.Windows.Forms.Padding(5);
             this.fuelSwitchIcon12.Name = "fuelSwitchIcon12";
             this.fuelSwitchIcon12.ShowName = false;
-            this.fuelSwitchIcon12.Size = new System.Drawing.Size(90, 35);
+            this.fuelSwitchIcon12.Size = new System.Drawing.Size(103, 53);
             this.fuelSwitchIcon12.State = ProcessSystemLib.ValveState.close;
             this.fuelSwitchIcon12.TabIndex = 449;
             this.fuelSwitchIcon12.ValveName = "HV314";
@@ -29445,7 +29234,7 @@ namespace ProcessSystem
             this.tabPage13.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage13.Location = new System.Drawing.Point(0, 40);
             this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Size = new System.Drawing.Size(1588, 719);
+            this.tabPage13.Size = new System.Drawing.Size(3309, 1087);
             this.tabPage13.TabIndex = 1;
             this.tabPage13.Text = "Debug";
             // 
@@ -30617,7 +30406,7 @@ namespace ProcessSystem
             this.tabPage4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage4.Location = new System.Drawing.Point(121, 0);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(3317, 1151);
+            this.tabPage4.Size = new System.Drawing.Size(3309, 1127);
             this.tabPage4.TabIndex = 2;
             this.tabPage4.Text = "煤油系统";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -30634,7 +30423,7 @@ namespace ProcessSystem
             this.uiTabControl4.MainPage = "";
             this.uiTabControl4.Name = "uiTabControl4";
             this.uiTabControl4.SelectedIndex = 0;
-            this.uiTabControl4.Size = new System.Drawing.Size(3317, 1151);
+            this.uiTabControl4.Size = new System.Drawing.Size(3309, 1127);
             this.uiTabControl4.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.uiTabControl4.TabIndex = 1;
             this.uiTabControl4.TipsFont = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -30744,7 +30533,7 @@ namespace ProcessSystem
             this.tabPage15.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage15.Location = new System.Drawing.Point(0, 40);
             this.tabPage15.Name = "tabPage15";
-            this.tabPage15.Size = new System.Drawing.Size(3317, 1111);
+            this.tabPage15.Size = new System.Drawing.Size(3309, 1087);
             this.tabPage15.TabIndex = 0;
             this.tabPage15.Text = "主界面";
             // 
@@ -31594,11 +31383,11 @@ namespace ProcessSystem
             this.fuelSwitchIcon30.Enable = true;
             this.fuelSwitchIcon30.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.fuelSwitchIcon30.IsVertical = true;
-            this.fuelSwitchIcon30.Location = new System.Drawing.Point(338, 829);
+            this.fuelSwitchIcon30.Location = new System.Drawing.Point(324, 821);
             this.fuelSwitchIcon30.Margin = new System.Windows.Forms.Padding(5);
             this.fuelSwitchIcon30.Name = "fuelSwitchIcon30";
             this.fuelSwitchIcon30.ShowName = false;
-            this.fuelSwitchIcon30.Size = new System.Drawing.Size(90, 35);
+            this.fuelSwitchIcon30.Size = new System.Drawing.Size(103, 53);
             this.fuelSwitchIcon30.State = ProcessSystemLib.ValveState.close;
             this.fuelSwitchIcon30.TabIndex = 485;
             this.fuelSwitchIcon30.ValveName = "PV413";
@@ -31686,11 +31475,11 @@ namespace ProcessSystem
             this.fuelSwitchIcon26.Enable = true;
             this.fuelSwitchIcon26.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.fuelSwitchIcon26.IsVertical = true;
-            this.fuelSwitchIcon26.Location = new System.Drawing.Point(428, 780);
+            this.fuelSwitchIcon26.Location = new System.Drawing.Point(425, 772);
             this.fuelSwitchIcon26.Margin = new System.Windows.Forms.Padding(5);
             this.fuelSwitchIcon26.Name = "fuelSwitchIcon26";
             this.fuelSwitchIcon26.ShowName = false;
-            this.fuelSwitchIcon26.Size = new System.Drawing.Size(90, 35);
+            this.fuelSwitchIcon26.Size = new System.Drawing.Size(103, 53);
             this.fuelSwitchIcon26.State = ProcessSystemLib.ValveState.close;
             this.fuelSwitchIcon26.TabIndex = 481;
             this.fuelSwitchIcon26.ValveName = "PV409";
@@ -31709,11 +31498,11 @@ namespace ProcessSystem
             this.fuelSwitchIcon25.Enable = true;
             this.fuelSwitchIcon25.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.fuelSwitchIcon25.IsVertical = true;
-            this.fuelSwitchIcon25.Location = new System.Drawing.Point(377, 505);
+            this.fuelSwitchIcon25.Location = new System.Drawing.Point(374, 494);
             this.fuelSwitchIcon25.Margin = new System.Windows.Forms.Padding(5);
             this.fuelSwitchIcon25.Name = "fuelSwitchIcon25";
             this.fuelSwitchIcon25.ShowName = false;
-            this.fuelSwitchIcon25.Size = new System.Drawing.Size(85, 30);
+            this.fuelSwitchIcon25.Size = new System.Drawing.Size(103, 53);
             this.fuelSwitchIcon25.State = ProcessSystemLib.ValveState.close;
             this.fuelSwitchIcon25.TabIndex = 480;
             this.fuelSwitchIcon25.ValveName = "PV404";
@@ -31755,11 +31544,11 @@ namespace ProcessSystem
             this.fuelSwitchIcon22.Enable = true;
             this.fuelSwitchIcon22.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.fuelSwitchIcon22.IsVertical = true;
-            this.fuelSwitchIcon22.Location = new System.Drawing.Point(534, 425);
+            this.fuelSwitchIcon22.Location = new System.Drawing.Point(531, 414);
             this.fuelSwitchIcon22.Margin = new System.Windows.Forms.Padding(5);
             this.fuelSwitchIcon22.Name = "fuelSwitchIcon22";
             this.fuelSwitchIcon22.ShowName = false;
-            this.fuelSwitchIcon22.Size = new System.Drawing.Size(90, 35);
+            this.fuelSwitchIcon22.Size = new System.Drawing.Size(103, 53);
             this.fuelSwitchIcon22.State = ProcessSystemLib.ValveState.close;
             this.fuelSwitchIcon22.TabIndex = 478;
             this.fuelSwitchIcon22.ValveName = "PV401";
@@ -33561,7 +33350,7 @@ namespace ProcessSystem
             this.flowControl64.EdgeColor = System.Drawing.Color.DimGray;
             this.flowControl64.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.flowControl64.LineCenterColor = System.Drawing.Color.LightGray;
-            this.flowControl64.Location = new System.Drawing.Point(341, 807);
+            this.flowControl64.Location = new System.Drawing.Point(330, 807);
             this.flowControl64.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.flowControl64.MoveSpeed = -0.2F;
             this.flowControl64.Name = "flowControl64";
@@ -33696,7 +33485,7 @@ namespace ProcessSystem
             this.tabPage17.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage17.Location = new System.Drawing.Point(0, 40);
             this.tabPage17.Name = "tabPage17";
-            this.tabPage17.Size = new System.Drawing.Size(1588, 719);
+            this.tabPage17.Size = new System.Drawing.Size(3309, 1087);
             this.tabPage17.TabIndex = 1;
             this.tabPage17.Text = "Debug";
             // 
@@ -34767,11 +34556,11 @@ namespace ProcessSystem
             this.firingISwitchIcon32.Enable = true;
             this.firingISwitchIcon32.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.firingISwitchIcon32.IsVertical = false;
-            this.firingISwitchIcon32.Location = new System.Drawing.Point(464, 141);
+            this.firingISwitchIcon32.Location = new System.Drawing.Point(446, 127);
             this.firingISwitchIcon32.Margin = new System.Windows.Forms.Padding(5);
             this.firingISwitchIcon32.Name = "firingISwitchIcon32";
             this.firingISwitchIcon32.ShowName = true;
-            this.firingISwitchIcon32.Size = new System.Drawing.Size(30, 30);
+            this.firingISwitchIcon32.Size = new System.Drawing.Size(52, 56);
             this.firingISwitchIcon32.State = ProcessSystemLib.ValveState.close;
             this.firingISwitchIcon32.TabIndex = 274;
             this.firingISwitchIcon32.ValveName = null;
@@ -34790,11 +34579,11 @@ namespace ProcessSystem
             this.firingISwitchIcon30.Enable = true;
             this.firingISwitchIcon30.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.firingISwitchIcon30.IsVertical = false;
-            this.firingISwitchIcon30.Location = new System.Drawing.Point(464, 24);
+            this.firingISwitchIcon30.Location = new System.Drawing.Point(446, 10);
             this.firingISwitchIcon30.Margin = new System.Windows.Forms.Padding(5);
             this.firingISwitchIcon30.Name = "firingISwitchIcon30";
             this.firingISwitchIcon30.ShowName = true;
-            this.firingISwitchIcon30.Size = new System.Drawing.Size(30, 30);
+            this.firingISwitchIcon30.Size = new System.Drawing.Size(52, 56);
             this.firingISwitchIcon30.State = ProcessSystemLib.ValveState.close;
             this.firingISwitchIcon30.TabIndex = 275;
             this.firingISwitchIcon30.ValveName = null;
@@ -34813,11 +34602,11 @@ namespace ProcessSystem
             this.firingISwitchIcon31.Enable = true;
             this.firingISwitchIcon31.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.firingISwitchIcon31.IsVertical = false;
-            this.firingISwitchIcon31.Location = new System.Drawing.Point(464, 83);
+            this.firingISwitchIcon31.Location = new System.Drawing.Point(446, 69);
             this.firingISwitchIcon31.Margin = new System.Windows.Forms.Padding(5);
             this.firingISwitchIcon31.Name = "firingISwitchIcon31";
             this.firingISwitchIcon31.ShowName = true;
-            this.firingISwitchIcon31.Size = new System.Drawing.Size(30, 30);
+            this.firingISwitchIcon31.Size = new System.Drawing.Size(52, 56);
             this.firingISwitchIcon31.State = ProcessSystemLib.ValveState.close;
             this.firingISwitchIcon31.TabIndex = 276;
             this.firingISwitchIcon31.ValveName = null;
@@ -35112,11 +34901,11 @@ namespace ProcessSystem
             this.fuelSwitchIcon36.Enable = true;
             this.fuelSwitchIcon36.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.fuelSwitchIcon36.IsVertical = false;
-            this.fuelSwitchIcon36.Location = new System.Drawing.Point(241, 230);
+            this.fuelSwitchIcon36.Location = new System.Drawing.Point(223, 216);
             this.fuelSwitchIcon36.Margin = new System.Windows.Forms.Padding(5);
             this.fuelSwitchIcon36.Name = "fuelSwitchIcon36";
             this.fuelSwitchIcon36.ShowName = true;
-            this.fuelSwitchIcon36.Size = new System.Drawing.Size(30, 30);
+            this.fuelSwitchIcon36.Size = new System.Drawing.Size(52, 56);
             this.fuelSwitchIcon36.State = ProcessSystemLib.ValveState.close;
             this.fuelSwitchIcon36.TabIndex = 249;
             this.fuelSwitchIcon36.ValveName = null;
@@ -35135,11 +34924,11 @@ namespace ProcessSystem
             this.fuelSwitchIcon32.Enable = true;
             this.fuelSwitchIcon32.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.fuelSwitchIcon32.IsVertical = false;
-            this.fuelSwitchIcon32.Location = new System.Drawing.Point(246, 24);
+            this.fuelSwitchIcon32.Location = new System.Drawing.Point(226, 11);
             this.fuelSwitchIcon32.Margin = new System.Windows.Forms.Padding(5);
             this.fuelSwitchIcon32.Name = "fuelSwitchIcon32";
             this.fuelSwitchIcon32.ShowName = true;
-            this.fuelSwitchIcon32.Size = new System.Drawing.Size(30, 30);
+            this.fuelSwitchIcon32.Size = new System.Drawing.Size(52, 56);
             this.fuelSwitchIcon32.State = ProcessSystemLib.ValveState.close;
             this.fuelSwitchIcon32.TabIndex = 247;
             this.fuelSwitchIcon32.ValveName = "11";
@@ -35158,11 +34947,11 @@ namespace ProcessSystem
             this.fuelSwitchIcon38.Enable = true;
             this.fuelSwitchIcon38.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.fuelSwitchIcon38.IsVertical = false;
-            this.fuelSwitchIcon38.Location = new System.Drawing.Point(241, 337);
+            this.fuelSwitchIcon38.Location = new System.Drawing.Point(223, 323);
             this.fuelSwitchIcon38.Margin = new System.Windows.Forms.Padding(5);
             this.fuelSwitchIcon38.Name = "fuelSwitchIcon38";
             this.fuelSwitchIcon38.ShowName = true;
-            this.fuelSwitchIcon38.Size = new System.Drawing.Size(30, 30);
+            this.fuelSwitchIcon38.Size = new System.Drawing.Size(52, 56);
             this.fuelSwitchIcon38.State = ProcessSystemLib.ValveState.close;
             this.fuelSwitchIcon38.TabIndex = 235;
             this.fuelSwitchIcon38.ValveName = null;
@@ -35181,11 +34970,11 @@ namespace ProcessSystem
             this.fuelSwitchIcon23.Enable = true;
             this.fuelSwitchIcon23.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.fuelSwitchIcon23.IsVertical = false;
-            this.fuelSwitchIcon23.Location = new System.Drawing.Point(25, 71);
+            this.fuelSwitchIcon23.Location = new System.Drawing.Point(7, 57);
             this.fuelSwitchIcon23.Margin = new System.Windows.Forms.Padding(5);
             this.fuelSwitchIcon23.Name = "fuelSwitchIcon23";
             this.fuelSwitchIcon23.ShowName = true;
-            this.fuelSwitchIcon23.Size = new System.Drawing.Size(30, 30);
+            this.fuelSwitchIcon23.Size = new System.Drawing.Size(52, 56);
             this.fuelSwitchIcon23.State = ProcessSystemLib.ValveState.close;
             this.fuelSwitchIcon23.TabIndex = 243;
             this.fuelSwitchIcon23.ValveName = null;
@@ -35351,11 +35140,11 @@ namespace ProcessSystem
             this.fuelSwitchIcon37.Enable = true;
             this.fuelSwitchIcon37.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.fuelSwitchIcon37.IsVertical = false;
-            this.fuelSwitchIcon37.Location = new System.Drawing.Point(241, 285);
+            this.fuelSwitchIcon37.Location = new System.Drawing.Point(223, 271);
             this.fuelSwitchIcon37.Margin = new System.Windows.Forms.Padding(5);
             this.fuelSwitchIcon37.Name = "fuelSwitchIcon37";
             this.fuelSwitchIcon37.ShowName = true;
-            this.fuelSwitchIcon37.Size = new System.Drawing.Size(30, 30);
+            this.fuelSwitchIcon37.Size = new System.Drawing.Size(52, 56);
             this.fuelSwitchIcon37.State = ProcessSystemLib.ValveState.close;
             this.fuelSwitchIcon37.TabIndex = 236;
             this.fuelSwitchIcon37.ValveName = null;
@@ -35409,9 +35198,9 @@ namespace ProcessSystem
             this.panel1.Controls.Add(this.lbl_SysTime);
             this.panel1.Controls.Add(this.none20);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 1335);
+            this.panel1.Location = new System.Drawing.Point(0, 1330);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(3438, 39);
+            this.panel1.Size = new System.Drawing.Size(3430, 39);
             this.panel1.TabIndex = 4;
             // 
             // Total1
@@ -35636,12 +35425,264 @@ namespace ProcessSystem
             this.tr_SonSystem.Enabled = true;
             this.tr_SonSystem.Interval = 200;
             // 
+            // firingIISwitchIcon26
+            // 
+            this.firingIISwitchIcon26.BackColor = System.Drawing.Color.Transparent;
+            this.firingIISwitchIcon26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.firingIISwitchIcon26.DiClose = ((ushort)(0));
+            this.firingIISwitchIcon26.DiOpen = ((ushort)(0));
+            this.firingIISwitchIcon26.DiOpenAndClose = ((ushort)(0));
+            this.firingIISwitchIcon26.DqClose = ((ushort)(0));
+            this.firingIISwitchIcon26.DqOpen = ((ushort)(0));
+            this.firingIISwitchIcon26.DqOpenAndClose = ((ushort)(0));
+            this.firingIISwitchIcon26.Enable = true;
+            this.firingIISwitchIcon26.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.firingIISwitchIcon26.IsVertical = false;
+            this.firingIISwitchIcon26.Location = new System.Drawing.Point(358, 255);
+            this.firingIISwitchIcon26.Margin = new System.Windows.Forms.Padding(5);
+            this.firingIISwitchIcon26.Name = "firingIISwitchIcon26";
+            this.firingIISwitchIcon26.ShowName = false;
+            this.firingIISwitchIcon26.Size = new System.Drawing.Size(123, 65);
+            this.firingIISwitchIcon26.State = ProcessSystemLib.ValveState.close;
+            this.firingIISwitchIcon26.TabIndex = 580;
+            this.firingIISwitchIcon26.ValveName = "加注路常温氮气吹除";
+            this.firingIISwitchIcon26.WorkStation = null;
+            // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.panel15);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel14.Location = new System.Drawing.Point(3009, 0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(419, 201);
+            this.panel14.TabIndex = 10;
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(50)))), ((int)(((byte)(120)))));
+            this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel15.Controls.Add(this.gaseSupplySolenoid118);
+            this.panel15.Controls.Add(this.gaseSupplySolenoid117);
+            this.panel15.Controls.Add(this.gaseSupplySensor105);
+            this.panel15.Controls.Add(this.gaseSupplySensor104);
+            this.panel15.Controls.Add(this.gaseSupplySensor103);
+            this.panel15.Controls.Add(this.gaseSupplySensor102);
+            this.panel15.Controls.Add(this.uiSymbolLabel3);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel15.Location = new System.Drawing.Point(0, 0);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(1098, 201);
+            this.panel15.TabIndex = 10;
+            // 
+            // uiSymbolLabel3
+            // 
+            this.uiSymbolLabel3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiSymbolLabel3.ForeColor = System.Drawing.Color.White;
+            this.uiSymbolLabel3.Location = new System.Drawing.Point(3, 3);
+            this.uiSymbolLabel3.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiSymbolLabel3.Name = "uiSymbolLabel3";
+            this.uiSymbolLabel3.Size = new System.Drawing.Size(91, 22);
+            this.uiSymbolLabel3.Symbol = 361748;
+            this.uiSymbolLabel3.SymbolColor = System.Drawing.Color.Red;
+            this.uiSymbolLabel3.TabIndex = 4;
+            this.uiSymbolLabel3.Text = "氮消防";
+            this.uiSymbolLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // gaseSupplySolenoid118
+            // 
+            this.gaseSupplySolenoid118.BackColor = System.Drawing.Color.Transparent;
+            this.gaseSupplySolenoid118.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gaseSupplySolenoid118.DiOpenAndClose = ((ushort)(0));
+            this.gaseSupplySolenoid118.DqClose = ((ushort)(0));
+            this.gaseSupplySolenoid118.DqOpen = ((ushort)(0));
+            this.gaseSupplySolenoid118.DqOpenAndClose = ((ushort)(0));
+            this.gaseSupplySolenoid118.Enable = false;
+            this.gaseSupplySolenoid118.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gaseSupplySolenoid118.IsVertical = false;
+            this.gaseSupplySolenoid118.Location = new System.Drawing.Point(318, 147);
+            this.gaseSupplySolenoid118.Margin = new System.Windows.Forms.Padding(5);
+            this.gaseSupplySolenoid118.Name = "gaseSupplySolenoid118";
+            this.gaseSupplySolenoid118.Size = new System.Drawing.Size(40, 46);
+            this.gaseSupplySolenoid118.State = ProcessSystemLib.ValveState.close;
+            this.gaseSupplySolenoid118.TabIndex = 551;
+            this.gaseSupplySolenoid118.ValveName = "电磁阀";
+            this.gaseSupplySolenoid118.WorkStation = null;
+            // 
+            // gaseSupplySolenoid117
+            // 
+            this.gaseSupplySolenoid117.BackColor = System.Drawing.Color.Transparent;
+            this.gaseSupplySolenoid117.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gaseSupplySolenoid117.DiOpenAndClose = ((ushort)(0));
+            this.gaseSupplySolenoid117.DqClose = ((ushort)(0));
+            this.gaseSupplySolenoid117.DqOpen = ((ushort)(0));
+            this.gaseSupplySolenoid117.DqOpenAndClose = ((ushort)(0));
+            this.gaseSupplySolenoid117.Enable = false;
+            this.gaseSupplySolenoid117.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gaseSupplySolenoid117.IsVertical = false;
+            this.gaseSupplySolenoid117.Location = new System.Drawing.Point(57, 147);
+            this.gaseSupplySolenoid117.Margin = new System.Windows.Forms.Padding(5);
+            this.gaseSupplySolenoid117.Name = "gaseSupplySolenoid117";
+            this.gaseSupplySolenoid117.Size = new System.Drawing.Size(40, 46);
+            this.gaseSupplySolenoid117.State = ProcessSystemLib.ValveState.close;
+            this.gaseSupplySolenoid117.TabIndex = 552;
+            this.gaseSupplySolenoid117.ValveName = "电磁阀";
+            this.gaseSupplySolenoid117.WorkStation = null;
+            // 
+            // gaseSupplySensor105
+            // 
+            this.gaseSupplySensor105.AI = ((ushort)(0));
+            this.gaseSupplySensor105.BackColor = System.Drawing.Color.Transparent;
+            this.gaseSupplySensor105.BValue = 0F;
+            this.gaseSupplySensor105.CurrentRange = ProcessSystemLib.CurrentRange.FourToTwenty;
+            this.gaseSupplySensor105.DecimalPlaces = 2;
+            this.gaseSupplySensor105.Density = 1000F;
+            this.gaseSupplySensor105.DigitalRange = 27648;
+            this.gaseSupplySensor105.DirectCalibration = false;
+            this.gaseSupplySensor105.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gaseSupplySensor105.Gravity = 9.8F;
+            this.gaseSupplySensor105.InputType = ProcessSystemLib.InputValueType.PLC_Digital;
+            this.gaseSupplySensor105.IsPT100 = false;
+            this.gaseSupplySensor105.KValue = 1F;
+            this.gaseSupplySensor105.Location = new System.Drawing.Point(223, 112);
+            this.gaseSupplySensor105.Margin = new System.Windows.Forms.Padding(5);
+            this.gaseSupplySensor105.MaxSensorRange = 1F;
+            this.gaseSupplySensor105.MinSensorRange = 0F;
+            this.gaseSupplySensor105.Name = "gaseSupplySensor105";
+            this.gaseSupplySensor105.OriginalPressureUnit = ProcessSystemLib.Unit.Pa;
+            this.gaseSupplySensor105.SensitivityCalibrationFactor = 1F;
+            this.gaseSupplySensor105.SensorName = "助燃I传感器";
+            this.gaseSupplySensor105.SensorNameColor = System.Drawing.Color.White;
+            this.gaseSupplySensor105.SensorPostion = true;
+            this.gaseSupplySensor105.SensorUnitColor = System.Drawing.Color.White;
+            this.gaseSupplySensor105.SensorValue = null;
+            this.gaseSupplySensor105.SensorValueColor = System.Drawing.Color.White;
+            this.gaseSupplySensor105.Size = new System.Drawing.Size(183, 25);
+            this.gaseSupplySensor105.SpeedValue = 0F;
+            this.gaseSupplySensor105.TabIndex = 547;
+            this.gaseSupplySensor105.TankArea = 1F;
+            this.gaseSupplySensor105.TFMState = false;
+            this.gaseSupplySensor105.Unit = ProcessSystemLib.Unit.MPa;
+            this.gaseSupplySensor105.VoltageRange = ProcessSystemLib.VoltageRange.ZeroToFive;
+            this.gaseSupplySensor105.ZeroOffset = 0F;
+            // 
+            // gaseSupplySensor104
+            // 
+            this.gaseSupplySensor104.AI = ((ushort)(0));
+            this.gaseSupplySensor104.BackColor = System.Drawing.Color.Transparent;
+            this.gaseSupplySensor104.BValue = 0F;
+            this.gaseSupplySensor104.CurrentRange = ProcessSystemLib.CurrentRange.FourToTwenty;
+            this.gaseSupplySensor104.DecimalPlaces = 2;
+            this.gaseSupplySensor104.Density = 1000F;
+            this.gaseSupplySensor104.DigitalRange = 27648;
+            this.gaseSupplySensor104.DirectCalibration = false;
+            this.gaseSupplySensor104.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gaseSupplySensor104.Gravity = 9.8F;
+            this.gaseSupplySensor104.InputType = ProcessSystemLib.InputValueType.PLC_Digital;
+            this.gaseSupplySensor104.IsPT100 = false;
+            this.gaseSupplySensor104.KValue = 1F;
+            this.gaseSupplySensor104.Location = new System.Drawing.Point(223, 49);
+            this.gaseSupplySensor104.Margin = new System.Windows.Forms.Padding(5);
+            this.gaseSupplySensor104.MaxSensorRange = 1F;
+            this.gaseSupplySensor104.MinSensorRange = 0F;
+            this.gaseSupplySensor104.Name = "gaseSupplySensor104";
+            this.gaseSupplySensor104.OriginalPressureUnit = ProcessSystemLib.Unit.Pa;
+            this.gaseSupplySensor104.SensitivityCalibrationFactor = 1F;
+            this.gaseSupplySensor104.SensorName = "助燃I传感器";
+            this.gaseSupplySensor104.SensorNameColor = System.Drawing.Color.White;
+            this.gaseSupplySensor104.SensorPostion = true;
+            this.gaseSupplySensor104.SensorUnitColor = System.Drawing.Color.White;
+            this.gaseSupplySensor104.SensorValue = null;
+            this.gaseSupplySensor104.SensorValueColor = System.Drawing.Color.White;
+            this.gaseSupplySensor104.Size = new System.Drawing.Size(183, 25);
+            this.gaseSupplySensor104.SpeedValue = 0F;
+            this.gaseSupplySensor104.TabIndex = 548;
+            this.gaseSupplySensor104.TankArea = 1F;
+            this.gaseSupplySensor104.TFMState = false;
+            this.gaseSupplySensor104.Unit = ProcessSystemLib.Unit.MPa;
+            this.gaseSupplySensor104.VoltageRange = ProcessSystemLib.VoltageRange.ZeroToFive;
+            this.gaseSupplySensor104.ZeroOffset = 0F;
+            // 
+            // gaseSupplySensor103
+            // 
+            this.gaseSupplySensor103.AI = ((ushort)(0));
+            this.gaseSupplySensor103.BackColor = System.Drawing.Color.Transparent;
+            this.gaseSupplySensor103.BValue = 0F;
+            this.gaseSupplySensor103.CurrentRange = ProcessSystemLib.CurrentRange.FourToTwenty;
+            this.gaseSupplySensor103.DecimalPlaces = 2;
+            this.gaseSupplySensor103.Density = 1000F;
+            this.gaseSupplySensor103.DigitalRange = 27648;
+            this.gaseSupplySensor103.DirectCalibration = false;
+            this.gaseSupplySensor103.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gaseSupplySensor103.Gravity = 9.8F;
+            this.gaseSupplySensor103.InputType = ProcessSystemLib.InputValueType.PLC_Digital;
+            this.gaseSupplySensor103.IsPT100 = false;
+            this.gaseSupplySensor103.KValue = 1F;
+            this.gaseSupplySensor103.Location = new System.Drawing.Point(17, 112);
+            this.gaseSupplySensor103.Margin = new System.Windows.Forms.Padding(5);
+            this.gaseSupplySensor103.MaxSensorRange = 1F;
+            this.gaseSupplySensor103.MinSensorRange = 0F;
+            this.gaseSupplySensor103.Name = "gaseSupplySensor103";
+            this.gaseSupplySensor103.OriginalPressureUnit = ProcessSystemLib.Unit.Pa;
+            this.gaseSupplySensor103.SensitivityCalibrationFactor = 1F;
+            this.gaseSupplySensor103.SensorName = "助燃I传感器";
+            this.gaseSupplySensor103.SensorNameColor = System.Drawing.Color.White;
+            this.gaseSupplySensor103.SensorPostion = true;
+            this.gaseSupplySensor103.SensorUnitColor = System.Drawing.Color.White;
+            this.gaseSupplySensor103.SensorValue = null;
+            this.gaseSupplySensor103.SensorValueColor = System.Drawing.Color.White;
+            this.gaseSupplySensor103.Size = new System.Drawing.Size(183, 25);
+            this.gaseSupplySensor103.SpeedValue = 0F;
+            this.gaseSupplySensor103.TabIndex = 549;
+            this.gaseSupplySensor103.TankArea = 1F;
+            this.gaseSupplySensor103.TFMState = false;
+            this.gaseSupplySensor103.Unit = ProcessSystemLib.Unit.MPa;
+            this.gaseSupplySensor103.VoltageRange = ProcessSystemLib.VoltageRange.ZeroToFive;
+            this.gaseSupplySensor103.ZeroOffset = 0F;
+            // 
+            // gaseSupplySensor102
+            // 
+            this.gaseSupplySensor102.AI = ((ushort)(0));
+            this.gaseSupplySensor102.BackColor = System.Drawing.Color.Transparent;
+            this.gaseSupplySensor102.BValue = 0F;
+            this.gaseSupplySensor102.CurrentRange = ProcessSystemLib.CurrentRange.FourToTwenty;
+            this.gaseSupplySensor102.DecimalPlaces = 2;
+            this.gaseSupplySensor102.Density = 1000F;
+            this.gaseSupplySensor102.DigitalRange = 27648;
+            this.gaseSupplySensor102.DirectCalibration = false;
+            this.gaseSupplySensor102.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gaseSupplySensor102.Gravity = 9.8F;
+            this.gaseSupplySensor102.InputType = ProcessSystemLib.InputValueType.PLC_Digital;
+            this.gaseSupplySensor102.IsPT100 = false;
+            this.gaseSupplySensor102.KValue = 1F;
+            this.gaseSupplySensor102.Location = new System.Drawing.Point(17, 49);
+            this.gaseSupplySensor102.Margin = new System.Windows.Forms.Padding(5);
+            this.gaseSupplySensor102.MaxSensorRange = 1F;
+            this.gaseSupplySensor102.MinSensorRange = 0F;
+            this.gaseSupplySensor102.Name = "gaseSupplySensor102";
+            this.gaseSupplySensor102.OriginalPressureUnit = ProcessSystemLib.Unit.Pa;
+            this.gaseSupplySensor102.SensitivityCalibrationFactor = 1F;
+            this.gaseSupplySensor102.SensorName = "助燃I传感器";
+            this.gaseSupplySensor102.SensorNameColor = System.Drawing.Color.White;
+            this.gaseSupplySensor102.SensorPostion = true;
+            this.gaseSupplySensor102.SensorUnitColor = System.Drawing.Color.White;
+            this.gaseSupplySensor102.SensorValue = null;
+            this.gaseSupplySensor102.SensorValueColor = System.Drawing.Color.White;
+            this.gaseSupplySensor102.Size = new System.Drawing.Size(183, 25);
+            this.gaseSupplySensor102.SpeedValue = 0F;
+            this.gaseSupplySensor102.TabIndex = 550;
+            this.gaseSupplySensor102.TankArea = 1F;
+            this.gaseSupplySensor102.TFMState = false;
+            this.gaseSupplySensor102.Unit = ProcessSystemLib.Unit.MPa;
+            this.gaseSupplySensor102.VoltageRange = ProcessSystemLib.VoltageRange.ZeroToFive;
+            this.gaseSupplySensor102.ZeroOffset = 0F;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(59)))), ((int)(((byte)(138)))));
-            this.ClientSize = new System.Drawing.Size(3440, 1421);
+            this.ClientSize = new System.Drawing.Size(3432, 1421);
             this.Controls.Add(this.pl_Main);
             this.Controls.Add(this.pl_Top);
             this.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -35695,6 +35736,8 @@ namespace ProcessSystem
             this.tabPage17.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.panel15.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -37180,19 +37223,22 @@ namespace ProcessSystem
         private System.Windows.Forms.Panel panel12;
         private FiringIIAdjustValve firingIIAdjustValve5;
         private FiringIISwitchIcon firingIISwitchIcon27;
-        private FiringIISwitchIcon firingIISwitchIcon26;
         private FiringIISwitchIcon firingIISwitchIcon25;
         private FiringIISwitchIcon firingIISwitchIcon24;
         private FiringIISwitchIcon firingIISwitchIcon23;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private GaseSupplySensor gaseSupplySensor106;
+        private FiringIISwitchIcon firingIISwitchIcon26;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel panel15;
+        private Sunny.UI.UISymbolLabel uiSymbolLabel3;
         private GaseSupplySolenoid gaseSupplySolenoid118;
         private GaseSupplySolenoid gaseSupplySolenoid117;
         private GaseSupplySensor gaseSupplySensor105;
         private GaseSupplySensor gaseSupplySensor104;
         private GaseSupplySensor gaseSupplySensor103;
         private GaseSupplySensor gaseSupplySensor102;
-        private GaseSupplySensor gaseSupplySensor106;
     }
 }
 

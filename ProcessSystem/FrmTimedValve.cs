@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Sunny.UI; 
+using Sunny.UI;
 
 namespace ProcessSystem
 {
@@ -12,19 +12,17 @@ namespace ProcessSystem
     {
         private Func<string, (ushort dq, TCPManager tcp, bool found)> _getValveInfo;
         public Action<int, string> AddLog;
-
         private CancellationTokenSource _cts;
+        private List<string> _allValveNames;
 
         public FrmMultiTimedValve(List<string> allValveNames, Func<string, (ushort dq, TCPManager tcp, bool found)> getValveInfoDelegate)
         {
             InitializeComponent();
-
             this.ZoomScaleDisabled = true;
-
             _getValveInfo = getValveInfoDelegate;
+            _allValveNames = allValveNames;
 
             colValveName.Items.AddRange(allValveNames.ToArray());
-
             this.FormClosing += FrmMultiTimedValve_FormClosing;
         }
 
@@ -39,6 +37,77 @@ namespace ProcessSystem
             row.Cells["colAction"].Value = "开启";
             row.Cells["colDuration"].Value = "10";
             row.Cells["colStatus"].Value = "等待启动";
+        }
+
+        private void btnBatchAdd_Click(object sender, EventArgs e)
+        {
+            if (_allValveNames == null || _allValveNames.Count == 0)
+            {
+                UIMessageBox.ShowWarning("当前没有可用的阀门数据！");
+                return;
+            }
+
+            using (var frm = new FrmBatchValveSetting(_allValveNames))
+            {
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    int totalTargetSeconds = frm.TotalMinutes * 60;
+                    int currentSeconds = 0;
+
+                    string selectedValve = frm.SelectedValve;
+                    int openDuration = frm.OpenDuration;   
+                    int closeDuration = frm.CloseDuration; 
+
+                    if (openDuration <= 0 || closeDuration <= 0 || totalTargetSeconds <= 0)
+                    {
+                        UIMessageBox.ShowError("时间参数必须大于0！");
+                        return;
+                    }
+
+                    rbSequential.Checked = true;
+
+                    dgvValves.SuspendLayout();
+                    while (currentSeconds < totalTargetSeconds)
+                    {
+                        int addOpenTime = (currentSeconds + openDuration > totalTargetSeconds)
+                            ? totalTargetSeconds - currentSeconds : openDuration;
+                        if (addOpenTime <= 0) break;
+
+                        AddRowData(selectedValve, "开启", addOpenTime);
+                        currentSeconds += addOpenTime;
+
+                        if (currentSeconds >= totalTargetSeconds) break;
+
+                        int addCloseTime = (currentSeconds + closeDuration > totalTargetSeconds)
+                            ? totalTargetSeconds - currentSeconds : closeDuration;
+                        if (addCloseTime <= 0) break;
+
+                        AddRowData(selectedValve, "关闭", addCloseTime);
+                        currentSeconds += addCloseTime;
+                    }
+                    dgvValves.ResumeLayout();
+
+                    UIMessageBox.ShowSuccess($"批量生成完成！共自动添加 {dgvValves.Rows.Count} 个步骤。");
+                }
+            }
+        }
+
+        private void AddRowData(string valve, string action, int duration)
+        {
+            int index = dgvValves.Rows.Add();
+            DataGridViewRow row = dgvValves.Rows[index];
+            row.Cells["colValveName"].Value = valve;
+            row.Cells["colAction"].Value = action;
+            row.Cells["colDuration"].Value = duration.ToString();
+            row.Cells["colStatus"].Value = "等待启动";
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            if (dgvValves.Rows.Count > 0 && UIMessageBox.ShowAsk("确定要清空表格中所有的阀门动作吗？"))
+            {
+                dgvValves.Rows.Clear();
+            }
         }
 
         private void dgvValves_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -84,9 +153,7 @@ namespace ProcessSystem
                     foreach (DataGridViewRow row in dgvValves.Rows)
                     {
                         if (row.IsNewRow) continue;
-
                         await ProcessRowAsync(row, token);
-
                         if (token.IsCancellationRequested) break;
                     }
                 }

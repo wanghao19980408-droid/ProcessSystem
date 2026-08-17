@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -64,36 +63,37 @@ namespace NodeSettings
         }
 
         private void GetSiemensValue()
-            {
+        {
             while (!Cts.IsCancellationRequested)
+            {
+                if (IsConnected)
                 {
-                    if (IsConnected)
+                    this.StopWatch = Stopwatch.StartNew();
+                    foreach (var gp in GroupList)
                     {
-                        this.StopWatch = Stopwatch.StartNew();
-                        foreach (var gp in GroupList)
-                        {
-                            gp.IsOK = GetGroupValue(gp);
-                        }
-                        if (this.GroupList.Where(e => e.IsOK == false).Count() == this.GroupList.Count)
-                        {
-                            this.IsConnected = false;
-                        }
-                        this.CommPeriod = this.StopWatch.ElapsedMilliseconds;
+                        gp.IsOK = GetGroupValue(gp);
                     }
-                    else
+                    if (this.GroupList.Where(e => e.IsOK == false).Count() == this.GroupList.Count)
                     {
-                        if (!FirstConnectSign)
-                        {
+                        this.IsConnected = false;
+                    }
+                    this.CommPeriod = this.StopWatch.ElapsedMilliseconds;
+                }
+                else
+                {
+                    if (!FirstConnectSign)
+                    {
                         this.siemens.DisConnect();
-                            Thread.Sleep(this.ReConnectTime);
-                        }
-                        this.siemens = new S7NetLib(this.CpuType, this.IPAddress, this.Port, this.Rack, this.Slot);
-                        IsConnected = siemens.Connect().IsSuccess;
-                        if (FirstConnectSign)
-                        {
-                            FirstConnectSign = false;
-                        }
+                        Thread.Sleep(this.ReConnectTime);
                     }
+                    this.siemens = new S7NetLib(this.CpuType, this.IPAddress, this.Port, this.Rack, this.Slot);
+                    IsConnected = siemens.Connect().IsSuccess;
+                    if (FirstConnectSign)
+                    {
+                        FirstConnectSign = false;
+                    }
+                }
+                Thread.Sleep(150);
             }
         }
 
@@ -210,10 +210,10 @@ namespace NodeSettings
         /// </summary>
         public void Stop()
         {
-                Cts?.Cancel();
+            Cts?.Cancel();
 
-                if (IsConnected)
-                {
+            if (IsConnected)
+            {
                 siemens?.DisConnect();
             }
         }
