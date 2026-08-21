@@ -83,6 +83,8 @@
             this.rb_FuelMainSensor = new System.Windows.Forms.RadioButton();
             this.CB_FuelSensorBackup = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.lb_CurrentSetting1 = new System.Windows.Forms.Label();
+            this.lb_CurrentSetting2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -99,7 +101,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(881, 40);
+            this.panel1.Size = new System.Drawing.Size(977, 40);
             this.panel1.TabIndex = 52;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseMove);
@@ -113,7 +115,7 @@
             this.btn_CLose.ForeHoverColor = System.Drawing.Color.Red;
             this.btn_CLose.ForePressColor = System.Drawing.Color.Red;
             this.btn_CLose.ForeSelectedColor = System.Drawing.Color.Red;
-            this.btn_CLose.Location = new System.Drawing.Point(827, 0);
+            this.btn_CLose.Location = new System.Drawing.Point(923, 0);
             this.btn_CLose.MinimumSize = new System.Drawing.Size(1, 1);
             this.btn_CLose.Name = "btn_CLose";
             this.btn_CLose.RectColor = System.Drawing.Color.Transparent;
@@ -139,7 +141,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(608, 7);
+            this.label10.Location = new System.Drawing.Point(654, 7);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(145, 26);
             this.label10.TabIndex = 1;
@@ -164,7 +166,7 @@
             // btn_endFuel
             // 
             this.btn_endFuel.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_endFuel.Location = new System.Drawing.Point(229, 401);
+            this.btn_endFuel.Location = new System.Drawing.Point(264, 401);
             this.btn_endFuel.Name = "btn_endFuel";
             this.btn_endFuel.Size = new System.Drawing.Size(93, 44);
             this.btn_endFuel.TabIndex = 79;
@@ -175,7 +177,7 @@
             // btn_startFuel
             // 
             this.btn_startFuel.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_startFuel.Location = new System.Drawing.Point(120, 401);
+            this.btn_startFuel.Location = new System.Drawing.Point(143, 401);
             this.btn_startFuel.Name = "btn_startFuel";
             this.btn_startFuel.Size = new System.Drawing.Size(93, 44);
             this.btn_startFuel.TabIndex = 78;
@@ -186,7 +188,7 @@
             // btn_pointFuel
             // 
             this.btn_pointFuel.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_pointFuel.Location = new System.Drawing.Point(11, 401);
+            this.btn_pointFuel.Location = new System.Drawing.Point(22, 401);
             this.btn_pointFuel.Name = "btn_pointFuel";
             this.btn_pointFuel.Size = new System.Drawing.Size(93, 44);
             this.btn_pointFuel.TabIndex = 77;
@@ -197,7 +199,7 @@
             // txt_Fuel_P
             // 
             this.txt_Fuel_P.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_Fuel_P.Location = new System.Drawing.Point(224, 175);
+            this.txt_Fuel_P.Location = new System.Drawing.Point(177, 169);
             this.txt_Fuel_P.Name = "txt_Fuel_P";
             this.txt_Fuel_P.Size = new System.Drawing.Size(137, 29);
             this.txt_Fuel_P.TabIndex = 0;
@@ -206,7 +208,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(101, 126);
+            this.label3.Location = new System.Drawing.Point(54, 120);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 21);
             this.label3.TabIndex = 68;
@@ -216,7 +218,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(95, 176);
+            this.label1.Location = new System.Drawing.Point(48, 170);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(122, 21);
             this.label1.TabIndex = 69;
@@ -228,7 +230,7 @@
             this.CB_FuelFlow.Items.AddRange(new object[] {
             "小流量",
             "大流量"});
-            this.CB_FuelFlow.Location = new System.Drawing.Point(222, 123);
+            this.CB_FuelFlow.Location = new System.Drawing.Point(175, 117);
             this.CB_FuelFlow.Name = "CB_FuelFlow";
             this.CB_FuelFlow.Size = new System.Drawing.Size(137, 29);
             this.CB_FuelFlow.TabIndex = 80;
@@ -245,7 +247,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(143, 76);
+            this.label4.Location = new System.Drawing.Point(96, 70);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 21);
             this.label4.TabIndex = 67;
@@ -257,7 +259,7 @@
             this.CB_Fuel.Items.AddRange(new object[] {
             "煤油",
             "甲烷"});
-            this.CB_Fuel.Location = new System.Drawing.Point(222, 71);
+            this.CB_Fuel.Location = new System.Drawing.Point(175, 65);
             this.CB_Fuel.Name = "CB_Fuel";
             this.CB_Fuel.Size = new System.Drawing.Size(137, 29);
             this.CB_Fuel.TabIndex = 81;
@@ -266,7 +268,7 @@
             // CB_Station
             // 
             this.CB_Station.FormattingEnabled = true;
-            this.CB_Station.Location = new System.Drawing.Point(671, 71);
+            this.CB_Station.Location = new System.Drawing.Point(661, 65);
             this.CB_Station.Name = "CB_Station";
             this.CB_Station.Size = new System.Drawing.Size(137, 29);
             this.CB_Station.TabIndex = 84;
@@ -276,7 +278,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(586, 76);
+            this.label6.Location = new System.Drawing.Point(576, 70);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 21);
             this.label6.TabIndex = 83;
@@ -285,7 +287,7 @@
             // txt_Oxygen_P
             // 
             this.txt_Oxygen_P.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_Oxygen_P.Location = new System.Drawing.Point(671, 175);
+            this.txt_Oxygen_P.Location = new System.Drawing.Point(661, 169);
             this.txt_Oxygen_P.Name = "txt_Oxygen_P";
             this.txt_Oxygen_P.Size = new System.Drawing.Size(135, 29);
             this.txt_Oxygen_P.TabIndex = 87;
@@ -294,7 +296,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label8.Location = new System.Drawing.Point(538, 176);
+            this.label8.Location = new System.Drawing.Point(528, 170);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(122, 21);
             this.label8.TabIndex = 88;
@@ -306,7 +308,7 @@
             this.CB_OxygenFlow.Items.AddRange(new object[] {
             "小流量",
             "大流量"});
-            this.CB_OxygenFlow.Location = new System.Drawing.Point(671, 123);
+            this.CB_OxygenFlow.Location = new System.Drawing.Point(661, 117);
             this.CB_OxygenFlow.Name = "CB_OxygenFlow";
             this.CB_OxygenFlow.Size = new System.Drawing.Size(137, 29);
             this.CB_OxygenFlow.TabIndex = 90;
@@ -315,7 +317,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label9.Location = new System.Drawing.Point(544, 126);
+            this.label9.Location = new System.Drawing.Point(534, 120);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(116, 21);
             this.label9.TabIndex = 89;
@@ -326,7 +328,7 @@
             this.label276.BackColor = System.Drawing.Color.Black;
             this.label276.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.label276.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label276.Location = new System.Drawing.Point(448, 42);
+            this.label276.Location = new System.Drawing.Point(496, 43);
             this.label276.Name = "label276";
             this.label276.Size = new System.Drawing.Size(2, 403);
             this.label276.TabIndex = 257;
@@ -334,7 +336,7 @@
             // btn_endOxygen
             // 
             this.btn_endOxygen.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_endOxygen.Location = new System.Drawing.Point(674, 401);
+            this.btn_endOxygen.Location = new System.Drawing.Point(756, 401);
             this.btn_endOxygen.Name = "btn_endOxygen";
             this.btn_endOxygen.Size = new System.Drawing.Size(93, 44);
             this.btn_endOxygen.TabIndex = 260;
@@ -345,7 +347,7 @@
             // btn_startOxygen
             // 
             this.btn_startOxygen.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_startOxygen.Location = new System.Drawing.Point(568, 401);
+            this.btn_startOxygen.Location = new System.Drawing.Point(635, 401);
             this.btn_startOxygen.Name = "btn_startOxygen";
             this.btn_startOxygen.Size = new System.Drawing.Size(93, 44);
             this.btn_startOxygen.TabIndex = 259;
@@ -356,7 +358,7 @@
             // btn_pointOxygen
             // 
             this.btn_pointOxygen.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_pointOxygen.Location = new System.Drawing.Point(462, 401);
+            this.btn_pointOxygen.Location = new System.Drawing.Point(514, 401);
             this.btn_pointOxygen.Name = "btn_pointOxygen";
             this.btn_pointOxygen.Size = new System.Drawing.Size(93, 44);
             this.btn_pointOxygen.TabIndex = 258;
@@ -367,7 +369,7 @@
             // btn_OxygenTime
             // 
             this.btn_OxygenTime.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_OxygenTime.Location = new System.Drawing.Point(780, 401);
+            this.btn_OxygenTime.Location = new System.Drawing.Point(877, 401);
             this.btn_OxygenTime.Name = "btn_OxygenTime";
             this.btn_OxygenTime.Size = new System.Drawing.Size(93, 44);
             this.btn_OxygenTime.TabIndex = 260;
@@ -378,7 +380,7 @@
             // btn_FuelTime
             // 
             this.btn_FuelTime.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_FuelTime.Location = new System.Drawing.Point(338, 401);
+            this.btn_FuelTime.Location = new System.Drawing.Point(385, 401);
             this.btn_FuelTime.Name = "btn_FuelTime";
             this.btn_FuelTime.Size = new System.Drawing.Size(93, 44);
             this.btn_FuelTime.TabIndex = 260;
@@ -397,16 +399,16 @@
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.MainSensor1);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Location = new System.Drawing.Point(462, 266);
+            this.panel2.Location = new System.Drawing.Point(514, 266);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(411, 124);
+            this.panel2.Size = new System.Drawing.Size(457, 124);
             this.panel2.TabIndex = 261;
             // 
             // MainSensor2
             // 
             this.MainSensor2.AutoSize = true;
             this.MainSensor2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.MainSensor2.Location = new System.Drawing.Point(232, 82);
+            this.MainSensor2.Location = new System.Drawing.Point(276, 82);
             this.MainSensor2.Name = "MainSensor2";
             this.MainSensor2.Size = new System.Drawing.Size(66, 21);
             this.MainSensor2.TabIndex = 89;
@@ -416,7 +418,7 @@
             // 
             this.lb_MainSensor2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lb_MainSensor2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lb_MainSensor2.Location = new System.Drawing.Point(304, 80);
+            this.lb_MainSensor2.Location = new System.Drawing.Point(348, 80);
             this.lb_MainSensor2.Name = "lb_MainSensor2";
             this.lb_MainSensor2.Size = new System.Drawing.Size(59, 25);
             this.lb_MainSensor2.TabIndex = 90;
@@ -438,7 +440,7 @@
             // 
             this.wy.AutoSize = true;
             this.wy.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.wy.Location = new System.Drawing.Point(355, 19);
+            this.wy.Location = new System.Drawing.Point(375, 19);
             this.wy.Name = "wy";
             this.wy.Size = new System.Drawing.Size(42, 21);
             this.wy.TabIndex = 92;
@@ -468,7 +470,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("微软雅黑", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label13.Location = new System.Drawing.Point(362, 91);
+            this.label13.Location = new System.Drawing.Point(406, 91);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(30, 15);
             this.label13.TabIndex = 95;
@@ -509,7 +511,7 @@
             // rb_BackupSensor
             // 
             this.rb_BackupSensor.AutoSize = true;
-            this.rb_BackupSensor.Location = new System.Drawing.Point(222, 13);
+            this.rb_BackupSensor.Location = new System.Drawing.Point(262, 13);
             this.rb_BackupSensor.Name = "rb_BackupSensor";
             this.rb_BackupSensor.Size = new System.Drawing.Size(92, 25);
             this.rb_BackupSensor.TabIndex = 266;
@@ -521,7 +523,7 @@
             // CB_OxygenSensorBackup
             // 
             this.CB_OxygenSensorBackup.FormattingEnabled = true;
-            this.CB_OxygenSensorBackup.Location = new System.Drawing.Point(317, 12);
+            this.CB_OxygenSensorBackup.Location = new System.Drawing.Point(357, 12);
             this.CB_OxygenSensorBackup.Name = "CB_OxygenSensorBackup";
             this.CB_OxygenSensorBackup.Size = new System.Drawing.Size(80, 29);
             this.CB_OxygenSensorBackup.TabIndex = 265;
@@ -539,14 +541,14 @@
             this.panel3.Controls.Add(this.label21);
             this.panel3.Location = new System.Drawing.Point(22, 266);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(411, 124);
+            this.panel3.Size = new System.Drawing.Size(457, 124);
             this.panel3.TabIndex = 261;
             // 
             // FuelBackupSensor
             // 
             this.FuelBackupSensor.AutoSize = true;
             this.FuelBackupSensor.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.FuelBackupSensor.Location = new System.Drawing.Point(232, 82);
+            this.FuelBackupSensor.Location = new System.Drawing.Point(273, 82);
             this.FuelBackupSensor.Name = "FuelBackupSensor";
             this.FuelBackupSensor.Size = new System.Drawing.Size(66, 21);
             this.FuelBackupSensor.TabIndex = 89;
@@ -556,7 +558,7 @@
             // 
             this.lb_FuelBackupSensor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lb_FuelBackupSensor.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lb_FuelBackupSensor.Location = new System.Drawing.Point(304, 80);
+            this.lb_FuelBackupSensor.Location = new System.Drawing.Point(345, 80);
             this.lb_FuelBackupSensor.Name = "lb_FuelBackupSensor";
             this.lb_FuelBackupSensor.Size = new System.Drawing.Size(59, 25);
             this.lb_FuelBackupSensor.TabIndex = 90;
@@ -578,7 +580,7 @@
             // 
             this.lb_FuelWY.AutoSize = true;
             this.lb_FuelWY.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lb_FuelWY.Location = new System.Drawing.Point(355, 19);
+            this.lb_FuelWY.Location = new System.Drawing.Point(378, 19);
             this.lb_FuelWY.Name = "lb_FuelWY";
             this.lb_FuelWY.Size = new System.Drawing.Size(42, 21);
             this.lb_FuelWY.TabIndex = 92;
@@ -608,7 +610,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("微软雅黑", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label19.Location = new System.Drawing.Point(362, 91);
+            this.label19.Location = new System.Drawing.Point(403, 91);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(30, 15);
             this.label19.TabIndex = 95;
@@ -642,7 +644,7 @@
             this.panel4.Controls.Add(this.CB_FuelSensorBackup);
             this.panel4.Location = new System.Drawing.Point(23, 210);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(411, 52);
+            this.panel4.Size = new System.Drawing.Size(457, 52);
             this.panel4.TabIndex = 267;
             // 
             // CB_FuelSensorMain
@@ -656,7 +658,7 @@
             // rb_FuelBackupSensor
             // 
             this.rb_FuelBackupSensor.AutoSize = true;
-            this.rb_FuelBackupSensor.Location = new System.Drawing.Point(214, 13);
+            this.rb_FuelBackupSensor.Location = new System.Drawing.Point(259, 13);
             this.rb_FuelBackupSensor.Name = "rb_FuelBackupSensor";
             this.rb_FuelBackupSensor.Size = new System.Drawing.Size(92, 25);
             this.rb_FuelBackupSensor.TabIndex = 270;
@@ -680,7 +682,7 @@
             // CB_FuelSensorBackup
             // 
             this.CB_FuelSensorBackup.FormattingEnabled = true;
-            this.CB_FuelSensorBackup.Location = new System.Drawing.Point(309, 12);
+            this.CB_FuelSensorBackup.Location = new System.Drawing.Point(354, 12);
             this.CB_FuelSensorBackup.Name = "CB_FuelSensorBackup";
             this.CB_FuelSensorBackup.Size = new System.Drawing.Size(80, 29);
             this.CB_FuelSensorBackup.TabIndex = 269;
@@ -691,16 +693,36 @@
             this.panel5.Controls.Add(this.rb_BackupSensor);
             this.panel5.Controls.Add(this.rb_MainSensor);
             this.panel5.Controls.Add(this.CB_OxygenSensorBackup);
-            this.panel5.Location = new System.Drawing.Point(462, 210);
+            this.panel5.Location = new System.Drawing.Point(514, 210);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(411, 52);
+            this.panel5.Size = new System.Drawing.Size(457, 52);
             this.panel5.TabIndex = 267;
+            // 
+            // lb_CurrentSetting1
+            // 
+            this.lb_CurrentSetting1.AutoSize = true;
+            this.lb_CurrentSetting1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lb_CurrentSetting1.Location = new System.Drawing.Point(322, 173);
+            this.lb_CurrentSetting1.Name = "lb_CurrentSetting1";
+            this.lb_CurrentSetting1.Size = new System.Drawing.Size(155, 21);
+            this.lb_CurrentSetting1.TabIndex = 92;
+            this.lb_CurrentSetting1.Text = "当前设定压力: 0.000";
+            // 
+            // lb_CurrentSetting2
+            // 
+            this.lb_CurrentSetting2.AutoSize = true;
+            this.lb_CurrentSetting2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lb_CurrentSetting2.Location = new System.Drawing.Point(803, 173);
+            this.lb_CurrentSetting2.Name = "lb_CurrentSetting2";
+            this.lb_CurrentSetting2.Size = new System.Drawing.Size(155, 21);
+            this.lb_CurrentSetting2.TabIndex = 92;
+            this.lb_CurrentSetting2.Text = "当前设定压力: 0.000";
             // 
             // PressureStation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(885, 448);
+            this.ClientSize = new System.Drawing.Size(981, 448);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -727,6 +749,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
+            this.Controls.Add(this.lb_CurrentSetting1);
+            this.Controls.Add(this.lb_CurrentSetting2);
             this.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
@@ -806,5 +830,7 @@
         private System.Windows.Forms.RadioButton rb_FuelMainSensor;
         private System.Windows.Forms.ComboBox CB_FuelSensorBackup;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label lb_CurrentSetting1;
+        private System.Windows.Forms.Label lb_CurrentSetting2;
     }
 }

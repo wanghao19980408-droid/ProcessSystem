@@ -26,7 +26,7 @@ namespace ProcessSystem
         private DualFault dualFaultFormInstance = null;
         private DualFault singleFaultFormInstance = null;
 
-        #region 新增的数据模型与状态跟踪器
+
         private class SystemDataDTO
         {
             public string MainSensorValue { get; set; }
@@ -49,7 +49,6 @@ namespace ProcessSystem
 
         private SystemStatusTracker oxygenTracker = new SystemStatusTracker();
         private SystemStatusTracker fuelTracker = new SystemStatusTracker();
-        #endregion
 
         public PressureStation(FormMain control)
         {
@@ -151,7 +150,7 @@ namespace ProcessSystem
                         {
                             MainSensor1.Text = this.CB_OxygenSensorMain.SelectedItem?.ToString() ?? "未选择";
                             MainSensor2.Text = this.CB_OxygenSensorBackup.SelectedItem?.ToString() ?? "未选择";
-
+                            this.lb_CurrentSetting2.Text = $"当前设定压力: {this.Tw0Device?["Pressure"]?.ToString()}" ?? "当前设定压力: 0.000";
                             ProcessSystemUI(oxygenData, oxygenTracker, "液氧", Tw0Device,
                                 lb_MainSensor1, lb_MainSensor2, wy,
                                 MainSensor1.Text, MainSensor2.Text,
@@ -170,7 +169,7 @@ namespace ProcessSystem
                         {
                             FuelMainSensor.Text = this.CB_FuelSensorMain.SelectedItem?.ToString() ?? "未选择";
                             FuelBackupSensor.Text = this.CB_FuelSensorBackup.SelectedItem?.ToString() ?? "未选择";
-
+                            this.lb_CurrentSetting1.Text = $"当前设定压力: {this.FuelDevice?["Pressure"]?.ToString()}" ?? "当前设定压力: 0.000";
                             ProcessSystemUI(fuelData, fuelTracker, "煤油", FuelDevice,
                                 lb_FuelMainSensor, lb_FuelBackupSensor, lb_FuelWY,
                                 FuelMainSensor.Text, FuelBackupSensor.Text,
@@ -538,6 +537,7 @@ namespace ProcessSystem
                 this.CB_FuelSensorMain.Enabled = true;
                 this.rb_FuelBackupSensor.Enabled = true;
                 this.panel3.Enabled = true;
+                this.lb_CurrentSetting1.Visible = true;
                 if (FuelDevice != null && FuelDevice.IsConnected)
                 {
                     CB_FuelSensorMain.SelectedIndex = Convert.ToInt32(this.FuelDevice?["MainSensor"]) - 1;
@@ -559,6 +559,7 @@ namespace ProcessSystem
                 this.rb_FuelBackupSensor.Enabled = false;
                 this.rb_FuelMainSensor.Checked = true;
                 this.panel3.Enabled = false;
+                this.lb_CurrentSetting1.Visible = false;
                 if (FuelDevice != null && FuelDevice.IsConnected)
                 {
                     this.CB_FuelFlow.SelectedIndex = Convert.ToInt32(this.FuelDevice?["WorkState"]) - 1;
@@ -580,6 +581,7 @@ namespace ProcessSystem
                 this.rb_BackupSensor.Enabled = false;
                 this.rb_MainSensor.Checked = true;
                 this.panel2.Enabled = false;
+                this.lb_CurrentSetting2.Visible = false;
                 if (OneDevice != null && OneDevice.IsConnected)
                 {
                     this.CB_OxygenFlow.SelectedIndex = Convert.ToInt32(this.OneDevice?["WorkState"]) - 1;
@@ -591,9 +593,9 @@ namespace ProcessSystem
             {
                 this.CB_OxygenSensorMain.Items.AddRange(Station2);
                 this.CB_OxygenSensorBackup.Items.AddRange(Station2);
-
                 if (Tw0Device != null && Tw0Device.IsConnected)
                 {
+                    this.lb_CurrentSetting2.Visible = true;
                     this.CB_OxygenFlow.SelectedIndex = Convert.ToInt32(this.Tw0Device?["WorkState"]) - 1;
                     this.txt_Oxygen_P.Text = this.Tw0Device?["Pressure"]?.ToString() ?? "";
                     this.CB_OxygenSensorMain.SelectedIndex = Convert.ToInt32(this.Tw0Device?["目标传感器主"]) - 1;
