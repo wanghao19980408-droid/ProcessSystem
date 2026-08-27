@@ -54,7 +54,7 @@ namespace CommunicationLib
         /// <summary>
         /// 锁标志位
         /// </summary>
-        private static object objLock = new object();
+        private object objLock = new object();
 
         /// <summary>
         /// 建立PLC连接

@@ -625,7 +625,7 @@ namespace ProcessSystem
             this.panel2.ForeColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(2, 54);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(2560, 979);
+            this.panel2.Size = new System.Drawing.Size(3393, 979);
             this.panel2.TabIndex = 3;
             // 
             // uiTextBox10
@@ -5954,7 +5954,7 @@ namespace ProcessSystem
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(2560, 52);
+            this.label1.Size = new System.Drawing.Size(3393, 52);
             this.label1.TabIndex = 0;
             this.label1.Text = "操纵气配气台";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -5972,7 +5972,7 @@ namespace ProcessSystem
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2560, 52);
+            this.panel1.Size = new System.Drawing.Size(3393, 52);
             this.panel1.TabIndex = 2;
             // 
             // btn_Allow
@@ -5982,7 +5982,7 @@ namespace ProcessSystem
             this.btn_Allow.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_Allow.FillColor = System.Drawing.Color.Transparent;
             this.btn_Allow.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_Allow.Location = new System.Drawing.Point(2378, 0);
+            this.btn_Allow.Location = new System.Drawing.Point(3211, 0);
             this.btn_Allow.MinimumSize = new System.Drawing.Size(1, 1);
             this.btn_Allow.Name = "btn_Allow";
             this.btn_Allow.RectColor = System.Drawing.Color.Transparent;
@@ -6011,7 +6011,7 @@ namespace ProcessSystem
             this.uiSymbolButton1.ForeHoverColor = System.Drawing.Color.Red;
             this.uiSymbolButton1.ForePressColor = System.Drawing.Color.Red;
             this.uiSymbolButton1.ForeSelectedColor = System.Drawing.Color.Red;
-            this.uiSymbolButton1.Location = new System.Drawing.Point(2469, 0);
+            this.uiSymbolButton1.Location = new System.Drawing.Point(3302, 0);
             this.uiSymbolButton1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSymbolButton1.Name = "uiSymbolButton1";
             this.uiSymbolButton1.RectColor = System.Drawing.Color.Transparent;
@@ -6036,7 +6036,7 @@ namespace ProcessSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2564, 1035);
+            this.ClientSize = new System.Drawing.Size(3397, 1035);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));

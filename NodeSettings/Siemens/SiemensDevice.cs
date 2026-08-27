@@ -72,10 +72,12 @@ namespace NodeSettings
                     foreach (var gp in GroupList)
                     {
                         gp.IsOK = GetGroupValue(gp);
-                    }
-                    if (this.GroupList.Where(e => e.IsOK == false).Count() == this.GroupList.Count)
-                    {
-                        this.IsConnected = false;
+
+                        if (!gp.IsOK)
+                        {
+                            this.IsConnected = false;
+                            break;
+                        }
                     }
                     this.CommPeriod = this.StopWatch.ElapsedMilliseconds;
                 }

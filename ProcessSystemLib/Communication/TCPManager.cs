@@ -243,7 +243,7 @@ namespace ProcessSystemLib
                 foreach (var stage in stages)
                 {
                     ushort time = (ushort)(stage.EndTime - stage.StartTime);
-                    short pressure = (short)(stage.TargetPressure * 100);
+                    short pressure = (short)(Math.Round(stage.TargetPressure * 1000));
 
                     byte[] timeBytes = BitConverter.GetBytes(time);
                     byte[] pressBytes = BitConverter.GetBytes(pressure);
