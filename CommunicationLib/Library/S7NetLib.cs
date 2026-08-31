@@ -64,12 +64,10 @@ namespace CommunicationLib
         {
             try
             {
-                //如果已经连接，先断开再重新连接
                 if (this.siemens != null && this.siemens.IsConnected)
                 {
                     this.siemens.Close();
                 }
-                //连接PLC
                 siemens = new Plc(this.CpuType, this.IPAddress,this.Port, this.Rack, this.Slot);
                 siemens.Open();
                 return OperateResult.CreateSuccessResult();

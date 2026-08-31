@@ -352,7 +352,7 @@ namespace ProcessSystemLib
                         return OperateResult.CreateFailResult<byte[]>("设定参数不得为空");
                     if (!float.TryParse((string)paramValue, out float floatvalue))
                         return OperateResult.CreateFailResult<byte[]>("设定参数有误");
-                    float res = floatvalue * 100;
+                    float res = (float)Math.Round(floatvalue, 2) * 100;
                     short scaledValue = (short)res;
                     valueBytes = BitConverter.GetBytes(scaledValue);
                     if (BitConverter.IsLittleEndian) Array.Reverse(valueBytes);
@@ -400,7 +400,9 @@ namespace ProcessSystemLib
                         return OperateResult.CreateFailResult<byte[]>("设定参数不得为空");
                     if (!float.TryParse((string)paramValue, out float floatValue))
                         return OperateResult.CreateFailResult<byte[]>("设定参数有误");
-                    short scaledValue = (short)(floatValue * 100);
+                    float res = (float)Math.Round(floatValue, 2) * 100;
+                    short scaledValue = (short)res;
+
                     valueBytes = BitConverter.GetBytes(scaledValue);
                     if (BitConverter.IsLittleEndian) Array.Reverse(valueBytes);
                     valueLength = 2;

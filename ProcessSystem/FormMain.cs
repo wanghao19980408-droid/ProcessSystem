@@ -109,7 +109,6 @@ namespace ProcessSystem
         public FormMain(int[] fuelArea, int[] firingI, int[] firingII, int[] gase, int[] source, int[] highOne, int[] highTwo)
         {
             InitializeComponent();
-
             this.Size = new Size(3440, 1440);
             this.FuelArea = fuelArea;
             this.FiringI = firingI;

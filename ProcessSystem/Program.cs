@@ -18,7 +18,7 @@ namespace ProcessSystem
             int[] FiringI = { 225, 10, 6, 16, 1, 128, 64 , 48, 24 };
             int[] FiringII = { 183, 8, 6, 16, 1, 88, 64, 40, 36 };
             int[] Gase = { 246, 10, 26, 8, 1, 216, 0 , 232, 24 };
-            int[] GaseSource = { 89, 4, 4, 16, 1, 64, 0, 56, 36 };  
+            int[] GaseSource = { 89, 4, 4, 16, 1, 64, 0, 56, 36 };
             int[] IHighAI = { 64, 0, 0, 0, 1, 0, 64 };
             int[] IIHighAI = { 64, 0, 0, 0, 1, 0, 64 };
             try
