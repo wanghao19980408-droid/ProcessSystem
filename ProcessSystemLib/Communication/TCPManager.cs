@@ -93,14 +93,23 @@ namespace ProcessSystemLib
                     ReceiveTimeout = ReceiveTimeOut
                 };
 
-                var connectTask = TcpClient.ConnectAsync(IPAddress.Parse(TargetIP), Port);
+                var connectTask = Task.Run(() =>
+                {
+                    TcpClient.Connect(IPAddress.Parse(TargetIP), Port);
+                });
+
                 var timeoutTask = Task.Delay(ConnectTimeOut);
 
                 if (await Task.WhenAny(connectTask, timeoutTask) != connectTask)
                 {
                     Disconnect();
+
+                    _ = connectTask.ContinueWith(t => _ = t.Exception, TaskContinuationOptions.OnlyOnFaulted);
+
                     return OperateResult.CreateFailResult("TCP连接超时");
                 }
+
+                await connectTask;
 
                 if (TcpClient == null || !TcpClient.Connected)
                     return OperateResult.CreateFailResult("TCP连接失败");
@@ -113,7 +122,7 @@ namespace ProcessSystemLib
             }
             catch (Exception ex)
             {
-                SetConnected(false);
+                Disconnect();
                 return OperateResult.CreateFailResult(ex.Message);
             }
         }
@@ -243,7 +252,7 @@ namespace ProcessSystemLib
                 foreach (var stage in stages)
                 {
                     ushort time = (ushort)(stage.EndTime - stage.StartTime);
-                    short pressure = (short)(Math.Round(stage.TargetPressure * 1000));
+                    short pressure = (short)Math.Round((decimal)stage.TargetPressure * 1000m, MidpointRounding.AwayFromZero);
 
                     byte[] timeBytes = BitConverter.GetBytes(time);
                     byte[] pressBytes = BitConverter.GetBytes(pressure);
@@ -350,10 +359,9 @@ namespace ProcessSystemLib
                 case PIDParamSeq.DeadZone:
                     if (((string)paramValue) == "")
                         return OperateResult.CreateFailResult<byte[]>("设定参数不得为空");
-                    if (!float.TryParse((string)paramValue, out float floatvalue))
+                    if (!decimal.TryParse((string)paramValue, out decimal decValue))
                         return OperateResult.CreateFailResult<byte[]>("设定参数有误");
-                    float res = (float)Math.Round(floatvalue, 2) * 100;
-                    short scaledValue = (short)res;
+                    short scaledValue = (short)(decValue * 100m);
                     valueBytes = BitConverter.GetBytes(scaledValue);
                     if (BitConverter.IsLittleEndian) Array.Reverse(valueBytes);
                     valueLength = 2;
@@ -398,10 +406,9 @@ namespace ProcessSystemLib
                 case LockParamSeq.LowLimit:
                     if (((string)paramValue) == "")
                         return OperateResult.CreateFailResult<byte[]>("设定参数不得为空");
-                    if (!float.TryParse((string)paramValue, out float floatValue))
+                    if (!decimal.TryParse((string)paramValue, out decimal decValue))
                         return OperateResult.CreateFailResult<byte[]>("设定参数有误");
-                    float res = (float)Math.Round(floatValue, 2) * 100;
-                    short scaledValue = (short)res;
+                    short scaledValue = (short)(decValue * 100m);
 
                     valueBytes = BitConverter.GetBytes(scaledValue);
                     if (BitConverter.IsLittleEndian) Array.Reverse(valueBytes);
