@@ -44,19 +44,24 @@ namespace ProcessSystemLib
                     buttonState = dqOpen && !dqClose ? ValveState.open : ValveState.close; ;
                 }
                 ValveState iconstate;
-                if (combo.DiOpenAndClose != ushort.MaxValue)
+
+                if (icon.DiOpenAndClose != ushort.MaxValue)
                 {
-                     iconstate = e.DI_value[combo.DiOpenAndClose - 1] ? ValveState.open : ValveState.close;
+                    iconstate = e.DI_value[icon.DiOpenAndClose - 1] ? ValveState.open : ValveState.close;
+                }
+                else if (icon.DiOpen == 0 && icon.DiClose == 0)
+                {
+                    iconstate = e.DQ_value[icon.DqOpenAndClose - 1] ? ValveState.open : ValveState.close;
                 }
                 else
                 {
                     bool openSN = e.DI_value[icon.DiOpen - 1];
                     bool closeSN = e.DI_value[icon.DiClose - 1];
-                     iconstate =
-                        !openSN && !closeSN ? ValveState.low :
-                        openSN && closeSN ? ValveState.warning :
-                        openSN ? ValveState.open :
-                          ValveState.close;
+                    iconstate =
+                       !openSN && !closeSN ? ValveState.low :
+                       openSN && closeSN ? ValveState.warning :
+                       openSN ? ValveState.open :
+                         ValveState.close;
                 }
 
                 result.Add((i, buttonState, iconstate));

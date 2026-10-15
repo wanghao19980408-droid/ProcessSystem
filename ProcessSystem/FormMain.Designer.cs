@@ -680,6 +680,7 @@ namespace ProcessSystem
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.firingIISwitchIcon8 = new ProcessControlLib.FiringIISwitchIcon();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.firingIISwitchIcon14 = new ProcessControlLib.FiringIISwitchIcon();
             this.gaseSupplySensor106 = new ProcessControlLib.GaseSupplySensor();
             this.button4 = new System.Windows.Forms.Button();
             this.firingIISwitchIcon26 = new ProcessControlLib.FiringIISwitchIcon();
@@ -929,6 +930,7 @@ namespace ProcessSystem
             this.firingIISensor24 = new ProcessControlLib.FiringIISensor();
             this.firingIIHighAISensor3 = new ProcessControlLib.FiringIIHighAISensor();
             this.tabPage11 = new System.Windows.Forms.TabPage();
+            this.firingIISensor14 = new ProcessControlLib.FiringIISensor();
             this.firingIISwitchCombo27 = new ProcessControlLib.FiringIISwitchCombo();
             this.firingIISwitchCombo26 = new ProcessControlLib.FiringIISwitchCombo();
             this.firingIISwitchCombo25 = new ProcessControlLib.FiringIISwitchCombo();
@@ -1064,7 +1066,6 @@ namespace ProcessSystem
             this.fuelSensor21 = new ProcessControlLib.FuelSensor();
             this.fuelSensor9 = new ProcessControlLib.FuelSensor();
             this.firingIISwitchIcon16 = new ProcessControlLib.FiringIISwitchIcon();
-            this.firingIISwitchIcon14 = new ProcessControlLib.FiringIISwitchIcon();
             this.firingIISwitchIcon15 = new ProcessControlLib.FiringIISwitchIcon();
             this.firingISwitchIcon26 = new ProcessControlLib.FiringISwitchIcon();
             this.firingISwitchIcon25 = new ProcessControlLib.FiringISwitchIcon();
@@ -1248,14 +1249,12 @@ namespace ProcessSystem
             this.firingISensor21 = new ProcessControlLib.FiringISensor();
             this.firingIISensor33 = new ProcessControlLib.FiringIISensor();
             this.firingIISensor15 = new ProcessControlLib.FiringIISensor();
-            this.firingIISensor14 = new ProcessControlLib.FiringIISensor();
             this.fuelSensor18 = new ProcessControlLib.FuelSensor();
             this.fuelSensor17 = new ProcessControlLib.FuelSensor();
             this.fuelSensor11 = new ProcessControlLib.FuelSensor();
             this.fuelSensor10 = new ProcessControlLib.FuelSensor();
             this.fuelSensor55 = new ProcessControlLib.FuelSensor();
             this.firingIISwitchCombo16 = new ProcessControlLib.FiringIISwitchCombo();
-            this.firingIISwitchCombo14 = new ProcessControlLib.FiringIISwitchCombo();
             this.firingIISwitchCombo15 = new ProcessControlLib.FiringIISwitchCombo();
             this.firingIIAdjustValve4 = new ProcessControlLib.FiringIIAdjustValve();
             this.firingISwitchCombo28 = new ProcessControlLib.FiringISwitchCombo();
@@ -1447,6 +1446,7 @@ namespace ProcessSystem
             this.tank6 = new ProcessControlLib.Tank();
             this.engine1 = new ProcessControlLib.Engine();
             this.tabPage17 = new System.Windows.Forms.TabPage();
+            this.firingIISensor40 = new ProcessControlLib.FiringIISensor();
             this.firingIHighAISensor27 = new ProcessControlLib.FiringIHighAISensor();
             this.firingIHighAISensor26 = new ProcessControlLib.FiringIHighAISensor();
             this.firingIHighAISensor19 = new ProcessControlLib.FiringIHighAISensor();
@@ -1529,6 +1529,7 @@ namespace ProcessSystem
             this.lbl_SysTime = new System.Windows.Forms.Label();
             this.none20 = new System.Windows.Forms.Label();
             this.tr_SonSystem = new System.Windows.Forms.Timer(this.components);
+            this.firingIISwitchCombo14 = new ProcessControlLib.FiringIISwitchCombo();
             this.pl_Top.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -16074,6 +16075,7 @@ namespace ProcessSystem
             // 
             this.panel12.BackgroundImage = global::ProcessSystem.Properties.Resources.DataPanel;
             this.panel12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel12.Controls.Add(this.firingIISwitchIcon14);
             this.panel12.Controls.Add(this.gaseSupplySensor106);
             this.panel12.Controls.Add(this.button4);
             this.panel12.Controls.Add(this.firingIISwitchIcon26);
@@ -16095,6 +16097,29 @@ namespace ProcessSystem
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(642, 341);
             this.panel12.TabIndex = 579;
+            // 
+            // firingIISwitchIcon14
+            // 
+            this.firingIISwitchIcon14.BackColor = System.Drawing.Color.Transparent;
+            this.firingIISwitchIcon14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.firingIISwitchIcon14.DiClose = ((ushort)(0));
+            this.firingIISwitchIcon14.DiOpen = ((ushort)(0));
+            this.firingIISwitchIcon14.DiOpenAndClose = ((ushort)(0));
+            this.firingIISwitchIcon14.DqClose = ((ushort)(0));
+            this.firingIISwitchIcon14.DqOpen = ((ushort)(0));
+            this.firingIISwitchIcon14.DqOpenAndClose = ((ushort)(0));
+            this.firingIISwitchIcon14.Enable = true;
+            this.firingIISwitchIcon14.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.firingIISwitchIcon14.IsVertical = false;
+            this.firingIISwitchIcon14.Location = new System.Drawing.Point(213, 255);
+            this.firingIISwitchIcon14.Margin = new System.Windows.Forms.Padding(5);
+            this.firingIISwitchIcon14.Name = "firingIISwitchIcon14";
+            this.firingIISwitchIcon14.ShowName = false;
+            this.firingIISwitchIcon14.Size = new System.Drawing.Size(55, 65);
+            this.firingIISwitchIcon14.State = ProcessSystemLib.ValveState.close;
+            this.firingIISwitchIcon14.TabIndex = 580;
+            this.firingIISwitchIcon14.ValveName = "HV299";
+            this.firingIISwitchIcon14.WorkStation = null;
             // 
             // gaseSupplySensor106
             // 
@@ -16159,7 +16184,7 @@ namespace ProcessSystem
             this.firingIISwitchIcon26.Enable = true;
             this.firingIISwitchIcon26.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.firingIISwitchIcon26.IsVertical = false;
-            this.firingIISwitchIcon26.Location = new System.Drawing.Point(397, 255);
+            this.firingIISwitchIcon26.Location = new System.Drawing.Point(418, 255);
             this.firingIISwitchIcon26.Margin = new System.Windows.Forms.Padding(5);
             this.firingIISwitchIcon26.Name = "firingIISwitchIcon26";
             this.firingIISwitchIcon26.ShowName = false;
@@ -16182,7 +16207,7 @@ namespace ProcessSystem
             this.firingIISwitchIcon27.Enable = true;
             this.firingIISwitchIcon27.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.firingIISwitchIcon27.IsVertical = false;
-            this.firingIISwitchIcon27.Location = new System.Drawing.Point(531, 255);
+            this.firingIISwitchIcon27.Location = new System.Drawing.Point(527, 255);
             this.firingIISwitchIcon27.Margin = new System.Windows.Forms.Padding(5);
             this.firingIISwitchIcon27.Name = "firingIISwitchIcon27";
             this.firingIISwitchIcon27.ShowName = false;
@@ -16205,7 +16230,7 @@ namespace ProcessSystem
             this.firingIISwitchIcon25.Enable = true;
             this.firingIISwitchIcon25.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.firingIISwitchIcon25.IsVertical = false;
-            this.firingIISwitchIcon25.Location = new System.Drawing.Point(263, 255);
+            this.firingIISwitchIcon25.Location = new System.Drawing.Point(309, 255);
             this.firingIISwitchIcon25.Margin = new System.Windows.Forms.Padding(5);
             this.firingIISwitchIcon25.Name = "firingIISwitchIcon25";
             this.firingIISwitchIcon25.ShowName = false;
@@ -16228,7 +16253,7 @@ namespace ProcessSystem
             this.firingIISwitchIcon24.Enable = true;
             this.firingIISwitchIcon24.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.firingIISwitchIcon24.IsVertical = false;
-            this.firingIISwitchIcon24.Location = new System.Drawing.Point(142, 255);
+            this.firingIISwitchIcon24.Location = new System.Drawing.Point(117, 255);
             this.firingIISwitchIcon24.Margin = new System.Windows.Forms.Padding(5);
             this.firingIISwitchIcon24.Name = "firingIISwitchIcon24";
             this.firingIISwitchIcon24.ShowName = false;
@@ -21775,6 +21800,8 @@ namespace ProcessSystem
             // tabPage11
             // 
             this.tabPage11.BackColor = System.Drawing.Color.MidnightBlue;
+            this.tabPage11.Controls.Add(this.firingIISwitchCombo14);
+            this.tabPage11.Controls.Add(this.firingIISensor14);
             this.tabPage11.Controls.Add(this.firingIISwitchCombo27);
             this.tabPage11.Controls.Add(this.firingIISwitchCombo26);
             this.tabPage11.Controls.Add(this.firingIISwitchCombo25);
@@ -21872,6 +21899,44 @@ namespace ProcessSystem
             this.tabPage11.Size = new System.Drawing.Size(3309, 1087);
             this.tabPage11.TabIndex = 1;
             this.tabPage11.Text = "Debug";
+            // 
+            // firingIISensor14
+            // 
+            this.firingIISensor14.AI = ((ushort)(0));
+            this.firingIISensor14.BackColor = System.Drawing.Color.Transparent;
+            this.firingIISensor14.BValue = 0F;
+            this.firingIISensor14.CurrentRange = ProcessSystemLib.CurrentRange.FourToTwenty;
+            this.firingIISensor14.DecimalPlaces = 2;
+            this.firingIISensor14.Density = 1000F;
+            this.firingIISensor14.DigitalRange = 27648;
+            this.firingIISensor14.DirectCalibration = false;
+            this.firingIISensor14.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.firingIISensor14.Gravity = 9.8F;
+            this.firingIISensor14.InputType = ProcessSystemLib.InputValueType.PLC_Digital;
+            this.firingIISensor14.IsPT100 = false;
+            this.firingIISensor14.KValue = 1F;
+            this.firingIISensor14.Location = new System.Drawing.Point(893, 570);
+            this.firingIISensor14.Margin = new System.Windows.Forms.Padding(5);
+            this.firingIISensor14.MaxSensorRange = 1F;
+            this.firingIISensor14.MinSensorRange = 0F;
+            this.firingIISensor14.Name = "firingIISensor14";
+            this.firingIISensor14.OriginalPressureUnit = ProcessSystemLib.Unit.Pa;
+            this.firingIISensor14.SensitivityCalibrationFactor = 1F;
+            this.firingIISensor14.SensorName = "助燃II传感器";
+            this.firingIISensor14.SensorNameColor = System.Drawing.Color.White;
+            this.firingIISensor14.SensorPostion = true;
+            this.firingIISensor14.SensorUnitColor = System.Drawing.Color.White;
+            this.firingIISensor14.SensorValue = null;
+            this.firingIISensor14.SensorValueColor = System.Drawing.Color.White;
+            this.firingIISensor14.Size = new System.Drawing.Size(180, 25);
+            this.firingIISensor14.SpeedValue = 0F;
+            this.firingIISensor14.TabIndex = 559;
+            this.firingIISensor14.TankArea = 1F;
+            this.firingIISensor14.TFMState = false;
+            this.firingIISensor14.Unit = ProcessSystemLib.Unit.MPa;
+            this.firingIISensor14.VoltageRange = ProcessSystemLib.VoltageRange.ZeroToFive;
+            this.firingIISensor14.WorkStation = null;
+            this.firingIISensor14.ZeroOffset = 0F;
             // 
             // firingIISwitchCombo27
             // 
@@ -24698,7 +24763,6 @@ namespace ProcessSystem
             this.tabPage12.Controls.Add(this.fuelSensor21);
             this.tabPage12.Controls.Add(this.fuelSensor9);
             this.tabPage12.Controls.Add(this.firingIISwitchIcon16);
-            this.tabPage12.Controls.Add(this.firingIISwitchIcon14);
             this.tabPage12.Controls.Add(this.firingIISwitchIcon15);
             this.tabPage12.Controls.Add(this.firingISwitchIcon26);
             this.tabPage12.Controls.Add(this.firingISwitchIcon25);
@@ -26351,29 +26415,6 @@ namespace ProcessSystem
             this.firingIISwitchIcon16.TabIndex = 465;
             this.firingIISwitchIcon16.ValveName = "HV327";
             this.firingIISwitchIcon16.WorkStation = null;
-            // 
-            // firingIISwitchIcon14
-            // 
-            this.firingIISwitchIcon14.BackColor = System.Drawing.Color.Transparent;
-            this.firingIISwitchIcon14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.firingIISwitchIcon14.DiClose = ((ushort)(0));
-            this.firingIISwitchIcon14.DiOpen = ((ushort)(0));
-            this.firingIISwitchIcon14.DiOpenAndClose = ((ushort)(0));
-            this.firingIISwitchIcon14.DqClose = ((ushort)(0));
-            this.firingIISwitchIcon14.DqOpen = ((ushort)(0));
-            this.firingIISwitchIcon14.DqOpenAndClose = ((ushort)(0));
-            this.firingIISwitchIcon14.Enable = true;
-            this.firingIISwitchIcon14.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.firingIISwitchIcon14.IsVertical = false;
-            this.firingIISwitchIcon14.Location = new System.Drawing.Point(1989, 801);
-            this.firingIISwitchIcon14.Margin = new System.Windows.Forms.Padding(5);
-            this.firingIISwitchIcon14.Name = "firingIISwitchIcon14";
-            this.firingIISwitchIcon14.ShowName = false;
-            this.firingIISwitchIcon14.Size = new System.Drawing.Size(55, 65);
-            this.firingIISwitchIcon14.State = ProcessSystemLib.ValveState.close;
-            this.firingIISwitchIcon14.TabIndex = 466;
-            this.firingIISwitchIcon14.ValveName = "HV310";
-            this.firingIISwitchIcon14.WorkStation = null;
             // 
             // firingIISwitchIcon15
             // 
@@ -29450,14 +29491,12 @@ namespace ProcessSystem
             this.tabPage13.Controls.Add(this.firingISensor21);
             this.tabPage13.Controls.Add(this.firingIISensor33);
             this.tabPage13.Controls.Add(this.firingIISensor15);
-            this.tabPage13.Controls.Add(this.firingIISensor14);
             this.tabPage13.Controls.Add(this.fuelSensor18);
             this.tabPage13.Controls.Add(this.fuelSensor17);
             this.tabPage13.Controls.Add(this.fuelSensor11);
             this.tabPage13.Controls.Add(this.fuelSensor10);
             this.tabPage13.Controls.Add(this.fuelSensor55);
             this.tabPage13.Controls.Add(this.firingIISwitchCombo16);
-            this.tabPage13.Controls.Add(this.firingIISwitchCombo14);
             this.tabPage13.Controls.Add(this.firingIISwitchCombo15);
             this.tabPage13.Controls.Add(this.firingIIAdjustValve4);
             this.tabPage13.Controls.Add(this.firingISwitchCombo28);
@@ -29833,44 +29872,6 @@ namespace ProcessSystem
             this.firingIISensor15.WorkStation = null;
             this.firingIISensor15.ZeroOffset = 0F;
             // 
-            // firingIISensor14
-            // 
-            this.firingIISensor14.AI = ((ushort)(0));
-            this.firingIISensor14.BackColor = System.Drawing.Color.Transparent;
-            this.firingIISensor14.BValue = 0F;
-            this.firingIISensor14.CurrentRange = ProcessSystemLib.CurrentRange.FourToTwenty;
-            this.firingIISensor14.DecimalPlaces = 2;
-            this.firingIISensor14.Density = 1000F;
-            this.firingIISensor14.DigitalRange = 27648;
-            this.firingIISensor14.DirectCalibration = false;
-            this.firingIISensor14.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.firingIISensor14.Gravity = 9.8F;
-            this.firingIISensor14.InputType = ProcessSystemLib.InputValueType.PLC_Digital;
-            this.firingIISensor14.IsPT100 = false;
-            this.firingIISensor14.KValue = 1F;
-            this.firingIISensor14.Location = new System.Drawing.Point(735, 284);
-            this.firingIISensor14.Margin = new System.Windows.Forms.Padding(5);
-            this.firingIISensor14.MaxSensorRange = 1F;
-            this.firingIISensor14.MinSensorRange = 0F;
-            this.firingIISensor14.Name = "firingIISensor14";
-            this.firingIISensor14.OriginalPressureUnit = ProcessSystemLib.Unit.Pa;
-            this.firingIISensor14.SensitivityCalibrationFactor = 1F;
-            this.firingIISensor14.SensorName = "助燃II传感器";
-            this.firingIISensor14.SensorNameColor = System.Drawing.Color.White;
-            this.firingIISensor14.SensorPostion = true;
-            this.firingIISensor14.SensorUnitColor = System.Drawing.Color.White;
-            this.firingIISensor14.SensorValue = null;
-            this.firingIISensor14.SensorValueColor = System.Drawing.Color.White;
-            this.firingIISensor14.Size = new System.Drawing.Size(180, 25);
-            this.firingIISensor14.SpeedValue = 0F;
-            this.firingIISensor14.TabIndex = 520;
-            this.firingIISensor14.TankArea = 1F;
-            this.firingIISensor14.TFMState = false;
-            this.firingIISensor14.Unit = ProcessSystemLib.Unit.MPa;
-            this.firingIISensor14.VoltageRange = ProcessSystemLib.VoltageRange.ZeroToFive;
-            this.firingIISensor14.WorkStation = null;
-            this.firingIISensor14.ZeroOffset = 0F;
-            // 
             // fuelSensor18
             // 
             this.fuelSensor18.AI = ((ushort)(0));
@@ -30082,28 +30083,6 @@ namespace ProcessSystem
             this.firingIISwitchCombo16.TabIndex = 260;
             this.firingIISwitchCombo16.ValveName = "开关阀";
             this.firingIISwitchCombo16.WorkStation = null;
-            // 
-            // firingIISwitchCombo14
-            // 
-            this.firingIISwitchCombo14.BackColor = System.Drawing.Color.Transparent;
-            this.firingIISwitchCombo14.Cursor = System.Windows.Forms.Cursors.Default;
-            this.firingIISwitchCombo14.DiClose = 0;
-            this.firingIISwitchCombo14.DiOpen = 0;
-            this.firingIISwitchCombo14.DiOpenAndClose = ((ushort)(0));
-            this.firingIISwitchCombo14.DqClose = ((ushort)(0));
-            this.firingIISwitchCombo14.DqOpen = ((ushort)(0));
-            this.firingIISwitchCombo14.DqOpenAndClose = ((ushort)(0));
-            this.firingIISwitchCombo14.Enable = true;
-            this.firingIISwitchCombo14.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.firingIISwitchCombo14.ForeColor = System.Drawing.Color.White;
-            this.firingIISwitchCombo14.Location = new System.Drawing.Point(503, 314);
-            this.firingIISwitchCombo14.Margin = new System.Windows.Forms.Padding(5);
-            this.firingIISwitchCombo14.Name = "firingIISwitchCombo14";
-            this.firingIISwitchCombo14.Size = new System.Drawing.Size(120, 40);
-            this.firingIISwitchCombo14.State = ProcessSystemLib.ValveState.close;
-            this.firingIISwitchCombo14.TabIndex = 261;
-            this.firingIISwitchCombo14.ValveName = "开关阀";
-            this.firingIISwitchCombo14.WorkStation = null;
             // 
             // firingIISwitchCombo15
             // 
@@ -33677,6 +33656,7 @@ namespace ProcessSystem
             // tabPage17
             // 
             this.tabPage17.BackColor = System.Drawing.Color.MidnightBlue;
+            this.tabPage17.Controls.Add(this.firingIISensor40);
             this.tabPage17.Controls.Add(this.firingIHighAISensor27);
             this.tabPage17.Controls.Add(this.firingIHighAISensor26);
             this.tabPage17.Controls.Add(this.firingIHighAISensor19);
@@ -33741,6 +33721,44 @@ namespace ProcessSystem
             this.tabPage17.Size = new System.Drawing.Size(3309, 1087);
             this.tabPage17.TabIndex = 1;
             this.tabPage17.Text = "Debug";
+            // 
+            // firingIISensor40
+            // 
+            this.firingIISensor40.AI = ((ushort)(0));
+            this.firingIISensor40.BackColor = System.Drawing.Color.Transparent;
+            this.firingIISensor40.BValue = 0F;
+            this.firingIISensor40.CurrentRange = ProcessSystemLib.CurrentRange.FourToTwenty;
+            this.firingIISensor40.DecimalPlaces = 2;
+            this.firingIISensor40.Density = 1000F;
+            this.firingIISensor40.DigitalRange = 27648;
+            this.firingIISensor40.DirectCalibration = false;
+            this.firingIISensor40.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.firingIISensor40.Gravity = 9.8F;
+            this.firingIISensor40.InputType = ProcessSystemLib.InputValueType.PLC_Digital;
+            this.firingIISensor40.IsPT100 = false;
+            this.firingIISensor40.KValue = 1F;
+            this.firingIISensor40.Location = new System.Drawing.Point(946, 412);
+            this.firingIISensor40.Margin = new System.Windows.Forms.Padding(5);
+            this.firingIISensor40.MaxSensorRange = 1F;
+            this.firingIISensor40.MinSensorRange = 0F;
+            this.firingIISensor40.Name = "firingIISensor40";
+            this.firingIISensor40.OriginalPressureUnit = ProcessSystemLib.Unit.Pa;
+            this.firingIISensor40.SensitivityCalibrationFactor = 1F;
+            this.firingIISensor40.SensorName = "助燃II传感器";
+            this.firingIISensor40.SensorNameColor = System.Drawing.Color.White;
+            this.firingIISensor40.SensorPostion = true;
+            this.firingIISensor40.SensorUnitColor = System.Drawing.Color.White;
+            this.firingIISensor40.SensorValue = null;
+            this.firingIISensor40.SensorValueColor = System.Drawing.Color.White;
+            this.firingIISensor40.Size = new System.Drawing.Size(180, 25);
+            this.firingIISensor40.SpeedValue = 0F;
+            this.firingIISensor40.TabIndex = 563;
+            this.firingIISensor40.TankArea = 1F;
+            this.firingIISensor40.TFMState = false;
+            this.firingIISensor40.Unit = ProcessSystemLib.Unit.MPa;
+            this.firingIISensor40.VoltageRange = ProcessSystemLib.VoltageRange.ZeroToFive;
+            this.firingIISensor40.WorkStation = null;
+            this.firingIISensor40.ZeroOffset = 0F;
             // 
             // firingIHighAISensor27
             // 
@@ -35678,6 +35696,28 @@ namespace ProcessSystem
             this.tr_SonSystem.Enabled = true;
             this.tr_SonSystem.Interval = 200;
             // 
+            // firingIISwitchCombo14
+            // 
+            this.firingIISwitchCombo14.BackColor = System.Drawing.Color.Transparent;
+            this.firingIISwitchCombo14.Cursor = System.Windows.Forms.Cursors.Default;
+            this.firingIISwitchCombo14.DiClose = 0;
+            this.firingIISwitchCombo14.DiOpen = 0;
+            this.firingIISwitchCombo14.DiOpenAndClose = ((ushort)(0));
+            this.firingIISwitchCombo14.DqClose = ((ushort)(0));
+            this.firingIISwitchCombo14.DqOpen = ((ushort)(0));
+            this.firingIISwitchCombo14.DqOpenAndClose = ((ushort)(0));
+            this.firingIISwitchCombo14.Enable = true;
+            this.firingIISwitchCombo14.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.firingIISwitchCombo14.ForeColor = System.Drawing.Color.White;
+            this.firingIISwitchCombo14.Location = new System.Drawing.Point(1286, 602);
+            this.firingIISwitchCombo14.Margin = new System.Windows.Forms.Padding(5);
+            this.firingIISwitchCombo14.Name = "firingIISwitchCombo14";
+            this.firingIISwitchCombo14.Size = new System.Drawing.Size(153, 40);
+            this.firingIISwitchCombo14.State = ProcessSystemLib.ValveState.close;
+            this.firingIISwitchCombo14.TabIndex = 560;
+            this.firingIISwitchCombo14.ValveName = "HV299";
+            this.firingIISwitchCombo14.WorkStation = null;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
@@ -36689,13 +36729,11 @@ namespace ProcessSystem
         private FiringIISwitchCombo firingIISwitchCombo1;
         private FiringIISwitchCombo firingIISwitchCombo13;
         private FiringIISwitchCombo firingIISwitchCombo16;
-        private FiringIISwitchCombo firingIISwitchCombo14;
         private FiringIISwitchCombo firingIISwitchCombo15;
         private FiringIISwitchCombo firingIISwitchCombo18;
         private FiringIISwitchCombo firingIISwitchCombo19;
         private FiringIISwitchCombo firingIISwitchCombo17;
         private FiringIISwitchIcon firingIISwitchIcon16;
-        private FiringIISwitchIcon firingIISwitchIcon14;
         private FiringIISwitchIcon firingIISwitchIcon15;
         private FiringIISwitchIcon firingIISwitchIcon1;
         private FiringIISwitchIcon firingIISwitchIcon2;
@@ -37034,7 +37072,6 @@ namespace ProcessSystem
         private FiringISensor firingISensor21;
         private FiringIISensor firingIISensor33;
         private FiringIISensor firingIISensor15;
-        private FiringIISensor firingIISensor14;
         private FiringISensor firingISensor52;
         private FiringISensor firingISensor51;
         private FiringISensor firingISensor22;
@@ -37241,6 +37278,10 @@ namespace ProcessSystem
         private GaseSupplySensor gaseSupplySensor104;
         private GaseSupplySensor gaseSupplySensor103;
         private GaseSupplySensor gaseSupplySensor102;
+        private FiringIISwitchIcon firingIISwitchIcon14;
+        private FiringIISensor firingIISensor14;
+        private FiringIISensor firingIISensor40;
+        private FiringIISwitchCombo firingIISwitchCombo14;
     }
 }
 

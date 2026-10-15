@@ -16,10 +16,10 @@ namespace ProcessSystem
         SiemensDevice Tw0Device = null;
 
         private CancellationTokenSource cts;
-        string[] Kerosene = { "PT401", "PT401a", "PT401b", "PT403", "待新增" };
+        string[] Kerosene = { "PT401", "PT401a", "PT401b", "PT403", "PT403b" };
         string[] Methane = { "PT306", "PT307", "PT308" };
         string[] Station1 = { "PT214", "PT215", "PT216" };
-        string[] Station2 = { "PT218", "PT219", "PT220", "PT222", "PT223", "待新增" };
+        string[] Station2 = { "PT218", "PT219", "PT220", "PT222", "PT223", "PT223c" };
         string[] Station = { "工位1", "工位2" };
         FormMain Control = null;
 
@@ -84,8 +84,8 @@ namespace ProcessSystem
                 }
 
                 this.txt_Fuel_P.Text = this.FuelDevice?["Pressure"]?.ToString() ?? "";
-
                 int flowIndex = Convert.ToInt32(this.FuelDevice?["WorkState"]) - 1;
+
                 if (flowIndex >= 0 && flowIndex < CB_FuelFlow.Items.Count)
                 {
                     this.CB_FuelFlow.SelectedIndex = flowIndex;
@@ -102,6 +102,7 @@ namespace ProcessSystem
                 {
                     CB_FuelSensorBackup.SelectedIndex = sensorBackupIndex;
                 }
+
                 if (Convert.ToInt32(FuelDevice?["BaseSensor"]) == 1)
                 {
                     rb_FuelMainSensor.Checked = true;
@@ -184,7 +185,6 @@ namespace ProcessSystem
                                 });
                         }
                     });
-
                     await Task.Delay(500, cts.Token);
                 }
             }
@@ -268,7 +268,7 @@ namespace ProcessSystem
                     {
                         lblCurrent.Text = backupSensorName;
                         rbBackup.Checked = true;
-                        alarmMsg = $"【{sysName}系统警告】{sysName}主传感器异常, 已自动切至备用";
+                        alarmMsg = $"【{sysName}系统警告】{sysName}主传感器异常, 已自动切至备用传感器";
                         titleMsg = "单路故障报警";
                         Addlog?.Invoke(2, alarmMsg);
                     }
@@ -276,7 +276,7 @@ namespace ProcessSystem
                     {
                         lblCurrent.Text = mainSensorName;
                         rbMain.Checked = true;
-                        alarmMsg = $"【{sysName}系统警告】{sysName}备用传感器异常, 使用主路增压";
+                        alarmMsg = $"【{sysName}系统警告】{sysName}备用传感器异常, 使用主传感器增压";
                         titleMsg = "单路故障报警";
                         Addlog?.Invoke(2, alarmMsg);
                     }
@@ -284,7 +284,7 @@ namespace ProcessSystem
                     {
                         lblCurrent.Text = mainSensorName;
                         rbMain.Checked = true;
-                        alarmMsg = $"【{sysName}系统提示】主传感器恢复正常, 已自动恢复至主路";
+                        alarmMsg = $"【{sysName}系统提示】主传感器恢复正常, 已自动恢复至主传感器";
                         titleMsg = "系统恢复提示";
                         Addlog?.Invoke(0, alarmMsg);
                     }
@@ -292,7 +292,7 @@ namespace ProcessSystem
                     {
                         lblCurrent.Text = mainSensorName;
                         rbMain.Checked = true;
-                        alarmMsg = $"【{sysName}系统提示】双路传感器均正常, 已自动恢复至主路";
+                        alarmMsg = $"【{sysName}系统提示】双路传感器均正常, 已自动恢复至主传感器";
                         titleMsg = "系统恢复提示";
                         Addlog?.Invoke(0, alarmMsg);
                     }

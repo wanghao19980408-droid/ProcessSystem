@@ -761,7 +761,7 @@ namespace ProcessSystem
             });
         }
         #endregion
-         #region 配气区域
+        #region 配气区域
 
         public delegate void GaseSensorDataUpdatedEventHandler(UDPValues e);
 
@@ -2099,9 +2099,7 @@ namespace ProcessSystem
             }
         }
 
-        private void UpdateValveFromRole<T1, T2>(List<T1> comboList, List<T2> iconList)
-    where T1 : IAirControlValveBase
-    where T2 : IAirControlValveIcon
+        private void UpdateValveFromRole<T1, T2>(List<T1> comboList, List<T2> iconList)where T1 : IAirControlValveBase where T2 : IAirControlValveIcon
         {
             if (comboList == null || iconList == null) return;
 
