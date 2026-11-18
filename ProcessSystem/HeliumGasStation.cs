@@ -31,6 +31,13 @@ namespace ProcessSystem
             this.List = list;
             this.TCP = tcp;
             FormMainControl.GaseSensorDataUpdated += MainForm_GaseSensorDataUpdated;
+            this.FormClosing += HeliumGasStation_FormClosing;
+        }
+
+        private void HeliumGasStation_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Hide();
+            e.Cancel = true;
         }
 
         private  void HeliumGasStation_Load(object sender, EventArgs e)

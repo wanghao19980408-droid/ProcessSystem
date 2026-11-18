@@ -30,7 +30,15 @@ namespace ProcessSystem
             this.TCP = tcp;
             FormMain.GaseSensorDataUpdated += MainForm_GaseSensorDataUpdated;
             this.Load += ControlAirStation_Load;
+            this.FormClosing += ControlAirStation_FormClosing;
         }
+
+        private void ControlAirStation_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Hide();
+            e.Cancel = true;
+        }
+
         TitleDataService titleDataService = new TitleDataService();
 
         private  void ControlAirStation_Load(object sender, EventArgs e)
@@ -207,6 +215,7 @@ namespace ProcessSystem
 
         private async void ControlAirStation_VisibleChanged(object sender, EventArgs e)
         {
+            this.Size = new Size(3397, 1035);
             var res = await Task.Run(() => titleDataService.QueryTitles("ControlAirStation"));
             if (!res.IsSuccess) return;
             var titles = res.Content;

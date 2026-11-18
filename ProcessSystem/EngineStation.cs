@@ -31,7 +31,15 @@ namespace ProcessSystem
             this.TCP = tcp;
             FormMain.GaseSensorDataUpdated += MainForm_GaseSensorDataUpdated;
             this.Load += EngineStation_Load;
+            this.FormClosing += EngineStation_FormClosing;
         }
+
+        private void EngineStation_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Hide();
+            e.Cancel = true;
+        }
+
         TitleDataService titleDataService = new TitleDataService();
         private  void EngineStation_Load(object sender, EventArgs e)
         {
